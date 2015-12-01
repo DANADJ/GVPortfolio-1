@@ -1,0 +1,31 @@
+/*Прибитие футера к низу экрана*/
+.empty {
+   position: relative;
+   height: 38px;
+}
+/*Оформление футера*/
+.footer {
+   position: relative;
+   margin-top: -38px;
+   height: 38px;
+   background-color: #dedcdc;
+   text-align: center;
+   line-height: 38px;
+}
+.footer-login {
+   float: left;
+}
+.footer-login-lock {
+   margin: 6px 10px 9px 41px;
+   height: 23px;
+   float: left;
+}
+.footer-login-text {
+   color: #9b9b9b;
+   font: 700 14px OpenSans;
+   text-decoration: none;
+}
+.footer-content {
+   color: #727070;
+   font: 300 12px OpenSans;
+}
