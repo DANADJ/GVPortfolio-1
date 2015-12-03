@@ -27,6 +27,7 @@ table {
       radial-gradient(ellipse farthest-corner at 100% 0%, #7ceeb0 3%, transparent 24%),
       radial-gradient(circle at 77% 30%, #d0d98d 5%, #DEDFA1 20%, #dfd0a0 60%);
    background-repeat: no-repeat;
+   background-position: 0 90px;
 }
 /*Центрирование контента*/
 .conteiner {
