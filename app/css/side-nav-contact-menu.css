@@ -1,9 +1,10 @@
+/*Сайдбар*/
 .side {
    width: 250px;
    float: left;
 }
 /*Блок навигации*/
-.nav-menu, .contact-menu {
+.nav-menu {
    list-style: none;
    padding: 0;
    margin: 35px 0;
@@ -36,7 +37,6 @@
 .nav-menu-item-link-activePage {
    padding: 16px 27px;
    color: #1e7465;
-   display: block;
    line-height: 1.1;
    border: 1px solid #39a68b;
    background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
@@ -72,4 +72,86 @@
    box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
 }
 
+
 /*Блок тонтактов*/
+.contact-menu {
+   padding: 0;
+   margin: 35px 0;
+   width: 100%;
+}
+.contact-menu-list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+.contact-menu-header {
+   padding: 10px 26px;
+   margin: 0;
+   font-size: 20px;
+   font-family: "Open Sans";
+   color: #d0982c;
+   line-height: 1.1;
+   text-align: left;
+   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+   border: 1px solid #caa151;
+   border-top-right-radius: 4px;
+   border-top-left-radius: 4px;
+   border-bottom-left-radius: 2px;
+   border-bottom-right-radius: 2px;
+   background-image: -moz-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+   background-image: -webkit-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+   background-image: -ms-linear-gradient( 90deg, rgb(220,177,93) 0%, rgb(244,204,126) 90%);
+   box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.17),inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25);
+}
+.contact-menu-list-item {
+   line-height: 100%;
+   padding: 0;
+   border: 1px solid #d6d5d3;
+   background-image: -moz-linear-gradient( 90deg, #e9e7e7 0%, #fbf9f9 100%);
+   background-image: -webkit-linear-gradient( 90deg, #e9e7e7 0%, #fbf9f9 100%);
+   background-image: -ms-linear-gradient( 90deg, #e9e7e7 0%, #fbf9f9 100%);
+   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35),inset 0px 2px 2px 0px rgba(114, 112, 112, 0.1);
+}
+.contact-menu-list-item:last-child {
+   border-bottom-right-radius: 4px;
+   border-bottom-left-radius: 4px;
+}
+.contact-menu-list-item:hover {
+  border: 1px solid #d6d5d3;
+  background-image: -moz-linear-gradient( 90deg, #e0c591 0%, #fbf9f9 100%);
+  background-image: -webkit-linear-gradient( 90deg, #e0c591 0%, #fbf9f9 100%);
+  background-image: -ms-linear-gradient( 90deg, #e0c591 0%, #fbf9f9 100%);
+}
+.mail-link {
+   background: url(../images/>.png) no-repeat,
+               url(../images/mail.png) no-repeat;
+   background-size: 8px 100%, 16px 13px;
+   background-origin: border-box, none;
+   background-position: 50px 0px, 18px 50%;
+}
+.celphone-link {
+   background: url(../images/>.png) no-repeat,
+               url(../images/celphone.png) no-repeat;
+   background-size: 8px 100%, 16px 21px;
+   background-origin: border-box, none;
+   background-position: 50px 0px, 18px 50%;
+}
+.skype-link {
+   background: url(../images/>.png) no-repeat,
+               url(../images/skype.png) no-repeat;
+   background-size: 8px 100%, 18px 18px;
+   background-origin: border-box, none;
+   background-position: 50px 0px, 19px 50%;
+}
+.contact-menu-list-item-icon {
+   padding: 10px 9px 9px 60px;
+   text-align: center;
+}
+.contact-menu-list-item-link {
+   font-size: 14px;
+   font-family: "Open Sans";
+   color: #727070;
+   line-height: 1.2;
+}
+
+
