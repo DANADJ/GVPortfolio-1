@@ -59,11 +59,11 @@
    width: 39px;
    height: 40px;
    background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -5px -100px;
+   background-position: -6px -100px;
 }
 .git:hover {
    width: 39px;
    height: 40px;
    background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -6px -150px;
+   background-position: -7px -150px;
 }

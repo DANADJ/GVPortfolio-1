@@ -41,8 +41,11 @@ table {
    width: 1200px;
 }
 .page-width {
-   width: 960px;
+   width: 966px;
 }
 .footer-width {
-   width: 960px;
+   width: 966px;
+}
+.link-without-decorations {
+   text-decoration: none;
 }
