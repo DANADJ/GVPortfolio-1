@@ -7,10 +7,13 @@
       <title>Сайт портфолио - Гордиенко Валентин - Мои работы</title>
       <meta name="author" content="WEB-developer Гордиенко Валентин Валентинович">   
       <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+      <link rel="stylesheet" href="fonts/fonts.css">
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="css/header.css">
       <link rel="stylesheet" href="css/footer.css">
       <link rel="stylesheet" href="css/side-nav-contact-menu.css">
+      <link rel="stylesheet" href="css/page-content.css">
+      <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
    </head>
    <body>
       <!--[if lt IE8]>
@@ -19,7 +22,7 @@
       <div class="wrapper">
          <header class="header">
             <div class="conteiner header-width">
-               <a href="http://loftschool.com" class="header-logo"><img class="header-logo-img" src="images/logo.png" alt="Логотип LoftSchool"></a>
+               <a href="./" class="header-logo"><img class="header-logo-img" src="images/logo.png" alt="Логотип LoftSchool"></a>
                <ul class="social-icon-menu">
                   <li class="social-icon-menu-item"><a href="https://github.com/DANADJ" class="social-icon git" target="_blank"></a></li>
                   <li class="social-icon-menu-item"><a href="#" class="social-icon tvit" target="_blank"></a></li>
@@ -28,15 +31,15 @@
                </ul>
             </div><!--Конец Conteiner-->
          </header>
-         <section class="page conteiner page-width">
+         <section class="page conteiner page-width clearfix">
             <section class="side">
                <ul class="nav-menu">
-                  <li class="nav-menu-item"><a href="index.html" class="link-without-decorations nav-menu-item-link">Обо мне</a></li>
-                  <li class="nav-menu-item "><a href="myworks.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link-activePage">Мои Работы</a></li>
-                  <li class="nav-menu-item"><a href="contactwithme.html" class="link-without-decorations nav-menu-item-link">Обратная связь</a></li>
+                  <li class="nav-menu-item"><a href="./" class="link-without-decorations nav-menu-item-link">Обо мне</a></li>
+                  <li class="nav-menu-item "><a href="./myworks.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link-activePage">Мои Работы</a></li>
+                  <li class="nav-menu-item"><a href="./contactwithme.html" class="link-without-decorations nav-menu-item-link">Обратная связь</a></li>
                </ul>
                <div class="contact-menu">
-                  <h2 class="contact-menu-header">Контакты</h3>
+                  <h2 class="contact-menu-header">Контакты</h2>
                   <ul class="contact-menu-list">
                      <li class="contact-menu-list-item">
                         <div class="contact-menu-list-item-icon mail-link">
@@ -57,6 +60,40 @@
                </div>
             </section>
             <main class="page-content">
+               <article class="page-content-item">
+                  <h1 class="page-content-item-header">Мои работы</h1>
+                  <div class="page-content-item-conteiner">
+                     <ol class="page-content-list clearfix">
+                        <li class="myWorks-item">
+                           <a href="" class="myWorks-item-link"><img src="images/a-industry.png" alt="a-indastry.ru" class="myWorks-item-link-img"></a>
+                           <p class="myWorks-item-header"><a href="#" class="link-without-decorations">a-indastry.ru</a></p>
+                           <p class="myWorks-item-content">Корпоративный и в тоже время продающий сайт строительной компаниии a-industry.</p>
+                        </li>
+                        <li class="myWorks-item">
+                           <a href="#" class="myWorks-item-link"><img src="images/domgazobeton.png" alt="домгазобетон.рф" class="myWorks-item-link-img"></a>
+                           <p class="myWorks-item-header"><a href="#" class="link-without-decorations">домгазобетон.рф</a></p>
+                           <p class="myWorks-item-content">Продающая страница для компании ledenlend.</p>
+                        </li>
+                        <li class="myWorks-item">
+                           <a href="" class="myWorks-item-link"><img src="images/crmconsulting.png" alt="crmconsulting.biz" class="myWorks-item-link-img"></a>
+                           <p class="myWorks-item-header"><a href="#" class="link-without-decorations">crmconsulting.biz</a></p>
+                           <p class="myWorks-item-content">Лендинг компании «СRM Consulting» специализирующейся на точной </p>
+                        </li>
+                        <li class="myWorks-item">
+                           <a href="" class="myWorks-item-link"><img src="images/landingsloft.png" alt="landingsloft.ru" class="myWorks-item-link-img"></a>
+                           <p class="myWorks-item-header"><a href="#" class="link-without-decorations">landingsloft.ru</a></p>
+                           <p class="myWorks-item-content">Сайт по услугам разработки продающих лендингов.</p>
+                        </li>
+                        <li class="myWorks-item">
+                           <a href="" class="myWorks-item-link"><img src="images/yasnow.png" alt="yasnow.biz" class="myWorks-item-link-img"></a>
+                           <p class="myWorks-item-header"><a href="#" class="link-without-decorations">yasnow.biz</a></p>
+                           <p class="myWorks-item-content">Landing page по продажи франшизы снежного бизнеса.</p>
+                        </li>
+                        <li class="myWorks-item">
+                        </li>
+                     </ol>
+                  </div>
+               </article>
             </main>
          </section>
          <div class="empty"></div>

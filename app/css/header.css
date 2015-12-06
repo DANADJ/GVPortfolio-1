@@ -4,9 +4,13 @@
    border-bottom: 7px solid #ffffff;
    box-shadow: 0px 0px 3px #676767;
 }
-.header-logo-img {
-   margin: 10px 0 0 5px;
+.header-logo {
+   display: inline-block;
    width: 95px;
+   padding: 10px 0 0 6px;
+}
+.header-logo-img {
+   width: 100%;
 }
 .social-icon-menu, .social-icon-menu-item  {
    float: right;

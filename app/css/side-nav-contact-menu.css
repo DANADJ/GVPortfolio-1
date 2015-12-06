@@ -7,7 +7,7 @@
 .nav-menu {
    list-style: none;
    padding: 0;
-   margin: 35px 0;
+   margin: 0 0 35px 0;
    width: 100%;
 }
 .nav-menu-item-link {
@@ -74,7 +74,7 @@
 /*Блок тонтактов*/
 .contact-menu {
    padding: 0;
-   margin: 35px 0;
+   margin: 0 0 35px 0;
    width: 100%;
 }
 .contact-menu-list {
@@ -146,10 +146,12 @@
    text-align: center;
 }
 .contact-menu-list-item-link {
+   display: block;
    font-size: 14px;
    font-family: "Open Sans";
    color: #727070;
    line-height: 1.2;
+   word-break: break-all;
 }
 
 
