@@ -1,0 +1,107 @@
+.page-content {
+   width: 651px;
+   float: left;
+   margin-left: 59px;
+   margin-top: 35px;
+}
+.page-content-item {
+   margin: 0 0 35px 0;
+   width: 100%;
+   padding: 0; 
+}
+.page-content-item-conteiner {
+   background-color: #f1f0ef;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   border: 1px solid #acaaaa;
+   background-origin: border-box;
+   position: relative;
+}
+.page-content-item-header {
+   margin: 0;
+   padding: 17px 40px;
+   font: 24px "Open Sans" bold italic;
+   color: #eeedec;
+   line-height: 0.9;
+   text-align: left;
+   text-shadow: 0px 1px 0px rgba(102, 101, 101, 0.004);
+   border: 1px solid rgba(99, 99, 99, 0.35);
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   background-image: -moz-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+   background-image: -webkit-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+   background-image: -ms-linear-gradient( 90deg, rgb(123,120,120) 0%, rgb(169,168,168) 100%);
+   background-origin: border-box;
+   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3); 
+}
+.page-content-list {
+   list-style: none;
+}
+/*Основная информация*/
+.main-info-myPhoto {
+   width: 133px;
+   height: 133px;
+   border: 10px solid #f6f5f4;
+   border-radius: 50%;
+   position: absolute;
+   top: 36px;
+   left: 41px;
+   background: url(../images/myphoto.png) no-repeat;
+   background-size: 136px;
+   background-position: 0 -12px;
+   box-shadow: 3.236px 2.351px 26.88px 5.12px rgba(236, 232, 227, 0.75),inset 0px 2px 24px 0px rgba(121, 121, 121, 0.23);
+}
+.main-info-list {
+   padding: 0 28px 0 228px;
+   margin: 28px 0;
+}
+.main-info-list-item {
+   padding: 3px 0 3px 0;
+}
+.main-info-list-item:last-child {
+   padding: 13px 0 3px 0
+}
+.main-info-list-item-name {
+   font: 14px "Open Sans" ;
+   color: #727070;
+   line-height: 1.2;
+   text-align: left;
+}
+.main-info-list-item-content {
+   font-size: 14px "Open Sans";
+   color: #727070;
+   line-height: 1.2;
+   text-align: left;
+}
+.main-info-list-item-content-my-skills {
+   padding: 0 0 0 135px;
+   margin-top: -20px;
+}
+.main-info-list-item-content-my-skills-skill{
+   color:  #1e7465;
+   font-size: 9px;
+   font-weight: 600;
+   text-transform: uppercase;
+   position: relative;
+   height: 16px;
+   line-height: 10px;
+   padding-top: 4px;
+   padding-left: 5px;
+   padding-right: 1px;
+   margin-left: 18px;
+   margin-bottom: 5px;
+   display: inline-block;
+   background: url(../images/bg-skill-body.png) repeat-x;
+}
+.main-info-list-item-content-my-skills-skill:before{
+   content: url(../images/bg-skill-start.png);
+   position: absolute;
+   left: -10px;
+   top: 0;
+}
+.main-info-list-item-content-my-skills-skill:after{
+   content: url(../images/bg-skill-end.png);
+   position: absolute;
+   right: -5px;
+   top: 0;
+}

@@ -44,8 +44,15 @@ table {
    width: 966px;
 }
 .footer-width {
-   width: 966px;
+   width: 960px;
 }
 .link-without-decorations {
    text-decoration: none;
+}
+.clearfix:before, .clearfix:after {
+   content: " ";
+   display: table;
+}
+.clearfix:after {
+   clear: both;
 }

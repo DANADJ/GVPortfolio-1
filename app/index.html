@@ -7,10 +7,12 @@
       <title>Сайт портфолио - Гордиенко Валентин</title>
       <meta name="author" content="WEB-developer Гордиенко Валентин Валентинович">   
       <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+      <link rel="stylesheet" href="fonts/fonts.css">
       <link rel="stylesheet" href="css/main.css">
       <link rel="stylesheet" href="css/header.css">
       <link rel="stylesheet" href="css/footer.css">
       <link rel="stylesheet" href="css/side-nav-contact-menu.css">
+      <link rel="stylesheet" href="css/page-content.css">
    </head>
    <body>
       <!--[if lt IE8]>
@@ -28,7 +30,7 @@
                </ul>
             </div><!--Конец Conteiner-->
          </header>
-         <section class="page conteiner page-width">
+         <section class="page conteiner page-width clearfix">
             <section class="side">
                <ul class="nav-menu">
                   <li class="nav-menu-item"><a href="index.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link-activePage">Обо мне</a></li>
@@ -56,7 +58,93 @@
                   </ul>
                </div>
             </section>
-            <main class="page-content"></main>
+            <main class="page-content">
+               <article class="page-content-item">
+                  <h1 class="page-content-item-header">Основная информация</h1>
+                  <div class="page-content-item-conteiner">
+                     <div class="main-info-myPhoto"></div>
+                     <ol class="main-info-list page-content-list">
+                        <li class="main-info-list-item">
+                           <span class="main-info-list-item-name">Меня зовут:</span>
+                           <span class="main-info-list-item-content">Гордиенко Валентин Валентинович</span>
+                        </li>
+                        <li class="main-info-list-item">
+                           <span class="main-info-list-item-name">Мой возраст:</span>
+                           <span class="main-info-list-item-content">30 лет</span>
+                        </li>
+                        <li class="main-info-list-item">
+                           <span class="main-info-list-item-name">Мой город:</span>
+                           <span class="main-info-list-item-content">Санкт-Петербург, Россия</span>
+                        </li>
+                        <li class="main-info-list-item">
+                           <span class="main-info-list-item-name">Моя специализация:</span>
+                           <span class="main-info-list-item-content">FRONTEND разработчик</span>
+                        </li>
+                        <li class="main-info-list-item">
+                           <span class="main-info-list-item-name">Ключевые навыки:</span>
+                           <ol class="main-info-list-item-content-my-skills">
+                              <li class="main-info-list-item-content-my-skills-skill">html</li>
+                              <li class="main-info-list-item-content-my-skills-skill">css</li>
+                              <li class="main-info-list-item-content-my-skills-skill">javascript</li>
+                              <li class="main-info-list-item-content-my-skills-skill">git</li>
+                              <li class="main-info-list-item-content-my-skills-skill">gulp</li>
+                              <li class="main-info-list-item-content-my-skills-skill">php</li>
+                              <li class="main-info-list-item-content-my-skills-skill">angular</li>
+                              <li class="main-info-list-item-content-my-skills-skill">xml</li>
+                              <li class="main-info-list-item-content-my-skills-skill">MySQl</li>
+                           </ol>
+                        </li>
+                     </ol>
+                  </div>
+               </article>
+               <article class="page-content-item">
+                  <h1 class="page-content-item-header">Опыт работы</h1>
+                  <div class="page-content-item-conteiner">
+                     <ol class="experience-list page-content-list">
+                        <li class="experience-list-item">
+                           <p class="experience-list-item-point">
+                              <span class="experience-list-item-point-organization">ООО Atelier Doorus</span>
+                              <span class="experience-list-item-point-position">Конструктор мебели</span>
+                           </p>
+                           <p class="experience-list-item-point-period">Июль 2012 - Ноябрь 2013</p>
+                        </li>
+                        <li class="experience-list-item">
+                           <p class="experience-list-item-point">
+                              <span class="experience-list-item-point-organization">Фриланс</span>
+                              <span class="experience-list-item-point-position">Конструктор мебели</span>
+                           </p>
+                           <p class="experience-list-item-point-period">Ноябрь 2013 - Апрель 2015</p>
+                        </li>
+                        <li class="experience-list-item">
+                           <p class="experience-list-item-point">
+                              <span class="experience-list-item-point-organization">ООО Акрополь Паркет</span>
+                              <span class="experience-list-item-point-position">Распиловщик паркета</span>
+                           </p>
+                           <p class="experience-list-item-point-period">Апрель 2015 - Июль 2015</p>
+                        </li>
+                        <li class="experience-list-item">
+                           <p class="experience-list-item-point">
+                              <span class="experience-list-item-point-organization">ООО Авторская мебель +</span>
+                              <span class="experience-list-item-point-position">Конструктор мебели</span>
+                           </p>
+                           <p class="experience-list-item-point-period">Июль 2015 - По настоящее время</p>
+                        </li>
+                     </ol>
+                  </div>
+               </article>
+               <article class="page-content-item">
+                  <h1 class="page-content-item-header">Образованние</h1>
+                  <div class="page-content-item-conteiner">
+                     <ol class="education-list page-content-list">
+                        <li class="education-list-item"></li>
+                        <li class="education-list-item"></li>
+                        <li class="education-list-item"></li>
+                        <li class="education-list-item"></li>
+                        <li class="education-list-item"></li>
+                     </ol>
+                  </div>
+               </article>
+            </main>
          </section>
          <div class="empty"></div>
       </div>
