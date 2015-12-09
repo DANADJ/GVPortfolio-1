@@ -11,6 +11,7 @@
       <link rel="stylesheet" href="css/header.css">
       <link rel="stylesheet" href="css/footer.css">
       <link rel="stylesheet" href="css/side-nav-contact-menu.css">
+      <link rel="stylesheet" href="css/page-content.css">
       <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
    </head>
    <body>
@@ -57,7 +58,39 @@
                   </ul>
                </div>
             </section>
-            <main class="page-content"></main>
+            <main class="page-content">
+               <article class="page-content-item">
+                  <h1 class="page-content-item-header">У вас интересный проект? Напишите мне </h1>
+                  <div class="page-content-item-conteiner">
+                     <form action="#" class="contactForms">
+                        <div class="contactForms-item-nameEmail-label">
+                           <label for="name" class="contactForms-item-label" for="name">Имя</label>
+                           <label for="email" class="contactForms-item-label contactForms-item-right">Email</label>
+                        </div>
+                        <div class="contactForms-item">
+                           <input class="contactForms-item-input" type="text" name="name" placeholder="Как к вам обращаться" id="name" pattern="^[А-Яа-яЁё\s]+$" required>
+                        </div>
+                        <div class="contactForms-item">
+                           <input class="contactForms-item-input contactForms-item-right" type="email" name="email" placeholder="Куда мне писать" id="email" required>
+                        </div>
+                        <div  class="contactForms-item contactForms-item-100perc">
+                           <label for="message"  class="contactForms-item-label">Cообщение</label>
+                           <textarea id="message" class="contactForms-item-textarea" name="message" placeholder="Кратко в чём суть" required></textarea>
+                        </div>
+                        <div  class="contactForms-item-captcha">
+                           <label for="captcha" class="contactForms-item-label">Введите код, указанный на картинке</label>
+                              <div class="contactForms-item contactForms-item-captcha-img-conteiner"><img class="contactForms-item-captcha-img" src="images/captcha.png" alt="captcha"></div>
+                              <input id="captcha" class="contactForms-item-input contactForms-item-input-code" type="text" name="captcha" placeholder="Введите код" required>
+                        </div>
+                        <div  class="contactForm-item-button-list clearfix">  
+                           <input class="contactForm-item-button submit-button" type="submit" value="Отправить">
+                        
+                           <input class="contactForm-item-button clear-button" type="reset" value="Очистить">
+                        </div>
+                     </form>
+                  </div>
+               </article>
+            </main>
          </section>
          <div class="empty"></div>
       </div>
