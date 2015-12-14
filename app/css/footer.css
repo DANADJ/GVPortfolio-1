@@ -12,9 +12,9 @@
    line-height: 58px;
 }
 .footer-login {
-   padding: 0 56px 0 177px;
+   padding: 0 56px 0 169px;
    color: #9b9b9b;
-   font: 700 14px OpenSans;
+   font: 14px 'open_sansbold';
    text-decoration: none;
    display: inline-block;
    font-weight: bold;
@@ -23,23 +23,39 @@
    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.85);
 }
 .footer-login::before {
-   content: url(../images/locked.png);
+   content: "";
+   display: inline-block;
+   width: 25px;
+   height: 21px;
+   background: url(../images/locked-unlocked-sprite.png);
+   background-position: -10px -10px;
    position: relative;
-   right: 8px;
+   right: 2px;
    top: 6px;
 }
 .login:hover .footer-login::before {
-   content: url(../images/unlocked.png);
-   position: relative;
-   right: 3px;
+   background-position: -10px -51px;
+   right: 4px;
    top: 5px;
 }
 .login:hover .footer-login {
-   padding: 0 56px 0 170px;
+   padding: 0 56px 0 169px;
 }
 .footer-content {
    color: #727070;
-   font: 300 12px OpenSans;
+   font: 12px 'open_sanslight';
    line-height: 1.2;
    text-align: center;
+}
+
+.sprite-locked {
+    width: 18px;
+    height: 21px;
+    background-position: -10px -10px;
+}
+
+.sprite-unlocked {
+    width: 25px;
+    height: 21px;
+    background-position: -10px -51px;
 }
