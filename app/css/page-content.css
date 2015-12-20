@@ -304,7 +304,7 @@
    height: auto;
    margin: 0 0 9px 0;
 }
-.contactForms-item-label {
+.contactForms-item-label, .modalWindow-addNewProject-label {
    font: 14px 'open_sansregular';
    display: block;
    width: 190px;
@@ -324,13 +324,14 @@
    width: 100%;
 }
 .contactForms-item-input,
-.contactForms-item-textarea {
+.contactForms-item-textarea, .modalWindow-addNewProject-input, .modalWindow-addNewProject-textarea {
    border: 1px solid #d6d5d3;
    -webkit-box-sizing: border-box;
            box-sizing: border-box;
-   background-color:  #fbfcfd;
-   background: -webkit-linear-gradient(90deg, rgba(233, 231, 231, 0.45) 0%, rgba(251, 249, 249, 0) 100%);
-   background: linear-gradient(0deg, rgba(233, 231, 231, 0.45) 0%, rgba(251, 249, 249, 0) 100%);
+   background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(255,255,255) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(247, 246, 245) 0%, rgb(255,255,255) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(255,255,255) 100%);
+  box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07),inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
            box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.35);
    width: 100%;
@@ -340,7 +341,7 @@
    border-radius: 4px;
    font: 11px 'open_sansregular';
 }
-.contactForms-item-textarea{
+.contactForms-item-textarea, .modalWindow-addNewProject-textarea{
    width: 100%;
    height: 182px;
    margin: 0;
@@ -348,7 +349,7 @@
    padding-top: 11px;
 }
 .contactForms-item-input:focus,
-.contactForms-item-textarea:focus{
+.contactForms-item-textarea:focus, .modalWindow-addNewProject-input:focus, .modalWindow-addNewProject-textarea:focus{
    border-color: #6FDCC1;
 }
 .contactForms-item-captcha {
@@ -381,7 +382,7 @@
    margin: 0 auto;
    width: 350px;
 }
-.contactForm-item-button {
+.contactForm-item-button, .add-button {
    min-width: 126px;
    max-width: 126px;
    height: auto;
@@ -393,14 +394,14 @@
    text-align: center;
    word-wrap: break-word;
 }
-.submit-button {
+.submit-button, .add-button {
    float: left;
    background: #4ABFA2;
    background: -webkit-linear-gradient(90deg, #43b796 0%, #80e8cb 100%);
    background: linear-gradient(0deg, #43b796 0%, #80e8cb 100%);
    color:  #1e7465;
 }
-.submit-button:hover{
+.submit-button:hover,  .add-button:hover{
    background: #3aa087;
    background: -webkit-linear-gradient(90deg, #3aa087 0%, #5fdcbd 100%);
    background: linear-gradient(0deg, #3aa087 0%, #5fdcbd 100%);
@@ -417,4 +418,80 @@
    background: #e9e6e4;
    background: -webkit-linear-gradient(90deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
    background: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
+}
+
+/*ПопАп окно добавления проекта*/
+#modalWindow-addNewProject {
+   display: none;
+   width: 364px;
+   position: fixed;
+   top: 49px;
+   left: 526px;
+}
+.modalWindow-header {
+   font: 12px 'open_sanslight';
+   color: #fff;
+   margin: 0 0 3px 0;
+   height: 19px;
+   line-height: 19px;
+   padding: 0 0 0 21px;
+}
+.modalWindow-body {
+   box-sizing: border-box;
+   width: 100%;
+   padding: 7px 20px 26px 20px;
+   border-radius: 5px;
+   border: 1px solid #acaaaa;
+   background-color: #f1f0ef;
+   background-origin: border-box;
+}
+.close-button {
+   display: block;
+   width: 14px;
+   height: 14px;
+   padding: 0;
+   margin: 0 0 -2px 0;
+   background: url(../images/X.png) no-repeat;
+   background-position: center center;
+   border: none;
+   position: relative;
+   left: 322px;
+}
+.add-button {
+   float: none;
+   position: relative;
+   left: 89px;
+   max-width: 125px;
+   min-width: 125px;
+   width: 125px;
+   height: auto;
+   margin: 0;
+}
+.modalWindow-addNewProject-label {
+   margin: 0 0 9px 0;
+}
+.form-group {
+   margin: 0 0 6px 0;
+}
+.modalWindow-addNewProject-textarea {
+   min-height: 111px;
+   height: auto;
+   margin: 0 0 3px 0;
+}
+.modalWindow-addNewProject-input-file {
+   display: none;
+}
+.modalWindow-addNewProject-input-fake {
+   float: left; 
+   margin: 10px 5px 0px 0px;
+   color: #98969b;
+   font: 11px "open_sansregular";
+}
+.modalWindow-addNewProject-input-img {
+   float: right;
+   width: 52px;
+   height: 39px;
+   background:url(../images/iCloud-down.png) no-repeat, linear-gradient(0deg, #EAE8E9 0%, #F9FAF9 100%);
+   background-position:center center, 0 0;
+   border-left: 1px solid #d6d5d3;  
 }
