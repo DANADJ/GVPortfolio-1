@@ -4,9 +4,9 @@ var myModul = (function () {
       _setUpListners();
    };
    
-   //Функция прослушивания событий
+   //Функции прослушивания событий
    var _setUpListners = function(){
-      $('#add-new-project').on('click', _showModalWindow);
+      $('#add-new-project').on('click', _showModalWindowAddNewProject);
    
       $('#modalWindow-addNewProject-label, .modalWindow-addNewProject-input-img').on('click', function(){
          $('#fileUpload').trigger('click');
@@ -20,8 +20,8 @@ var myModul = (function () {
       
    };
    
-   //Функция вывода модального окна
-   var _showModalWindow =  function(ev){
+   //Функция вывода модального окна длбавления проекта
+   var _showModalWindowAddNewProject =  function(ev){
       ev.preventDefault();
       var modalWindowAddNewProject = $('#modalWindow-addNewProject'),
           modalWindowAddNewProjectForm = modalWindowAddNewProject.find('#modalWindow-addNewProject-form');

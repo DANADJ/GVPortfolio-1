@@ -324,7 +324,8 @@
    width: 100%;
 }
 .contactForms-item-input,
-.contactForms-item-textarea, .modalWindow-addNewProject-input, .modalWindow-addNewProject-textarea {
+.contactForms-item-textarea, .modalWindow-addNewProject-input, .modalWindow-addNewProject-textarea,
+.modalWindow-autorization-label {
    border: 1px solid #d6d5d3;
    -webkit-box-sizing: border-box;
            box-sizing: border-box;
@@ -419,16 +420,16 @@
    background: -webkit-linear-gradient(90deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
    background: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
 }
-
-/*ПопАп окно добавления проекта*/
+/*ПопАп окно добавления проекта и окно авторизации*/
 #modalWindow-addNewProject {
    display: none;
    width: 364px;
-   position: fixed;
-   top: 49px;
-   left: 526px;
 }
-.modalWindow-header {
+#autorizationWindow {
+   margin: 0 auto;
+   width: 332px;
+}
+.modalWindow-header, .autorizationWindow-header {
    font: 12px 'open_sanslight';
    color: #fff;
    margin: 2px 0 1px 0;
@@ -436,7 +437,10 @@
    line-height: 19px;
    padding: 0 0 0 22px;
 }
-.modalWindow-body {
+.autorizationWindow-header {
+   color: #000;
+}
+.modalWindow-body, .autorizationWindow-body {
    box-sizing: border-box;
    width: 100%;
    padding: 6px 20px 26px 20px;
@@ -444,6 +448,9 @@
    border: 1px solid #acaaaa;
    background-color: #f1f0ef;
    background-origin: border-box;
+}
+.autorizationWindow-body {
+   padding: 39px 39px 26px 37px;
 }
 .close-button {
    display: block;
@@ -469,6 +476,10 @@
 }
 .modalWindow-addNewProject-label {
    margin: 0 0 9px 0;
+}
+.modalWindow-autorization-label {
+   display: block;
+   margin-bottom: 24px;
 }
 .form-group {
    margin: 0 0 6px 0;
@@ -523,4 +534,76 @@
 }
 .succes-mes {
    
+}
+/*Окно авторизации*/
+.modalWindow-autorization-label {
+   padding: 0px;
+}
+.modalWindow-autorization-label-img {
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+.modalWindow-autorization-label .first-img {
+   width: 43px;
+   height: 39px;
+}
+.modalWindow-autorization-label .mail-img {
+   background: url(../images/email-autorization.png) no-repeat 13px 13px;
+}
+.modalWindow-autorization-label .key-img {
+   background: url(../images/key-autorization.png) no-repeat 14px 12px;
+}
+.modalWindow-autorization-label .second-img {
+   width: 11px;
+   height: 40px;
+   background: url(../images/\).png) no-repeat center center;
+}
+.modalWindow-autorization-input {
+   display: block;
+   float: left;
+   border: none;
+   background: none;
+   width: 181px;
+   line-height: 39px;
+   height: 39px;
+   padding: 0 0 0 17px;
+   font: 12px "open_sanslight";
+}
+.modalWindow-autorization-button {
+   text-align: center;
+   margin: 0 0 13px 0;
+}
+.modalWindow-autorization-button .add-button {
+   position: static;
+   left: 0;
+   max-width: 152px;
+   width: 152px;
+}
+.modalWindow-autorization-labelForCheckbox {
+   display: block;
+   width: 100%;
+   height: 22px;
+   margin: -8px 0 18px 0; 
+}
+.modalWindow-autorization-checkbox {
+   position: absolute;
+   left: -10000px;
+}
+.fake-checkbox {
+   float: left;
+   width: 22px;
+   height: 22px;
+   margin: 0 0 0 -2px;
+   background: url(../images/checkbox.png) no-repeat;
+   background-position: -10px -51px;
+}
+.checbox-title {
+   float: left;
+   margin: 1px 0 0 8px;
+   color: #727070;
+   font: 14px "open_sansregular";
+}
+.modalWindow-autorization-checkbox:checked + .fake-checkbox {
+   background-position: -10px -10px;
 }
