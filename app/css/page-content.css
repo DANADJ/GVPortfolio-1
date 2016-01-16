@@ -536,6 +536,13 @@
    
 }
 /*Окно авторизации*/
+#autorizationWindow {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-top: -200px;
+   margin-left: -166px;
+}
 .modalWindow-autorization-label {
    padding: 0px;
 }
