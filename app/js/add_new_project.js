@@ -45,7 +45,9 @@ var myModul = (function () {
                            data: data //передаю ассоциативный массив с сохранёнными в нём данными из формы
                   }).fail(function(ans){
                                         console.log('Прблемы в PHP');
-                                        form.find('.server-mes').text('На сервере произошла ошибка.')
+                                        form.find('.error-mes .server-mes-content')
+                                            .text('На сервере произошла ошибка.');
+                                        form.find('.error-mes')
                                             .show();
                   });
       return result;
