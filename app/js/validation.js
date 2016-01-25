@@ -25,29 +25,29 @@ var validation = (function() {
                }
             }
          }
-      };
       //Инициализация тултипа
-   element.qtip({
-      content: {
-         text: function(){
-            return $(this).attr('qtip-content');
+      element.qtip({
+         content: {
+            text: function(){
+               return $(this).attr('qtip-content');
+            }
+         },
+         show: {
+            event: 'show'
+         },
+         hide: {
+            event: 'keydown hideTooltip'
+         },
+         position: position,
+         style: {
+            classes: 'qtip-mystyle qtip-rounded',
+            tip: {
+               height: 10,
+               width:16
+            }
          }
-      },
-      show: {
-         event: 'show'
-      },
-      hide: {
-         event: 'keydown hideTooltip'
-      },
-      position: position,
-      style: {
-         classes: 'qtip-mystyle qtip-rounded',
-         tip: {
-            height: 10,
-            width:16
-         }
-      }
-   }).trigger('show');
+      }).trigger('show');
+   };
    
    //Универсальная функция проверки поля формы
    var validateForm = function(form){
@@ -69,13 +69,13 @@ var validation = (function() {
       });
       
       return valid;
-   };
+   }
 
    //Возвращаем объект (публичные методы)
    return {
       init: init,
       validateForm: validateForm
-   };
+   }
    
 })();
 
