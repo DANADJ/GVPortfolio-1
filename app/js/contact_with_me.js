@@ -1,7 +1,21 @@
 var contact_with_me = (function(){
-   //Функция инициализации модуля
-   var init = function(){
-      _setUpListners();
+
+   //Функция ajax запроса для валидации формы
+   var _ajaxForm = function(form, url){
+      console.log('ajax запрос с проверкой.');
+      if(!validation.validateForm(form)){
+         return false;
+      };
+   };
+   
+   //Функция проверки формы при её отправке
+   var _submitForm = function(ev){
+      
+      ev.preventDefault();//Сброс стандартного поведения кнопки отправки даных формы
+      
+      var form = $(this),
+          url = 'php/contact_with_me.php',//путь к файлу обработчику
+          defObj = _ajaxForm(form, url);
    };
    
    //Функция прослушивания событий
@@ -9,22 +23,9 @@ var contact_with_me = (function(){
       $('#contactForms').on('submit', _submitForm);
    };
    
-   //Функция проверки формы при её отправке
-   var _submitForm = function(ev){
-      console.log('Функция проверки формы при её отправке.');
-      ev.preventDefault();
-      
-      var form = $(this),
-          url = 'contact_with_me.php',
-          defObj = _ajaxForm(form, url);
-   };
-   
-   //Функция ajax запроса
-   var _ajaxForm = function(form, url){
-      console.log('ajax запрос с проверкой.');
-      if(!validation.validateForm(form)){
-         return false;
-      };
+   //Функция инициализации модуля
+   var init = function(){
+      _setUpListners();
    };
    
    return {

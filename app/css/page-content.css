@@ -119,7 +119,6 @@
    content: " ";
    display: block;
    border-radius: 1px;
-   background-color: ;
    box-shadow: inset 0px 1px 1px 0px rgba(128, 128, 128, 0.29);
    width: 100%;
    height: 2px;
@@ -515,6 +514,7 @@
    box-sizing: border-box;
    width: 100%;
    border-radius: 4px;
+   margin: 8px 0px 6px 0px;
    padding: 3px 10px 5px 10px;
 }
 .server-mes-header {
@@ -530,10 +530,10 @@
 .error-mes {
    border: 1px solid rgb(203, 105, 69);
    background-color: rgba(203, 105, 69, 0.329);
-   margin: 8px 0px 6px 0px;
 }
 .succes-mes {
-   
+   border: 1px solid rgb(203, 105, 69);
+   background-color: rgba(203, 105, 69, 0.329);
 }
 /*Окно авторизации*/
 #autorizationWindow {

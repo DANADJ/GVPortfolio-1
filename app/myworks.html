@@ -157,24 +157,27 @@
                      <h4 class="server-mes-header">Ошибка!</h4>
                      <p class="server-mes-content">Невозможно добавить проект.</p>
                   </div>
-                  <div class="server-mes succes-mes"></div>
+                  <div class="server-mes succes-mes">
+                     <h4 class="server-mes-header">Ура!</h4>
+                     <p class="server-mes-content">Проект успешно добавлен.</p>
+                  </div>
                   <div class="form-group">
                      <label for="projectName" class="modalWindow-addNewProject-label">Название проекта</label>
-                     <input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Вы не ввели название" class="modalWindow-addNewProject-input">
+                     <input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left" class="modalWindow-addNewProject-input">
                   </div>
                   <div class="form-group clearfix">
                         <span id="modalWindow-addNewProject-label" class="modalWindow-addNewProject-label">Картинка проекта</span>
-                           <input name="projectImg" class="modalWindow-addNewProject-input modalWindow-addNewProject-input-fake" placeholder="Загрузите изображение">
+                           <input name="projectImg" class="modalWindow-addNewProject-input modalWindow-addNewProject-input-fake" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left">
                            <div class="modalWindow-addNewProject-input-img"></div>
                         <input id="fileUpload" type="file"  class="modalWindow-addNewProject-input-file">
                   </div>
                   <div class="form-group">
                      <label for="projectURL" class="modalWindow-addNewProject-label">URL проекта</label>
-                     <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Вы не ввели ссылку" class="modalWindow-addNewProject-input">
+                     <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left"class="modalWindow-addNewProject-input">
                   </div>
                   <div class="form-group">
                      <label for="projectDescription" class="modalWindow-addNewProject-label">Описание</label>
-                     <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" qtip-content="Вы не ввели название" class="modalWindow-addNewProject-textarea"></textarea>
+                     <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" class="modalWindow-addNewProject-textarea" qtip-content="Напиши пару слов о проекте!" qtip-position="left"></textarea>
                   </div>
                   <button type="submit" name="add-button" value="Добавить" class="add-button">Добавить</button>
                </form>
@@ -189,7 +192,7 @@
             <span class="footer-content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
         </div><!--Конец Conteiner-->
     </footer>
-    <script src="bower/jquery/jquery.js"></script>
+    <script src="bower/jquery/dist/jquery.js"></script>
     <script src="bower/bPopup/jquery.bpopup.js"></script>
     <script src="bower/qtip2/jquery.qtip.js"></script>
     <script src="js/validation.js"></script>

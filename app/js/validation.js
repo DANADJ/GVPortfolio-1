@@ -1,3 +1,4 @@
+//Модуль валидации и вывода ТУЛЛТИПов
 var validation = (function() {
    //Функция инициализации модуля
    var init = function(){
@@ -10,7 +11,7 @@ var validation = (function() {
    
    //Функция создания тултипов
    var _createQtip = function(element, position){
-      //позиция тултипа
+      //Позиция тултипа
       if(position === 'right'){
          position = {
             my: 'left center',
@@ -40,10 +41,10 @@ var validation = (function() {
          },
          position: position,
          style: {
-            classes: 'qtip-mystyle qtip-rounded',
+            classes: 'qtip-red qtip-rounded qtip-shadow',
             tip: {
-               height: 10,
-               width:16
+               height: 7,
+               width:9
             }
          }
       }).trigger('show');
@@ -55,7 +56,7 @@ var validation = (function() {
       console.log ('Модуль валидации проверяет форму.')
       
       var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
-       valid = true;
+          valid = true;
       
       $.each(elements, function(index, val){
          var element = $(val),
