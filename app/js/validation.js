@@ -1,13 +1,5 @@
 //Модуль валидации и вывода ТУЛЛТИПов
 var validation = (function() {
-   //Функция инициализации модуля
-   var init = function(){
-      _setUpListners();
-   };
-   
-   //Функции прослушивания событий
-   var _setUpListners = function(){
-   };
    
    //Функция создания тултипов
    var _createQtip = function(element, position){
@@ -37,7 +29,7 @@ var validation = (function() {
             event: 'show'
          },
          hide: {
-            event: 'keydown hideTooltip'
+            event: 'keydown'
          },
          position: position,
          style: {
@@ -52,8 +44,6 @@ var validation = (function() {
    
    //Универсальная функция проверки поля формы
    var validateForm = function(form){
-      
-      console.log ('Модуль валидации проверяет форму.')
       
       var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
           valid = true;
@@ -70,14 +60,11 @@ var validation = (function() {
       });
       
       return valid;
-   }
+   };
 
    //Возвращаем объект (публичные методы)
    return {
-      init: init,
       validateForm: validateForm
-   }
+   };
    
 })();
-
-validation.init();

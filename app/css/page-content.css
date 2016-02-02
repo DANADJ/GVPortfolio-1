@@ -419,16 +419,17 @@
    background: -webkit-linear-gradient(90deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
    background: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
 }
-/*ПопАп окно добавления проекта и окно авторизации*/
+
+/*ПопАп окна добавления проекта и авторизации*/
 #modalWindow-addNewProject {
    display: none;
    width: 364px;
 }
-#autorizationWindow {
-   margin: 0 auto;
+#modalWindow-autorization {
+   display: none;
    width: 332px;
 }
-.modalWindow-header, .autorizationWindow-header {
+.modalWindow-header {
    font: 12px 'open_sanslight';
    color: #fff;
    margin: 2px 0 1px 0;
@@ -436,19 +437,18 @@
    line-height: 19px;
    padding: 0 0 0 22px;
 }
-.autorizationWindow-header {
-   color: #000;
-}
-.modalWindow-body, .autorizationWindow-body {
+.modalWindow-body {
    box-sizing: border-box;
    width: 100%;
-   padding: 6px 20px 26px 20px;
    border-radius: 5px;
    border: 1px solid #acaaaa;
    background-color: #f1f0ef;
    background-origin: border-box;
 }
-.autorizationWindow-body {
+#modalWindow-addNewProject .modalWindow-body {
+   padding: 6px 20px 26px 20px;
+}
+#modalWindow-autorization .modalWindow-body {
    padding: 39px 39px 26px 37px;
 }
 .close-button {
@@ -519,30 +519,28 @@
 }
 .server-mes-header {
    font: 16px "open_sanssemibold";
-   color: #cb6945;
    margin: 0;
 }
 .server-mes-content {
    font: 14px "open_sansregular";
-   color: #cb6945;
    margin: 0;
 }
 .error-mes {
    border: 1px solid rgb(203, 105, 69);
    background-color: rgba(203, 105, 69, 0.329);
 }
+.error-mes .server-mes-header, .error-mes .server-mes-content {
+   color: #cb6945;
+}
 .succes-mes {
-   border: 1px solid rgb(203, 105, 69);
-   background-color: rgba(203, 105, 69, 0.329);
+   border: 1px solid #49bb7b;
+   background-color: #bce1cb;
 }
+.succes-mes .server-mes-header, .succes-mes .server-mes-content {
+   color: #49bb7b;
+}
+
 /*Окно авторизации*/
-#autorizationWindow {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   margin-top: -200px;
-   margin-left: -166px;
-}
 .modalWindow-autorization-label {
    padding: 0px;
 }

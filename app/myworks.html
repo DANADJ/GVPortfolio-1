@@ -2,20 +2,22 @@
 <html lang="ru-RU">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="WEB-developer Гордиенко Валентин Валентинович">
-    <title>Сайт портфолио - Гордиенко Валентин - Мои работы</title>
-    <link rel="stylesheet" href="bower/normalize-css/normalize.css">
-    <link rel="stylesheet" href="fonts/stylesheet.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/side-nav-contact-menu.css">
-    <link rel="stylesheet" href="css/page-content.css">
-    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css">
-    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="WEB-developer Гордиенко Валентин Валентинович">
+   <title>Сайт портфолио - Гордиенко Валентин</title>
+   <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+   <!--bower:css-->
+   <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
+   <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+   <!--endbower-->
+   <link rel="stylesheet" href="fonts/stylesheet.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/header.css">
+   <link rel="stylesheet" href="css/side-nav-contact-menu.css">
+   <link rel="stylesheet" href="css/page-content.css">
+   <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -70,7 +72,7 @@
                         </li>
                         <li class="contact-menu-list-item">
                             <div class="contact-menu-list-item-icon skype-link">
-                                <a href="skype:Гордиенко Валентин" class="link-without-decorations contact-menu-list-item-link">Гордиенко Валентин</a>
+                                <a href="skype:Гордиенко Валентин" class="link-without-decorations contact-menu-list-item-link">danadjsaintpetersburg</a>
                             </div>
                         </li>
                     </ol>
@@ -136,7 +138,7 @@
                                 <p class="myWorks-item-content">Landing page по продажи франшизы снежного бизнеса.</p>
                             </li>
                             <li class="myWorks-item">
-                                <a href="" id="add-new-project" class="link-without-decorations add-new-project">
+                                <a href="" id="add-new-project" class="link-without-decorations add-new-project modalWindow-start">
                                     <div class="add-new-project-img"></div>
                                     <p class="add-new-project-content">Добавить проект</p>
                                 </a>
@@ -145,17 +147,16 @@
                     </div>
                 </article>
             </main>
-        </section>
-         <!--ПопАп окно Добавления проекта        -->
-        <section id="modalWindow">
-        <div id="modalWindow-addNewProject">
+         </section>
+         <!--ПопАп окно добавления проекта        -->
+         <section id="modalWindow-addNewProject">
             <h1 class="modalWindow-header">Добавление проекта</h1>
             <div class="modalWindow-body">
                <form id="modalWindow-addNewProject-form" role="form" class="form">
                   <button type="button" class="close-button b-close"></button>
                   <div class="server-mes error-mes">
                      <h4 class="server-mes-header">Ошибка!</h4>
-                     <p class="server-mes-content">Невозможно добавить проект.</p>
+                     <p class="server-mes-content">На сервере произошла ошибка.</p>
                   </div>
                   <div class="server-mes succes-mes">
                      <h4 class="server-mes-header">Ура!</h4>
@@ -173,7 +174,7 @@
                   </div>
                   <div class="form-group">
                      <label for="projectURL" class="modalWindow-addNewProject-label">URL проекта</label>
-                     <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left"class="modalWindow-addNewProject-input">
+                     <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="modalWindow-addNewProject-input">
                   </div>
                   <div class="form-group">
                      <label for="projectDescription" class="modalWindow-addNewProject-label">Описание</label>
@@ -182,21 +183,57 @@
                   <button type="submit" name="add-button" value="Добавить" class="add-button">Добавить</button>
                </form>
             </div>
-        </div>
-        </section>
-        <div class="empty"></div>
-    </div>
-    <footer class="footer">
-        <div class="conteiner footer-width">
-            <span class="login"><a href="autorization.html" class="footer-login">вход</a></span>
+         </section>
+         <!--ПопАп окно авторизации-->
+         <section id="modalWindow-autorization">
+            <h1 class="modalWindow-header">Авторизируйтесь</h1>
+            <div class="modalWindow-body">
+               <form id="modalWindow-autorization-form" role="form" class="form">
+                  <div class="server-mes error-mes">
+                     <h4 class="server-mes-header">Неудача!</h4>
+                     <p class="server-mes-content">Неверные логин/пароль.</p>
+                  </div>
+                  <div class="server-mes succes-mes">
+                     <h4 class="server-mes-header">Успешная авторизация!</h4>
+                     <p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
+                  </div>
+                  <div class="form-group">
+                     <label class="modalWindow-autorization-label">
+                        <div class="modalWindow-autorization-label-img first-img mail-img"></div>
+                        <div class="modalWindow-autorization-label-img second-img"></div>
+                        <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input" qtip-content="Требуется адрес электронной почты" qtip-position="right">
+                     </label>
+                     <label for="loginPassword" class="modalWindow-autorization-label">
+                        <div class="modalWindow-autorization-label-img first-img key-img"></div>
+                        <div class="modalWindow-autorization-label-img second-img"></div>
+                        <input id="loginPassword" name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input" qtip-content="Здесь нужен пароль" qtip-position="right">
+                     </label>
+                     <label for="rememberMeCheckbox" class="modalWindow-autorization-labelForCheckbox">
+                        <input id="rememberMeCheckbox" name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
+                        <div class="fake-checkbox"></div>
+                        <div class="checbox-title">Запомнить меня?</div>
+                     </label>
+                  </div>
+                  <div class="modalWindow-autorization-button">
+                     <button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
+                  </div>
+               </form>
+            </div>
+         </section>
+         <div class="empty"></div>
+      </div>
+      <footer class="footer">
+         <div class="conteiner footer-width">
+            <span class="login modalWindow-start" id="login"><a href="#" class="footer-login">вход</a></span>
             <span class="footer-content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
-        </div><!--Конец Conteiner-->
-    </footer>
-    <script src="bower/jquery/dist/jquery.js"></script>
-    <script src="bower/bPopup/jquery.bpopup.js"></script>
-    <script src="bower/qtip2/jquery.qtip.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/add_new_project.js"></script>
+         </div><!--Конец Conteiner-->
+      </footer>
+   <!--bower:js-->
+   <script src="bower/jquery/dist/jquery.js"></script>
+   <script src="bower/bPopup/jquery.bpopup.js"></script>
+   <script src="bower/qtip2/jquery.qtip.js"></script>
+   <!--endbower-->
+   <script src="js/main.js"></script>
+   <script src="js/validation.js"></script>
 </body>
-
 </html>

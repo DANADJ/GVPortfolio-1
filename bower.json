@@ -22,5 +22,16 @@
     "bPopup": "bpopup#~0.11.0",
     "qtip2": "~2.2.1",
     "normalize-css": "normalize.css#~3.0.3"
-  }
+  },
+   "overrides": {
+      "qtip2": {
+         "main": [
+            "jquery.qtip.css",
+            "jquery.qtip.js"
+         ],
+         "dependencies": {
+            "jquery": ">=1.6.0"
+         }
+   }
+}
 }
