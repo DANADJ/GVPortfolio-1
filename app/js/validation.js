@@ -29,7 +29,7 @@ var validation = (function() {
             event: 'show'
          },
          hide: {
-            event: 'keydown'
+            event: 'keydown click dbclick'
          },
          position: position,
          style: {
@@ -45,16 +45,19 @@ var validation = (function() {
    //Универсальная функция проверки поля формы
    var validateForm = function(form){
       
-      var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
+      var inputElements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
+          qtipBlocks = form.find('.qtipBlock'),
           valid = true;
       
-      $.each(elements, function(index, val){
+      $.each(inputElements, function(index, val){
          var element = $(val),
+             indexQtip = index,
+             qtipBlock = $(qtipBlocks[indexQtip]),
              val = element.val(),
-             pos = element.attr('qtip-position');
+             position = qtipBlock.attr('qtip-position');
          
          if (val.length === 0){
-            _createQtip(element, pos);
+            _createQtip(qtipBlock, position);
             valid = false;
          }
       });

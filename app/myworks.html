@@ -164,21 +164,21 @@
                   </div>
                   <div class="form-group">
                      <label for="projectName" class="modalWindow-addNewProject-label">Название проекта</label>
-                     <input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left" class="modalWindow-addNewProject-input">
+                     <input id="projectName" name="projectName" type="text" placeholder="Введите название" class="modalWindow-addNewProject-input qtipBlock" qtip-content="Проект без названия?!" qtip-position="left">
                   </div>
                   <div class="form-group clearfix">
                         <span id="modalWindow-addNewProject-label" class="modalWindow-addNewProject-label">Картинка проекта</span>
-                           <input name="projectImg" class="modalWindow-addNewProject-input modalWindow-addNewProject-input-fake" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left">
+                           <input name="projectImg" class="modalWindow-addNewProject-input modalWindow-addNewProject-input-fake qtipBlock" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left">
                            <div class="modalWindow-addNewProject-input-img"></div>
                         <input id="fileUpload" type="file"  class="modalWindow-addNewProject-input-file">
                   </div>
                   <div class="form-group">
                      <label for="projectURL" class="modalWindow-addNewProject-label">URL проекта</label>
-                     <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="modalWindow-addNewProject-input">
+                     <input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="modalWindow-addNewProject-input qtipBlock">
                   </div>
                   <div class="form-group">
                      <label for="projectDescription" class="modalWindow-addNewProject-label">Описание</label>
-                     <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" class="modalWindow-addNewProject-textarea" qtip-content="Напиши пару слов о проекте!" qtip-position="left"></textarea>
+                     <textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" class="modalWindow-addNewProject-textarea qtipBlock" qtip-content="Напиши пару слов о проекте!" qtip-position="left"></textarea>
                   </div>
                   <button type="submit" name="add-button" value="Добавить" class="add-button">Добавить</button>
                </form>
@@ -198,15 +198,15 @@
                      <p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
                   </div>
                   <div class="form-group">
-                     <label class="modalWindow-autorization-label">
+                     <label class="modalWindow-autorization-label qtipBlock" qtip-content="Требуется адрес электронной почты" qtip-position="left">
                         <div class="modalWindow-autorization-label-img first-img mail-img"></div>
                         <div class="modalWindow-autorization-label-img second-img"></div>
-                        <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input" qtip-content="Требуется адрес электронной почты" qtip-position="right">
+                        <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input">
                      </label>
-                     <label for="loginPassword" class="modalWindow-autorization-label">
+                     <label class="modalWindow-autorization-label qtipBlock" qtip-content="Здесь нужен пароль" qtip-position="left">
                         <div class="modalWindow-autorization-label-img first-img key-img"></div>
                         <div class="modalWindow-autorization-label-img second-img"></div>
-                        <input id="loginPassword" name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input" qtip-content="Здесь нужен пароль" qtip-position="right">
+                        <input name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input">
                      </label>
                      <label for="rememberMeCheckbox" class="modalWindow-autorization-labelForCheckbox">
                         <input id="rememberMeCheckbox" name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">

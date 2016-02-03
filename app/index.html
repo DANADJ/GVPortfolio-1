@@ -203,41 +203,39 @@
             </main>
          </section>
          <!--ПопАп окно авторизации-->
-         <section id="modalWindow">
-            <div id="modalWindow-autorization">
-               <h1 class="modalWindow-header">Авторизируйтесь</h1>
-               <div class="modalWindow-body">
-                  <form id="modalWindow-autorization-form" role="form" class="form">
-                     <div class="server-mes error-mes">
-                        <h4 class="server-mes-header">Неудача!</h4>
-                        <p class="server-mes-content">Неверные логин/пароль.</p>
-                     </div>
-                     <div class="server-mes succes-mes">
-                        <h4 class="server-mes-header">Успешная авторизация!</h4>
-                        <p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
-                     </div>
-                     <div class="form-group">
-                        <label class="modalWindow-autorization-label">
-                           <div class="modalWindow-autorization-label-img first-img mail-img"></div>
-                           <div class="modalWindow-autorization-label-img second-img"></div>
-                           <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input" qtip-content="Требуется адрес электронной почты" qtip-position="right">
-                        </label>
-                        <label for="loginPassword" class="modalWindow-autorization-label">
-                           <div class="modalWindow-autorization-label-img first-img key-img"></div>
-                           <div class="modalWindow-autorization-label-img second-img"></div>
-                           <input id="loginPassword" name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input" qtip-content="Здесь нужен пароль" qtip-position="right">
-                        </label>
-                        <label for="rememberMeCheckbox" class="modalWindow-autorization-labelForCheckbox">
-                           <input id="rememberMeCheckbox" name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
-                           <div class="fake-checkbox"></div>
-                           <div class="checbox-title">Запомнить меня?</div>
-                        </label>
-                     </div>
-                     <div class="modalWindow-autorization-button">
-                        <button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
-                     </div>
-                  </form>
-               </div>
+         <section id="modalWindow-autorization">
+            <h1 class="modalWindow-header">Авторизируйтесь</h1>
+            <div class="modalWindow-body">
+               <form id="modalWindow-autorization-form" role="form" class="form">
+                  <div class="server-mes error-mes">
+                     <h4 class="server-mes-header">Неудача!</h4>
+                     <p class="server-mes-content">Неверные логин/пароль.</p>
+                  </div>
+                  <div class="server-mes succes-mes">
+                     <h4 class="server-mes-header">Успешная авторизация!</h4>
+                     <p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
+                  </div>
+                  <div class="form-group">
+                     <label class="modalWindow-autorization-label qtipBlock" qtip-content="Требуется адрес электронной почты" qtip-position="left">
+                        <div class="modalWindow-autorization-label-img first-img mail-img"></div>
+                        <div class="modalWindow-autorization-label-img second-img"></div>
+                        <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input">
+                     </label>
+                     <label class="modalWindow-autorization-label qtipBlock" qtip-content="Здесь нужен пароль" qtip-position="left">
+                        <div class="modalWindow-autorization-label-img first-img key-img"></div>
+                        <div class="modalWindow-autorization-label-img second-img"></div>
+                        <input name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input">
+                     </label>
+                     <label for="rememberMeCheckbox" class="modalWindow-autorization-labelForCheckbox">
+                        <input id="rememberMeCheckbox" name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
+                        <div class="fake-checkbox"></div>
+                        <div class="checbox-title">Запомнить меня?</div>
+                     </label>
+                  </div>
+                  <div class="modalWindow-autorization-button">
+                     <button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
+                  </div>
+               </form>
             </div>
          </section>
          <div class="empty"></div>

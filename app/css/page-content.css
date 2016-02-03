@@ -421,13 +421,17 @@
 }
 
 /*ПопАп окна добавления проекта и авторизации*/
-#modalWindow-addNewProject {
+#modalWindow-addNewProject, #modalWindow-autorization, #modalWindow-sendMessage  {
    display: none;
+}
+#modalWindow-addNewProject {
    width: 364px;
 }
 #modalWindow-autorization {
-   display: none;
    width: 332px;
+}
+#modalWindow-sendMessage {
+   width: 345px;
 }
 .modalWindow-header {
    font: 12px 'open_sanslight';
@@ -450,6 +454,9 @@
 }
 #modalWindow-autorization .modalWindow-body {
    padding: 39px 39px 26px 37px;
+}
+#modalWindow-sendMessage .modalWindow-body {
+   padding: 39px 39px 26px 39px;
 }
 .close-button {
    display: block;

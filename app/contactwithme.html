@@ -72,19 +72,19 @@
                            <label for="email" class="contactForms-item-label contactForms-item-right">Email</label>
                         </div>
                         <div class="contactForms-item">
-                           <input class="contactForms-item-input" type="text" name="name" placeholder="Как к вам обращаться" id="name" pattern="^[А-Яа-яЁё\s]+$" qtip-content="Может быть всё-таки по имени?" qtip-position="left">
+                           <input class="contactForms-item-input qtipBlock" type="text" name="name" placeholder="Как к вам обращаться" id="name" pattern="^[А-Яа-яЁё\s]+$" qtip-content="Может быть всё-таки по имени?" qtip-position="left">
                         </div>
                         <div class="contactForms-item">
-                           <input class="contactForms-item-input contactForms-item-right" type="email" name="email" placeholder="Куда мне писать" id="email" qtip-content="Куда мне вам ответить?" qtip-position="right">
+                           <input class="contactForms-item-input contactForms-item-right qtipBlock" type="email" name="email" placeholder="Куда мне писать" id="email" qtip-content="Куда мне вам ответить?" qtip-position="right">
                         </div>
                         <div  class="contactForms-item contactForms-item-100perc">
                            <label for="message"  class="contactForms-item-label">Cообщение</label>
-                           <textarea id="message" class="contactForms-item-textarea" name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left"></textarea>
+                           <textarea id="message" class="contactForms-item-textarea qtipBlock" name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left"></textarea>
                         </div>
                         <div  class="contactForms-item-captcha">
                            <label for="captcha" class="contactForms-item-label">Введите код, указанный на картинке</label>
                               <div class="contactForms-item contactForms-item-captcha-img-conteiner"><img class="contactForms-item-captcha-img" src="images/captcha.png" alt="captcha"></div>
-                              <input id="captcha" class="contactForms-item-input contactForms-item-input-code" type="text" name="captcha" placeholder="Введите код" qtip-content="Вы же не робот?" qtip-position="right">
+                              <input id="captcha" class="contactForms-item-input contactForms-item-input-code qtipBlock" type="text" name="captcha" placeholder="Введите код" qtip-content="Вы же не робот?" qtip-position="right">
                         </div>
                         <div  class="contactForm-item-button-list clearfix">  
                            <input class="contactForm-item-button submit-button" type="submit" value="Отправить">
@@ -97,46 +97,45 @@
             </main>
          </section>
          <!--ПопАп окно авторизации-->
-         <section id="modalWindow">
-            <div id="modalWindow-autorization">
-               <h1 class="modalWindow-header">Авторизируйтесь</h1>
-               <div class="modalWindow-body">
-                  <form id="modalWindow-autorization-form" role="form" class="form">
-                     <div class="server-mes error-mes">
-                        <h4 class="server-mes-header">Неудача!</h4>
-                        <p class="server-mes-content">Неверные логин/пароль.</p>
-                     </div>
-                     <div class="server-mes succes-mes">
-                        <h4 class="server-mes-header">Успешная авторизация!</h4>
-                        <p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
-                     </div>
-                     <div class="form-group">
-                        <label class="modalWindow-autorization-label">
-                           <div class="modalWindow-autorization-label-img first-img mail-img"></div>
-                           <div class="modalWindow-autorization-label-img second-img"></div>
-                           <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input" qtip-content="Требуется адрес электронной почты" qtip-position="right">
-                        </label>
-                        <label for="loginPassword" class="modalWindow-autorization-label">
-                           <div class="modalWindow-autorization-label-img first-img key-img"></div>
-                           <div class="modalWindow-autorization-label-img second-img"></div>
-                           <input id="loginPassword" name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input" qtip-content="Здесь нужен пароль" qtip-position="right">
-                        </label>
-                        <label for="rememberMeCheckbox" class="modalWindow-autorization-labelForCheckbox">
-                           <input id="rememberMeCheckbox" name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
-                           <div class="fake-checkbox"></div>
-                           <div class="checbox-title">Запомнить меня?</div>
-                        </label>
-                     </div>
-                     <div class="modalWindow-autorization-button">
-                        <button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
-                     </div>
-                  </form>
-               </div>
-            </div>
-         </section>
-         <section id="modalWindow-sendMessage">
+         <section id="modalWindow-autorization">
+            <h1 class="modalWindow-header">Авторизируйтесь</h1>
             <div class="modalWindow-body">
                <form id="modalWindow-autorization-form" role="form" class="form">
+                  <div class="server-mes error-mes">
+                     <h4 class="server-mes-header">Неудача!</h4>
+                     <p class="server-mes-content">Неверные логин/пароль.</p>
+                  </div>
+                  <div class="server-mes succes-mes">
+                     <h4 class="server-mes-header">Успешная авторизация!</h4>
+                     <p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
+                  </div>
+                  <div class="form-group">
+                     <label class="modalWindow-autorization-label qtipBlock" qtip-content="Требуется адрес электронной почты" qtip-position="left">
+                        <div class="modalWindow-autorization-label-img first-img mail-img"></div>
+                        <div class="modalWindow-autorization-label-img second-img"></div>
+                        <input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input">
+                     </label>
+                     <label class="modalWindow-autorization-label qtipBlock" qtip-content="Здесь нужен пароль" qtip-position="left">
+                        <div class="modalWindow-autorization-label-img first-img key-img"></div>
+                        <div class="modalWindow-autorization-label-img second-img"></div>
+                        <input name="password" type="text" placeholder="Введите пароль"  class="modalWindow-autorization-input">
+                     </label>
+                     <label for="rememberMeCheckbox" class="modalWindow-autorization-labelForCheckbox">
+                        <input id="rememberMeCheckbox" name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
+                        <div class="fake-checkbox"></div>
+                        <div class="checbox-title">Запомнить меня?</div>
+                     </label>
+                  </div>
+                  <div class="modalWindow-autorization-button">
+                     <button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
+                  </div>
+               </form>
+            </div>
+         </section>
+         <!--ПопАп окно статуса отправки сообщения-->
+         <section id="modalWindow-sendMessage">
+            <div class="modalWindow-body">
+               <div id="modalWindow-sendMessage-block" class="form">
                   <div class="server-mes error-mes">
                      <h4 class="server-mes-header">Упс! Проблемка!</h4>
                      <p class="server-mes-content">Не удалось отправить письмо :_(</p>
@@ -145,7 +144,7 @@
                      <h4 class="server-mes-header">Письмо успешно отправлено!</h4>
                      <p class="server-mes-content">Скоро я вам отвечу.</p>
                   </div>
-               </form>
+               </div>
             </div>      
          </section>
          <div class="empty"></div>
