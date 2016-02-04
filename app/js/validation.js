@@ -45,7 +45,7 @@ var validation = (function() {
    //Универсальная функция проверки поля формы
    var validateForm = function(form){
       
-      var inputElements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
+      var inputElements = form.find('input, textarea').not('input[type="file"], input[type="hidden"], input[type="checkbox"]'),
           qtipBlocks = form.find('.qtipBlock'),
           valid = true;
       
@@ -53,15 +53,14 @@ var validation = (function() {
          var element = $(val),
              indexQtip = index,
              qtipBlock = $(qtipBlocks[indexQtip]),
-             val = element.val(),
+             value = element.val(),
              position = qtipBlock.attr('qtip-position');
          
-         if (val.length === 0){
+         if (value.length === 0 || value.length === ''){
             _createQtip(qtipBlock, position);
             valid = false;
          }
       });
-      
       return valid;
    };
 
