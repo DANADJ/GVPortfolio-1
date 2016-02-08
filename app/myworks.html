@@ -8,17 +8,19 @@
    <meta name="author" content="WEB-developer Гордиенко Валентин Валентинович">
    <title>Сайт портфолио - Гордиенко Валентин</title>
    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
-   <!--bower:css-->
-   <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
-   <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
-   <!--endbower-->
-    <!--build:css css/main.css-->
+    <!--build:css css/vendor.min.css-->
+    <!--bower:css-->
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
+    <link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+    <!--endbower-->
+    <!--endbuild-->
+    <!--build:css css/main.min.css-->
     <link rel="stylesheet" href="fonts/stylesheet.css">
-   <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/header.css">
-   <link rel="stylesheet" href="css/side-nav-contact-menu.css">
-   <link rel="stylesheet" href="css/page-content.css">
-   <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/side-nav-contact-menu.css">
+    <link rel="stylesheet" href="css/page-content.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!--endbuild-->
 </head>
 
@@ -185,7 +187,7 @@
                   <button type="submit" name="add-button" value="Добавить" class="add-button">Добавить</button>
                </form>
             </div>
-         </section>
+          </section>
          <!--ПопАп окно авторизации-->
          <section id="modalWindow-autorization">
             <h1 class="modalWindow-header">Авторизируйтесь</h1>
@@ -230,14 +232,17 @@
             <span class="footer-content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span>
          </div><!--Конец Conteiner-->
       </footer>
-   <!--bower:js-->
-   <script src="bower/jquery/dist/jquery.js"></script>
-   <script src="bower/bPopup/jquery.bpopup.js"></script>
-   <script src="bower/qtip2/jquery.qtip.js"></script>
-   <!--endbower-->
-    <!--build:js js/main.js-->
-   <script src="js/main.js"></script>
-   <script src="js/validation.js"></script>
+    <!--build:js js/vendor.min.js-->
+    <!--bower:js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/bPopup/jquery.bpopup.js"></script>
+    <script src="bower/qtip2/jquery.qtip.js"></script>
+    <!--endbower-->
+    <!--endbuild-->
+    <!--build:js js/main.min.js-->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+    <!--endbuild-->
     <!--endbuild-->
 </body>
 </html>

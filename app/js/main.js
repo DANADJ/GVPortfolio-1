@@ -129,7 +129,7 @@ var mainJS = (function () {
                $('#fileUpload').trigger('click');
           });
                
-          //Прослушка выбора файла на поле загрузки файла и ваставка его значения в фэйковое поле загрузки картинки
+          //Прослушка выбора файла на поле загрузки файла и вставка его значения в фэйковое поле загрузки картинки
           $('#fileUpload').on('change', function () {
                $('.modalWindow-addNewProject-input-fake').val($(this).val()).qtip('destroy', true);
           });
