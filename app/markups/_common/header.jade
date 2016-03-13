@@ -1,0 +1,10 @@
+//Шапка
+header.header
+	.conteiner.header-width
+		a(href="./" class="header-logo")
+			img(src="images/logo.png" class="header-logo-img" alt="Логотип LoftSchool")
+		ul.social-icon-menu
+			- var socials = {git:'https://github.com/danadj',vk:'https://vk.com/danadj'};
+			each val, index in socials
+				li.social-icon-menu-item
+					a(href="#{val}" class="social-icon #{index}" target="_blank")

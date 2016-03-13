@@ -1,73 +1,78 @@
 .header {
-   background-image: url(../images/header_bg.png);
-   height: 90px;
-   border-bottom: 7px solid #ffffff;
-   box-shadow: 0px 0px 3px #676767;
+    background-image: url(../images/header_bg.png);
+    height: 90px;
+    border-bottom: 7px solid #ffffff;
+    box-shadow: 0 0 3px #676767;
 }
+
 .header-logo {
-   display: inline-block;
-   width: 95px;
-   padding: 10px 0 0 6px;
+    display: inline-block;
+    width: 95px;
+    padding: 10px 0 0 6px;
 }
+
 .header-logo-img {
-   width: 100%;
+    width: 100%;
 }
-.social-icon-menu, .social-icon-menu-item  {
-   float: right;
+
+.social-icon-menu, .social-icon-menu-item {
+    float: right;
 }
+
 .social-icon-menu-item {
-   list-style: none;
-   padding: 9px 0 0 10px;
+    list-style: none;
+    padding: 9px 0 0 10px;
 }
+
 .social-icon {
-   display: inline-block;
+    display: inline-block;
 }
+
 .fb {
-   width: 43px;
-   height: 40px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -4px -2px;
+    width: 43px;
+    height: 40px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -4px 1px;
 }
+
 .fb:hover {
-   width: 43px;
-   height: 40px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -4px -50px;
-   
+    width: 43px;
+    height: 40px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -4px -53px;
+
 }
+
 .vk {
-   width: 41px;
-   height: 40px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -5px -300px;
+    width: 41px;
+    height: 40px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -5px -303px;
 }
+
 .vk:hover {
-   width: 41px;
-   height: 40px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -6px -350px;
+    width: 41px;
+    height: 40px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -6px -353px;
 }
+
 .tvit {
-   width: 43px;
-   height: 41px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -5px -200px;
+    width: 43px;
+    height: 41px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -5px -203px;
 }
+
 .tvit:hover {
-   width: 43px;
-   height: 41px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -5px -250px;
+    width: 43px;
+    height: 41px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -5px -253px;
 }
+
 .git {
-   width: 39px;
-   height: 40px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -6px -100px;
+    width: 39px;
+    height: 40px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -6px -103px;
 }
+
 .git:hover {
-   width: 39px;
-   height: 40px;
-   background: url(../images/social-icon-sprite.png) no-repeat;
-   background-position: -7px -150px;
+    width: 39px;
+    height: 40px;
+    background: url(../images/social-icon-sprite.png) no-repeat  -7px -153px;
 }

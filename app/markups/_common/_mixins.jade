@@ -1,0 +1,29 @@
+include _variables
+//- СайдБар
+mixin sidebar(activePage)
+	// СайдБар
+	section.side
+		ul.nav-menu
+			each item in sideBarNav
+				if item.pageNumber !== activePage
+					li.nav-menu-item
+						a.link-without-decorations.nav-menu-item-link.nav-menu-item-link(href="#{item.pageLink}") #{item.pageContent}
+				else
+					li.nav-menu-item
+						a.link-without-decorations.nav-menu-item-link.nav-menu-item-link-activePage(href="#{item.pageLink}") #{item.pageContent}
+		.contact-menu
+			h2.contact-menu-header
+				|Контакты
+			ol.contact-menu-list
+				li.contact-menu-list-item
+					.contact-menu-list-item-icon.mail-link
+						a(href="mailto:danadj@yandex.ru" class="link-without-decorations contact-menu-list-item-link")
+							|danadj@yandex.ru
+				li.contact-menu-list-item
+					.contact-menu-list-item-icon.celphone-link
+						a(href="tel:+79522775951" class="link-without-decorations contact-menu-list-item-link")
+							|+7952 277 59 51
+				li.contact-menu-list-item
+					.contact-menu-list-item-icon.skype-link
+						a(href="skype:danadjsaintpetersburg" class="link-without-decorations contact-menu-list-item-link")
+							|danadjsaintpetersburg

@@ -1,0 +1,26 @@
+//ПопАп окно авторизаци
+section#modalWindow-autorization
+	h1.modalWindow-header Авторизируйтесь
+	.modalWindow-body
+		form.form(id="modalWindow-autorization-form")
+			.server-mes.error-mes
+				h2.server-mes-header Неудача!
+				p.server-mes-content Неверные логин/пароль.
+			.server-mes.succes-mes
+				h2.server-mes-header Успешная авторизация!
+				p.server-mes-content Добро пожаловать. Хозяяяин.
+			.form-group
+				div.modalWindow-autorization-label.qtipBlock(qtip-content="Требуется адрес электронной почты" qtip-position="left")
+					.modalWindow-autorization-label-img.first-img.mail-img
+					.modalWindow-autorization-label-img.second-img
+					input.modalWindow-autorization-input(name="admin-name" type="text" placeholder="Введите Email")
+				div.modalWindow-autorization-label.qtipBlock(qtip-content="Здесь нужен пароль" qtip-position="left")
+					.modalWindow-autorization-label-img.first-img.key-img
+					.modalWindow-autorization-label-img.second-img
+					input.modalWindow-autorization-input(name="password" type="text" placeholder="Введите пароль")
+				div.modalWindow-autorization-labelForCheckbox
+					input.modalWindow-autorization-checkbox(name="projectName" type="checkbox")
+					.fake-checkbox
+					.checbox-title Запомнить меня?
+			.modalWindow-autorization-button
+				button.add-button(type="submit" name="add-button" value="Добавить") Войти

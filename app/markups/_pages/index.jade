@@ -1,0 +1,45 @@
+extends ../main
+block title
+	|Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.
+block sidebar
+	+ sidebar(1)
+block content
+	article.page-content-item
+		h2.page-content-item-header Основная информация
+		.page-content-item-conteiner
+			.main-info-myPhoto
+				img.main-info-myPhoto-img(src="images/myphoto.png" alt="Гордиенко Валентин - Фото")
+			ol.main-info-list.page-content-list
+				each point in about_me
+					if (point.header !== 'Ключевые навыки')
+						li.main-info-list-item
+							span.list-item-name #{point.header}:
+							span.list-item-content #{point.value}
+					else
+						li.main-info-list-item
+							span.list-item-name #{point.header}:
+							ol.main-info-list-item-content-my-skills
+								each item in point.value
+									li.main-info-list-item-content-my-skills-skill #{item}
+	article.page-content-item
+		h2.page-content-item-header Опыт работы
+		.page-content-item-conteiner
+			ol.experienceEducation-list.page-content-list
+				each point in work
+					li.experience-list-item
+						.experience-list-item-icon
+						.experience-list-item-content
+							p.list-item-name.experience-education-name
+								span.list-item-experience-point-organization #{point.organization}
+								span.list-item-experience-point-position #{point.position}
+							p.list-item-content.experience-education-period #{point.period}
+	article.page-content-item
+		h2.page-content-item-header Образованние
+		.page-content-item-conteiner
+			ol.page-content-list
+				each point in education
+					li.education-list-item
+						.education-list-item-icon.middle-education
+						.education-list-item-content
+							p.list-item-name.experience-education-name #{point.header}
+							p.list-item-content.experience-education-period #{point.value}

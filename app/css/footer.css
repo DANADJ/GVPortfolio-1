@@ -1,51 +1,56 @@
 /*Прибитие футера к низу экрана*/
 .empty {
-   position: relative;
-   height: 60px;
+    position: relative;
+    height: 60px;
 }
+
 /*Оформление футера*/
 .footer {
-   position: relative;
-   margin-top: -60px;
-   height: 60px;
-   background-color: #dedcdc;
-   line-height: 58px;
+    position: relative;
+    margin-top: -60px;
+    height: 60px;
+    background-color: #dedcdc;
+    line-height: 58px;
 }
+
 .footer-login {
-   padding: 0 56px 0 169px;
-   color: #9b9b9b;
-   font: 14px 'open_sansbold';
-   text-decoration: none;
-   display: inline-block;
-   font-weight: bold;
-   line-height: 1.2;
-   text-align: left;
-   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.85);
+    padding: 0 56px 0 169px;
+    color: #9b9b9b;
+    font: 14px 'open_sansbold';
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.2;
+    text-align: left;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
 }
+
 .footer-login::before {
-   content: "";
-   display: inline-block;
-   width: 25px;
-   height: 21px;
-   background: url(../images/locked-unlocked-sprite.png);
-   background-position: -10px -10px;
-   position: relative;
-   right: 2px;
-   top: 6px;
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 21px;
+    background: url(../images/locked-unlocked-sprite.png) -10px -10px;
+    position: relative;
+    right: 2px;
+    top: 6px;
 }
+
 .login:hover .footer-login::before {
-   background-position: -10px -51px;
-   right: 4px;
-   top: 5px;
+    background-position: -10px -51px;
+    right: 4px;
+    top: 5px;
 }
+
 .login:hover .footer-login {
-   padding: 0 56px 0 169px;
+    padding: 0 56px 0 169px;
 }
+
 .footer-content {
-   color: #727070;
-   font: 12px 'open_sanslight';
-   line-height: 1.2;
-   text-align: center;
+    color: #727070;
+    font: 12px 'open_sanslight';
+    line-height: 1.2;
+    text-align: center;
 }
 
 .sprite-locked {

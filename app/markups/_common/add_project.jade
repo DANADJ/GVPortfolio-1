@@ -1,0 +1,27 @@
+// ПопАп окно добавления проекта
+section#modalWindow-addNewProject
+	h1.modalWindow-header Добавление проекта
+	.modalWindow-body
+		form#modalWindow-addNewProject-form.form(role="form")
+			button.close-button.b-close(type="button")
+			.server-mes.error-mes
+				h4.server-mes-header Ошибка!
+				p.server-mes-content На сервере произошла ошибка.
+			.server-mes.succes-mes
+				h4.server-mes-header Ура!
+				p.server-mes-content Проект успешно добавлен.
+			.form-group
+				label.modalWindow-addNewProject-label(for="projectName") Название проекта
+				input#projectName.modalWindow-addNewProject-input.qtipBlock(name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left")
+			.form-group.clearfix
+				span#modalWindow-addNewProject-label.modalWindow-addNewProject-label Картинка проекта
+				input.modalWindow-addNewProject-input.modalWindow-addNewProject-input-fake.qtipBlock(name="projectImg" type="text" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left")
+				.modalWindow-addNewProject-input-img
+				input#fileUpload.modalWindow-addNewProject-input-file(type="file")
+			.form-group
+				label.modalWindow-addNewProject-label(for="projectURL") URL проекта
+				input#projectURL.modalWindow-addNewProject-input.qtipBlock(name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left")
+			.form-group
+				label.modalWindow-addNewProject-label(for="projectDescription") Описание
+				textarea#projectDescription.modalWindow-addNewProject-textarea.qtipBlock(name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left")
+			button.add-button(type="submit" name="add-button" value="Добавить") Добавить

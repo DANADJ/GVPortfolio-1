@@ -1,0 +1,30 @@
+extends ../main
+block title
+	|Контакты. Web разработчик фрилансер Гордиенко Валенти.
+block sidebar
+	+ sidebar(3)
+block content
+	article.page-content-item
+		h1.page-content-item-header У вас интересный проект? Напишите мне
+		.page-content-item-conteiner
+			form#contactForms.contactForms(action="#")
+				.contactForms-item-nameEmail-label
+					label.contactForms-item-label(for="name") Имя
+					label.contactForms-item-label.contactForms-item-right(for="email") Email
+				.contactForms-item
+					input#name.contactForms-item-input.qtipBlock(type="text" name="name" placeholder="Как к вам обращаться" qtip-content="Может быть всё-таки по имени?" qtip-position="left")
+				.contactForms-item
+					input#email.contactForms-item-input.contactForms-item-right.qtipBlock(type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right")
+				.contactForms-item.contactForms-item-100perc
+					label(for="message").contactForms-item-label Cообщение
+					textarea#message.contactForms-item-textarea.qtipBlock(name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left")
+				.contactForms-item-captcha
+					label.contactForms-item-label(for="captcha") Введите код, указанный на картинке
+					.contactForms-item.contactForms-item-captcha-img-conteiner
+						img.contactForms-item-captcha-img(src="images/captcha.png" alt="captcha")
+					input#captcha.contactForms-item-input.contactForms-item-input-code.qtipBlock(type="text" name="captcha" placeholder="Введите код" qtip-content="Вы же не робот?" qtip-position="right")
+				.contactForm-item-button-list.clearfix
+					input.contactForm-item-button.submit-button(type="submit" value="Отправить")
+					input.contactForm-item-button.clear-button(type="reset" value="Очистить")
+block modal_windows
+	include ../_common/contact_form

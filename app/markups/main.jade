@@ -1,0 +1,47 @@
+include _common/_mixins
+include _common/_variables
+doctype html
+html(lang='ru-RU')
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="author" content="WEB-developer Гордиенко Валентин Валентинович")
+		title
+			block title
+		link(rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16")
+		// build:css css/vendor.min.css
+		// bower:css
+		// endbower
+		// endbuild
+		// build:css css/main.min.css
+		link(rel="stylesheet" href="fonts/stylesheet.css")
+		link(rel="stylesheet" href="css/main.css")
+		link(rel="stylesheet" href="css/header.css")
+		link(rel="stylesheet" href="css/side-nav-contact-menu.css")
+		link(rel="stylesheet" href="css/page-content.css")
+		link(rel="stylesheet" href="css/footer.css")
+		//endbuild
+	body
+		<!--[if lt IE8]>
+		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
+		<![endif]-->
+		.wrapper
+			include _common/header
+			section.page.conteiner.page-width.clearfix
+				block sidebar
+				//Основной контент страницы
+				main.page-content
+					block content
+			block modal_windows
+			include _common/login
+			.empty
+			include _common/footer
+			//build:js js/vendor.min.js
+			//bower:js
+			//endbower
+			//endbuild
+			//build:js js/main.min.js
+			script(src="js/main.js")
+			script(src="js/validation.js")
+			//endbuild
