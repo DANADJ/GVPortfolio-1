@@ -58,13 +58,13 @@ gulp.task('jade', function () {
 
 //Задача слежки за bower и вставки нужных скриптов в html
 gulp.task('wiredep', ['jade'], function () {
-	gulp.src('app/*.html')
+	return gulp.src('app/*.html')
 		.pipe(wiredep())
 		.pipe(gulp.dest('app'))
 });
 
 //Задача объединения, минификации css и js файлов, и переноса их вместе с html в директорию dist
-gulp.task('useref', function () {
+gulp.task('useref', ['wiredep'], function () {
 	return gulp.src('app/*.html')
 		.pipe(useref())
 		.pipe(gulpif('*.js', uglify()))
@@ -74,7 +74,7 @@ gulp.task('useref', function () {
 
 //Задача переноса шрифтов
 gulp.task('move_fonts', function () {
-	gulp.src('app/fonts/*')
+	return gulp.src('app/fonts/*')
 		.pipe(filter(['*.eot', '*.svt', '*.ttf', '*.woff', '*.woff2']))
 		.pipe(gulp.dest('dist/fonts'))
 });
@@ -91,7 +91,7 @@ gulp.task('imagemin', function () {
 
 //Задача переноса php файлов
 gulp.task('move_php', function () {
-	gulp.src('app/**/*.php')
+	return gulp.src('app/**/*.php')
 		.pipe(gulp.dest('dist'))
 });
 
