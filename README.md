@@ -4,4 +4,6 @@
 2. cd WEB-DEVELOPMENT
 3. bower i
 4. npm i
-5. gulp
+5. composer install
+6. modernizr -c modernizr-config.json
+7. gulp

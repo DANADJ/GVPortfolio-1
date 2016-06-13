@@ -1,4 +1,5 @@
-var jade_path = 'app/markups/_pages/*.jade';
+var jade_path = 'app/markups/_pages/*.jade',
+	modernizrSettings = require('./modernizr-config.json');
 
 //Инициализация плагинов
 var gulp = require('gulp'),
@@ -12,7 +13,8 @@ var gulp = require('gulp'),
 	csso = require('gulp-csso'),//модуль минификации css
 	filter = require('gulp-filter'),//модуль фильтраци
 	imagemin = require('gulp-imagemin'),//модуль сжатия картинок
-	jade = require('gulp-jade');//модуль компиляции jade
+	jade = require('gulp-jade'),//модуль компиляции jade
+	modernizr = require('customizr');//модуль компиляции modernizr.js
 
 //Задача запуска сервера
 gulp.task('server', function () {
@@ -36,6 +38,9 @@ gulp.task('watch', function () {
 	gulp.watch('app/markups/**/*.jade').on('change', function () {
 		gulp.start('wiredep')
 	});
+	gulp.watch('modernizr-config.json').on('change', function() {
+		gulp.start('modernizr')
+	})
 });
 
 ////Задача слежки за файлами jade
@@ -87,6 +92,11 @@ gulp.task('imagemin', function () {
 			interlaced: true
 		}))
 		.pipe(gulp.dest('dist/images'))
+});
+
+//Задача компиляции файла Modernizr.json
+gulp.task('modernizr', function() {
+	modernizr(modernizrSettings)
 });
 
 //Задача переноса php файлов

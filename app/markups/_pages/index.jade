@@ -1,6 +1,8 @@
 extends ../main
 block description
 	meta(name="description" content="Основная информация о Web разработчике Гордиенко Валентине.")
+block keywords
+	meta(name="keywords" content="")
 block title
 	|Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.
 block sidebar
@@ -16,7 +18,7 @@ block content
 					if (point.header !== 'Ключевые навыки')
 						li.main-info-list-item
 							span.list-item-name #{point.header}:
-							span.list-item-content #{point.value}
+							span.list-item-content  #{point.value}
 					else
 						li.main-info-list-item
 							span.list-item-name #{point.header}:
@@ -24,24 +26,17 @@ block content
 								each item in point.value
 									li.main-info-list-item-content-my-skills-skill #{item}
 	article.page-content-item
-		h2.page-content-item-header Опыт работы
-		.page-content-item-conteiner
-			ol.experienceEducation-list.page-content-list
-				each point in work
-					li.experience-list-item
-						.experience-list-item-icon
-						.experience-list-item-content
-							p.list-item-name.experience-education-name
-								span.list-item-experience-point-organization #{point.organization}
-								span.list-item-experience-point-position #{point.position}
-							p.list-item-content.experience-education-period #{point.period}
-	article.page-content-item
-		h2.page-content-item-header Образованние
+		h2.page-content-item-header Образование
 		.page-content-item-conteiner
 			ol.page-content-list
 				each point in education
 					li.education-list-item
 						.education-list-item-icon.middle-education
 						.education-list-item-content
-							p.list-item-name.experience-education-name #{point.header}
+							if (!point.link)
+								p.list-item-name.experience-education-name #{point.header}
+							else
+								p.list-item-name.experience-education-name
+									a.experience-education-name__link(href="#{point.link}")
+										|#{point.header}
 							p.list-item-content.experience-education-period #{point.value}

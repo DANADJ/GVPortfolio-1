@@ -4,13 +4,20 @@ doctype html
 html(lang='ru-RU')
 	head
 		meta(charset='UTF-8')
+		//- Указание браузеру использовать самую последнюю версию
 		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		//- Указание использовать для сайта ширину экрана
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		meta(name="author" content="WEB-developer Гордиенко Валентин Валентинович")
+		//SEO
 		block description
+		block keywords
+		meta(name="author" content="WEB-developer Valentin Gordienko")
+		//Заголовок страницы
 		title
 			block title
+		//FAVICONS
 		link(rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16")
+		//CSS STYLESHEETS
 		// build:css css/vendor.min.css
 		// bower:css
 		// endbower
@@ -23,9 +30,11 @@ html(lang='ru-RU')
 		link(rel="stylesheet" href="css/page-content.css")
 		link(rel="stylesheet" href="css/footer.css")
 		//endbuild
+		//START SCRIPTS AFTER LOUD PAGE
 		//build:js js/ga.min.js
 		script(src="js/ga.js")
 		//endbuild
+		script(src="js/modernizr.min.js")
 	body
 		// Yandex.Metrika counter
 		//build:js js/yam.min.js
@@ -48,12 +57,12 @@ html(lang='ru-RU')
 			block modal_windows
 			include _common/login
 			.empty
-			include _common/footer
-			//build:js js/vendor.min.js
-			//bower:js
-			//endbower
-			//endbuild
-			//build:js js/main.min.js
-			script(src="js/main.js")
-			script(src="js/validation.js")
-			//endbuild
+		include _common/footer
+		//build:js js/vendor.min.js
+		//bower:js
+		//endbower
+		//endbuild
+		//build:js js/main.min.js
+		script(src="js/main.js")
+		script(src="js/validation.js")
+		//endbuild

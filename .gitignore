@@ -2,3 +2,5 @@ node_modules
 dist
 app/bower
 .idea
+/vendor/
+/composer.lock

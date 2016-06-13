@@ -1,0 +1,15 @@
+{
+  "cache" : true,
+  "dest" : "app/js/modernizr.min.js",
+  "options": [
+	"html5shiv",
+	"setClasses"
+  ],
+  "feature-detects": [
+	"test/input",
+	"test/css/animations",
+	"test/css/borderradius",
+	"test/css/gradients"
+  ],
+  "uglify": true
+}

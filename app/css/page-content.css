@@ -45,7 +45,7 @@
     margin: 7px 0 0 0;
 }
 
-.list-item-name {
+.list-item-name, .experience-education-name__link {
     font: 14px 'open_sanssemibold';
     color: #727070;
     line-height: 1.2;
