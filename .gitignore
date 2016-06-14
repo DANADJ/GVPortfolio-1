@@ -1,6 +1,8 @@
-node_modules
-dist
 app/bower
 .idea
-/vendor/
-/composer.lock
+dist
+node_modules
+vendor
+.remotesettings
+composer.lock
+app/config.php
