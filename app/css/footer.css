@@ -10,57 +10,52 @@
     margin-top: -60px;
     height: 60px;
     background-color: #dedcdc;
-    line-height: 58px;
 }
 
-.footer-login {
-    padding: 0 56px 0 169px;
+.footer__login {
+	float: left;
+	margin: 15px 5px 15px 270px;
+}
+
+.login {
+	width: 73px;
+	height: 30px;
+	margin: 0;
+	padding: 0 5px;
+}
+
+.login__link {
+    padding: 0 0 0 10px;
     color: #9b9b9b;
     font: 14px 'open_sansbold';
     text-decoration: none;
-    display: inline-block;
     font-weight: bold;
-    line-height: 1.2;
-    text-align: left;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
 }
 
-.footer-login::before {
+.login__link:before {
     content: "";
     display: inline-block;
-    width: 25px;
+    width: 16px;
     height: 21px;
     background: url(../images/locked-unlocked-sprite.png) -10px -10px;
     position: relative;
-    right: 2px;
-    top: 6px;
-}
-
-.login:hover .footer-login::before {
-    background-position: -10px -51px;
-    right: 4px;
+	right: 10px;
     top: 5px;
 }
 
-.login:hover .footer-login {
-    padding: 0 56px 0 169px;
+.login:hover .login__link:before {
+    background-position: -10px -51px;
+	width: 24px;
+    right: 4px;
+    top: 4px;
+}
+.login:hover .login__link {
+	padding-left: 2px;
 }
 
-.footer-content {
+.footer__content {
     color: #727070;
     font: 12px 'open_sanslight';
-    line-height: 1.2;
-    text-align: center;
-}
-
-.sprite-locked {
-    width: 18px;
-    height: 21px;
-    background-position: -10px -10px;
-}
-
-.sprite-unlocked {
-    width: 25px;
-    height: 21px;
-    background-position: -10px -51px;
+    line-height: 60px;
 }

@@ -1,7 +1,7 @@
 include _variables
-//- СайдБар
+//- Sidebar
 mixin sidebar(activePage)
-	// СайдБар
+	// Sidebar
 	section.side
 		ul.nav-menu
 			each item in sideBarNav
@@ -27,3 +27,25 @@ mixin sidebar(activePage)
 					.contact-menu-list-item-icon.skype-link
 						a(href="skype:danadjsaintpetersburg" class="link-without-decorations contact-menu-list-item-link")
 							|danadjsaintpetersburg
+//-Logo
+mixin logo(wrapperClass)
+	// Logo
+	div(class="#{wrapperClass}")
+		a.logo(href="./")
+			img.logo__img(src="img/logo.png" alt="Логотип LoftSchool")
+
+//-Menu social icon
+mixin menu-social-icons(wrapperClass)
+	//Menu social icon
+	div(class="#{wrapperClass}")
+		ul.menu-social-icons
+			each val, index in socials
+				li.menu-social-icons__item
+					a(href="#{val}" class="social-icon #{index}" target="_blank")
+
+//-Login
+mixin login(wrapperClass)
+	//Login
+	div(class="#{wrapperClass}")
+		div.login#login
+			a.login__link(href="#") вход
