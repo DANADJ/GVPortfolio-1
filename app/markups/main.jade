@@ -12,7 +12,7 @@ html(lang='ru-RU')
 		block description
 		block keywords
 		meta(name="author" content="WEB-developer Valentin Gordienko")
-		//Заголовок страницы
+		//Title
 		title
 			block title
 		//FAVICONS
@@ -43,20 +43,20 @@ html(lang='ru-RU')
 		noscript
 			div
 				img(src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt="")
-		// /Yandex.Metrika counter
+		//Yandex.Metrika counter
 		<!--[if lt IE8]>
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
-		.wrapper
+		div.wrapper
 			include _common/header
 			section.page.conteiner.page-width.clearfix
+				//SIDEBAR
 				block sidebar
-				//Основной контент страницы
+				//Main content of page
 				main.page-content
 					block content
 			block modal_windows
-			include _common/login
-			.empty
+			div.empty
 		include _common/footer
 		//build:js js/vendor.min.js
 		//bower:js

@@ -4,10 +4,12 @@ block description
 block title
 	|Примеры работ. Портфолио. Web разработчик фрилансер Гордиенко Валентин.
 block sidebar
-	+ sidebar(2)
+	section.sidebar
+		+menu-navigation(2,"side-bar__item")
+		+menu-contacts("side-bar__item")
 block content
 	article.page-content-item
-		h1.page-content-item-header Мои работы
+		h2.page-content-item-header Мои работы
 		.page-content-item-conteiner
 			ol.page-content-list
 				each point in portfolio

@@ -1,38 +1,34 @@
 include _variables
-//- Sidebar
-mixin sidebar(activePage)
-	// Sidebar
-	section.side
-		ul.nav-menu
-			each item in sideBarNav
-				if item.pageNumber !== activePage
-					li.nav-menu-item
-						a.link-without-decorations.nav-menu-item-link.nav-menu-item-link(href="#{item.pageLink}") #{item.pageContent}
-				else
-					li.nav-menu-item
-						a.link-without-decorations.nav-menu-item-link.nav-menu-item-link-activePage(href="#{item.pageLink}") #{item.pageContent}
-		.contact-menu
-			h2.contact-menu-header
-				|Контакты
-			ol.contact-menu-list
-				li.contact-menu-list-item
-					.contact-menu-list-item-icon.mail-link
-						a(href="mailto:danadj@yandex.ru" class="link-without-decorations contact-menu-list-item-link")
-							|danadj@yandex.ru
-				li.contact-menu-list-item
-					.contact-menu-list-item-icon.celphone-link
-						a(href="tel:+79522775951" class="link-without-decorations contact-menu-list-item-link")
-							|+7952 277 59 51
-				li.contact-menu-list-item
-					.contact-menu-list-item-icon.skype-link
-						a(href="skype:danadjsaintpetersburg" class="link-without-decorations contact-menu-list-item-link")
-							|danadjsaintpetersburg
+
+//- Menu navigation
+mixin menu-navigation(activePage, wrapperClass)
+	// Menu navigation
+	ul.menu-navigation(class="#{wrapperClass}")
+		each item in navigation
+			if item.pageNumber !== activePage
+				li.menu-navigation__item
+					a.link-without-decorations.menu-navigation__link(href="#{item.pageLink}") #{item.pageContent}
+			else
+				li.menu-navigation__item
+					a.link-without-decorations.menu-navigation__link.menu-navigation__active-page(href="#{item.pageLink}") #{item.pageContent}
+
+//- Menu contacts
+mixin menu-contacts(wrapperClass)
+	// Menu contacts
+	div.menu-contacts(class="#{wrapperClass}")
+		h2.menu-contacts__header Контакты
+		ol.menu-contacts__list
+			each point in contacts
+				li.menu-contacts__item
+					div.menu-contacts__item-icon(class="menu-contacts__#{point.name}-img")
+						a.link-without-decorations.menu-contacts__item-link(href="#{point.href}") #{point.content}
+
 //-Logo
 mixin logo(wrapperClass)
 	// Logo
 	div(class="#{wrapperClass}")
 		a.logo(href="./")
-			img.logo__img(src="img/logo.png" alt="Логотип LoftSchool")
+			img.logo__img(src="images/logo.png" alt="Логотип LoftSchool")
 
 //-Menu social icon
 mixin menu-social-icons(wrapperClass)
@@ -41,7 +37,7 @@ mixin menu-social-icons(wrapperClass)
 		ul.menu-social-icons
 			each val, index in socials
 				li.menu-social-icons__item
-					a(href="#{val}" class="social-icon #{index}" target="_blank")
+					a(href="#{val}" class="social-icon #{index}" target="_blank") #{index}
 
 //-Login
 mixin login(wrapperClass)

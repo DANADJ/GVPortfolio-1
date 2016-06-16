@@ -1,0 +1,18 @@
+article.page-content-item
+	h2.page-content-item__header Образование
+	div.page-content-item__conteiner.clearfix
+		ol.education.page-content-list
+			each point in education
+				if (!point.link)
+					li.education__item
+						div.education__item-icon(class="#{point.type}")
+						div.education__item-content
+							p.item-name.education__item-name #{point.header}
+							p.item-content.education__item-period #{point.value}
+				else
+					li.education__item
+						div.education__item-icon(class="#{point.type}")
+						div.education__item-content
+							p.education__item-name
+								a.item-name(href="#{point.link}") #{point.header}
+							p.item-content.education__item-period #{point.value}

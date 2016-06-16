@@ -1,7 +1,7 @@
 //- Массив "Навыков"
 - var skills = ['html5','jade','css3','scss','javascript','jquery','git','gulp','php','MySQL','xml', 'SEO'];
 
-//-Массив "Cоциальных иконок"
+//- Массив "Cоциальных иконок"
 - var socials = {vk:'https://vk.com/danadj', git:'https://github.com/danadj', fb:'https://www.facebook.com/danadjuss'};
 
 //- Массив "Данных обо мне"
@@ -14,17 +14,23 @@
 
 //- Массив "Образование"
 - var education = [];
-- education.push({header:'Высшее образование. СПбГЛТА, факультет ЛИФ', value:'2006 - 2011'});
-- education.push({header:'Курс LoftSchool.com "Проф-ное программирование на PHP"', value:'02.09.2015 - 02.11.2015', link:'http://loftschool.com/certificate/IE34861946059'});
-- education.push({header:'Курс LoftSchool.com "Комплексное обучение WEB-разработке"', value:'16.11.2015 - 01.02.2016', link:'http://loftschool.com/certificate/VG95645504165'});
-- education.push({header:'Курс LoftSchool.com "SEO для всех"', value:'23.02.2016 - 24.03.2016', link:'http://loftschool.com/certificate/UW3447459684'});
+- education.push({type:'higher-education',header:'Высшее образование. СПбГЛТА, факультет ЛИФ', value:'2006 - 2011'});
+- education.push({type:'course',header:'Курс LoftSchool.com "Проф-ное программирование на PHP"', value:'02.09.2015 - 02.11.2015',link:'http://loftschool.com/certificate/IE34861946059'});
+- education.push({type:'course',header:'Курс LoftSchool.com "Комплексное обучение WEB-разработке"', value:'16.11.2015 - 01.02.2016', link:'http://loftschool.com/certificate/VG95645504165'});
+- education.push({type:'course',header:'Курс LoftSchool.com "SEO для всех"', value:'23.02.2016 - 24.03.2016', link:'http://loftschool.com/certificate/UW3447459684'});
 
 //- Маcсив "Портфолио"
 - var portfolio = [];
 - portfolio.push({link:'http://v5.master-css.com/Valentin007', image:'html5&css3-cours.png', alt:'Шпаргалка по html и css', name:'Шпаргалка по HTML5 и CSS3' , desc:'Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Пока ещё не закончил.'});
 
-//- Массив "Сайдбар-Навигация"
-- var sideBarNav = [];
-- sideBarNav.push({pageNumber:1, pageLink:'./',pageContent:'Обо мне'});
-- sideBarNav.push({pageNumber:2, pageLink:'./myworks.html',pageContent:'Мои Работы'});
-- sideBarNav.push({pageNumber:3, pageLink:'./contactwithme.html',pageContent:'Обратная связь'});
+//- Массив "Навигация"
+- var navigation = [];
+- navigation.push({pageNumber:1, pageLink:'./',pageContent:'Обо мне'});
+- navigation.push({pageNumber:2, pageLink:'./myworks.html',pageContent:'Мои Работы'});
+- navigation.push({pageNumber:3, pageLink:'./contactwithme.html',pageContent:'Обратная связь'});
+
+//- Массив "Контакты"
+- var contacts = [];
+- contacts.push({name:"mail", href:"mailto:danadj@yandex.ru", content:"danadj@yandex.ru"});
+- contacts.push({name:"celphone", href:"tel:+79522775951", content:"+7952 277 59 51"});
+- contacts.push({name:"skype", href:"skype:danadjsaintpetersburg", content:"danadjsaintpetersburg"});

@@ -8,7 +8,7 @@
 		<meta name="description" content="Основная информация о Web разработчике Гордиенко Валентине.">
 		<meta name="keywords" content="">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
-		<!--Заголовок страницы-->
+		<!--Title-->
 		<title>Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.</title>
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
@@ -41,102 +41,110 @@
 		<noscript>
 			<div><img src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt=""></div>
 		</noscript>
-		<!-- /Yandex.Metrika counter--><!--[if lt IE8]>
+		<!--Yandex.Metrika counter--><!--[if lt IE8]>
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		<div class="wrapper">
-			<!--Шапка-->
+			<!--Header-->
 			<header class="header">
-				<div class="conteiner header-width"><a href="./" class="header-logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="header-logo-img"></a>
-					<ul class="social-icon-menu">
-						<li class="social-icon-menu-item"><a href="https://github.com/danadj" target="_blank" class="social-icon git"></a></li>
-						<li class="social-icon-menu-item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk"></a></li>
-					</ul>
+				<div class="conteiner header__width">
+					<!-- Logo-->
+					<div class="header__logo"><a href="./" class="logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="logo__img"/></a></div>
+					<!--Menu social icon-->
+					<div class="header__menu-social-icons">
+						<ul class="menu-social-icons">
+							<li class="menu-social-icons__item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk">vk</a></li>
+							<li class="menu-social-icons__item"><a href="https://github.com/danadj" target="_blank" class="social-icon git">git</a></li>
+							<li class="menu-social-icons__item"><a href="https://www.facebook.com/danadjuss" target="_blank" class="social-icon fb">fb</a></li>
+						</ul>
+					</div>
 				</div>
 			</header>
 			<section class="page conteiner page-width clearfix">
-				<!-- СайдБар-->
-				<section class="side">
-					<ul class="nav-menu">
-						<li class="nav-menu-item"><a href="./" class="link-without-decorations nav-menu-item-link nav-menu-item-link-activePage">Обо мне</a></li>
-						<li class="nav-menu-item"><a href="./myworks.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link">Мои Работы</a></li>
-						<li class="nav-menu-item"><a href="./contactwithme.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link">Обратная связь</a></li>
+				<!--SIDEBAR-->
+				<section class="sidebar">
+					<!-- Menu navigation-->
+					<ul class="menu-navigation sidebar__item">
+						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link menu-navigation__active-page">Обо мне</a></li>
+						<li class="menu-navigation__item"><a href="./myworks.html" class="link-without-decorations menu-navigation__link">Мои Работы</a></li>
+						<li class="menu-navigation__item"><a href="./contactwithme.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
 					</ul>
-					<div class="contact-menu">
-						<h2 class="contact-menu-header">Контакты</h2>
-						<ol class="contact-menu-list">
-							<li class="contact-menu-list-item">
-								<div class="contact-menu-list-item-icon mail-link"><a href="mailto:danadj@yandex.ru" class="link-without-decorations contact-menu-list-item-link">danadj@yandex.ru</a></div>
+					<!-- Menu contacts-->
+					<div class="menu-contacts sidebar__item">
+						<h2 class="menu-contacts__header">Контакты</h2>
+						<ol class="menu-contacts__list">
+							<li class="menu-contacts__item">
+								<div class="menu-contacts__item-icon menu-contacts__mail-img"><a href="mailto:danadj@yandex.ru" class="link-without-decorations menu-contacts__item-link">danadj@yandex.ru</a></div>
 							</li>
-							<li class="contact-menu-list-item">
-								<div class="contact-menu-list-item-icon celphone-link"><a href="tel:+79522775951" class="link-without-decorations contact-menu-list-item-link">+7952 277 59 51</a></div>
+							<li class="menu-contacts__item">
+								<div class="menu-contacts__item-icon menu-contacts__celphone-img"><a href="tel:+79522775951" class="link-without-decorations menu-contacts__item-link">+7952 277 59 51</a></div>
 							</li>
-							<li class="contact-menu-list-item">
-								<div class="contact-menu-list-item-icon skype-link"><a href="skype:danadjsaintpetersburg" class="link-without-decorations contact-menu-list-item-link">danadjsaintpetersburg</a></div>
+							<li class="menu-contacts__item">
+								<div class="menu-contacts__item-icon menu-contacts__skype-img"><a href="skype:danadjsaintpetersburg" class="link-without-decorations menu-contacts__item-link">danadjsaintpetersburg</a></div>
 							</li>
 						</ol>
 					</div>
 				</section>
-				<!--Основной контент страницы-->
+				<!--Main content of page-->
 				<main class="page-content">
 					<article class="page-content-item">
-						<h2 class="page-content-item-header">Основная информация</h2>
-						<div class="page-content-item-conteiner">
-							<div class="main-info-myPhoto"><img src="images/myphoto.png" alt="Гордиенко Валентин - Фото" class="main-info-myPhoto-img"></div>
-							<ol class="main-info-list page-content-list">
-								<li class="main-info-list-item"><span class="list-item-name">Меня зовут:</span><span class="list-item-content"> Гордиенко Валентин</span></li>
-								<li class="main-info-list-item"><span class="list-item-name">Мой возраст:</span><span class="list-item-content"> 30 лет</span></li>
-								<li class="main-info-list-item"><span class="list-item-name">Мой город:</span><span class="list-item-content"> Санкт-Петербург, Россия</span></li>
-								<li class="main-info-list-item"><span class="list-item-name">Моя специализация:</span><span class="list-item-content"> FRONTEND разработчик</span></li>
-								<li class="main-info-list-item"><span class="list-item-name">Ключевые навыки:</span>
-									<ol class="main-info-list-item-content-my-skills">
-										<li class="main-info-list-item-content-my-skills-skill">html5</li>
-										<li class="main-info-list-item-content-my-skills-skill">jade</li>
-										<li class="main-info-list-item-content-my-skills-skill">css3</li>
-										<li class="main-info-list-item-content-my-skills-skill">scss</li>
-										<li class="main-info-list-item-content-my-skills-skill">javascript</li>
-										<li class="main-info-list-item-content-my-skills-skill">jquery</li>
-										<li class="main-info-list-item-content-my-skills-skill">git</li>
-										<li class="main-info-list-item-content-my-skills-skill">gulp</li>
-										<li class="main-info-list-item-content-my-skills-skill">php</li>
-										<li class="main-info-list-item-content-my-skills-skill">MySQL</li>
-										<li class="main-info-list-item-content-my-skills-skill">xml</li>
-										<li class="main-info-list-item-content-my-skills-skill">SEO</li>
+						<h2 class="page-content-item__header">Основная информация</h2>
+						<div class="page-content-item__conteiner clearfix">
+							<div class="my-photo"><img src="images/myphoto.png" alt="Гордиенко Валентин - Фото" class="my-photo__img"></div>
+							<ol class="main-info page-content-list">
+								<li class="main-info__item"><span class="item-name">Меня зовут:</span><span class="item-content"> Гордиенко Валентин</span></li>
+								<li class="main-info__item"><span class="item-name">Мой возраст:</span><span class="item-content"> 30 лет</span></li>
+								<li class="main-info__item"><span class="item-name">Мой город:</span><span class="item-content"> Санкт-Петербург, Россия</span></li>
+								<li class="main-info__item"><span class="item-name">Моя специализация:</span><span class="item-content"> FRONTEND разработчик</span></li>
+								<li class="main-info__item"><span class="item-name">Ключевые навыки:</span>
+									<ol class="skills main-info__item-content">
+										<li class="skills__skill">html5</li>
+										<li class="skills__skill">jade</li>
+										<li class="skills__skill">css3</li>
+										<li class="skills__skill">scss</li>
+										<li class="skills__skill">javascript</li>
+										<li class="skills__skill">jquery</li>
+										<li class="skills__skill">git</li>
+										<li class="skills__skill">gulp</li>
+										<li class="skills__skill">php</li>
+										<li class="skills__skill">MySQL</li>
+										<li class="skills__skill">xml</li>
+										<li class="skills__skill">SEO</li>
 									</ol>
 								</li>
 							</ol>
 						</div>
 					</article>
 					<article class="page-content-item">
-						<h2 class="page-content-item-header">Образование</h2>
-						<div class="page-content-item-conteiner">
-							<ol class="page-content-list">
-								<li class="education-list-item">
-									<div class="education-list-item-icon middle-education"></div>
-									<div class="education-list-item-content">
-										<p class="list-item-name experience-education-name">Высшее образование. СПбГЛТА, факультет ЛИФ</p>
-										<p class="list-item-content experience-education-period">2006 - 2011</p>
+						<h2 class="page-content-item__header">Образование</h2>
+						<div class="page-content-item__conteiner clearfix">
+							<ol class="education page-content-list">
+								<li class="education__item">
+									<div class="education__item-icon higher-education"></div>
+									<div class="education__item-content">
+										<p class="item-name education__item-name">Высшее образование. СПбГЛТА, факультет ЛИФ</p>
+										<p class="item-content education__item-period">2006 - 2011</p>
 									</div>
 								</li>
-								<li class="education-list-item">
-									<div class="education-list-item-icon middle-education"></div>
-									<div class="education-list-item-content">
-										<p class="list-item-name experience-education-name"><a href="http://" class="experience-education-name__link">Курс LoftSchool.com &quot;Проф-ное программирование на PHP&quot;</a></p>
-										<p class="list-item-content experience-education-period">02.09.2015 - 02.11.2015</p>
+								<li class="education__item">
+									<div class="education__item-icon course"></div>
+									<div class="education__item-content">
+										<p class="education__item-name"><a href="http://loftschool.com/certificate/IE34861946059" class="item-name">Курс LoftSchool.com &quot;Проф-ное программирование на PHP&quot;</a></p>
+										<p class="item-content education__item-period">02.09.2015 - 02.11.2015</p>
 									</div>
 								</li>
-								<li class="education-list-item">
-									<div class="education-list-item-icon middle-education"></div>
-									<div class="education-list-item-content">
-										<p class="list-item-name experience-education-name"><a href="http://" class="experience-education-name__link">Курс LoftSchool.com &quot;Комплексное обучение WEB-разработке&quot;</a></p>
-										<p class="list-item-content experience-education-period">16.11.2015 - 01.02.2016</p>
+								<li class="education__item">
+									<div class="education__item-icon course"></div>
+									<div class="education__item-content">
+										<p class="education__item-name"><a href="http://loftschool.com/certificate/VG95645504165" class="item-name">Курс LoftSchool.com &quot;Комплексное обучение WEB-разработке&quot;</a></p>
+										<p class="item-content education__item-period">16.11.2015 - 01.02.2016</p>
 									</div>
 								</li>
-								<li class="education-list-item">
-									<div class="education-list-item-icon middle-education"></div>
-									<div class="education-list-item-content">
-										<p class="list-item-name experience-education-name"><a href="http://" class="experience-education-name__link">Курс LoftSchool.com &quot;SEO для всех&quot;</a></p>
-										<p class="list-item-content experience-education-period">23.02.2016 - 24.03.2016</p>
+								<li class="education__item">
+									<div class="education__item-icon course"></div>
+									<div class="education__item-content">
+										<p class="education__item-name"><a href="http://loftschool.com/certificate/UW3447459684" class="item-name">Курс LoftSchool.com &quot;SEO для всех&quot;</a></p>
+										<p class="item-content education__item-period">23.02.2016 - 24.03.2016</p>
 									</div>
 								</li>
 							</ol>
@@ -144,47 +152,17 @@
 					</article>
 				</main>
 			</section>
-			<!--ПопАп окно авторизаци-->
-			<section id="modalWindow-autorization">
-				<h1 class="modalWindow-header">Авторизируйтесь</h1>
-				<div class="modalWindow-body">
-					<form id="modalWindow-autorization-form" class="form">
-						<div class="server-mes error-mes">
-							<h2 class="server-mes-header">Неудача!</h2>
-							<p class="server-mes-content">Неверные логин/пароль.</p>
-						</div>
-						<div class="server-mes succes-mes">
-							<h2 class="server-mes-header">Успешная авторизация!</h2>
-							<p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
-						</div>
-						<div class="form-group">
-							<div qtip-content="Требуется адрес электронной почты" qtip-position="left" class="modalWindow-autorization-label qtipBlock">
-								<div class="modalWindow-autorization-label-img first-img mail-img"></div>
-								<div class="modalWindow-autorization-label-img second-img"></div>
-								<input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input">
-							</div>
-							<div qtip-content="Здесь нужен пароль" qtip-position="left" class="modalWindow-autorization-label qtipBlock">
-								<div class="modalWindow-autorization-label-img first-img key-img"></div>
-								<div class="modalWindow-autorization-label-img second-img"></div>
-								<input name="password" type="text" placeholder="Введите пароль" class="modalWindow-autorization-input">
-							</div>
-							<div class="modalWindow-autorization-labelForCheckbox">
-								<input name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
-								<div class="fake-checkbox"></div>
-								<div class="checbox-title">Запомнить меня?</div>
-							</div>
-						</div>
-						<div class="modalWindow-autorization-button">
-							<button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
-						</div>
-					</form>
-				</div>
-			</section>
 			<div class="empty"></div>
 		</div>
-		<!--Футер-->
+		<!--Footer-->
 		<footer class="footer">
-			<div class="conteiner footer-width"><span id="login" class="login"><a href="#" class="footer-login">вход</a></span><span class="footer-content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span></div>
+			<div class="conteiner footer__width">
+				<!--Login-->
+				<div class="footer__login">
+					<div id="login" class="login"><a href="#" class="login__link">вход</a></div>
+				</div>
+				<div class="footer__content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
+			</div>
 		</footer>
 		<!--build:js js/vendor.min.js-->
 		<!--bower:js-->

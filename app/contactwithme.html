@@ -7,7 +7,7 @@
 		<!--SEO-->
 		<meta name="description" content="Форма обратной связи с Web разработчиком Гордиенко Валентином.">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
-		<!--Заголовок страницы-->
+		<!--Title-->
 		<title>Контакты. Web разработчик фрилансер Гордиенко Валентин.</title>
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
@@ -40,46 +40,54 @@
 		<noscript>
 			<div><img src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt=""></div>
 		</noscript>
-		<!-- /Yandex.Metrika counter--><!--[if lt IE8]>
+		<!--Yandex.Metrika counter--><!--[if lt IE8]>
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		<div class="wrapper">
-			<!--Шапка-->
+			<!--Header-->
 			<header class="header">
-				<div class="conteiner header-width"><a href="./" class="header-logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="header-logo-img"></a>
-					<ul class="social-icon-menu">
-						<li class="social-icon-menu-item"><a href="https://github.com/danadj" target="_blank" class="social-icon git"></a></li>
-						<li class="social-icon-menu-item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk"></a></li>
-					</ul>
+				<div class="conteiner header__width">
+					<!-- Logo-->
+					<div class="header__logo"><a href="./" class="logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="logo__img"/></a></div>
+					<!--Menu social icon-->
+					<div class="header__menu-social-icons">
+						<ul class="menu-social-icons">
+							<li class="menu-social-icons__item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk">vk</a></li>
+							<li class="menu-social-icons__item"><a href="https://github.com/danadj" target="_blank" class="social-icon git">git</a></li>
+							<li class="menu-social-icons__item"><a href="https://www.facebook.com/danadjuss" target="_blank" class="social-icon fb">fb</a></li>
+						</ul>
+					</div>
 				</div>
 			</header>
 			<section class="page conteiner page-width clearfix">
-				<!-- СайдБар-->
-				<section class="side">
-					<ul class="nav-menu">
-						<li class="nav-menu-item"><a href="./" class="link-without-decorations nav-menu-item-link nav-menu-item-link">Обо мне</a></li>
-						<li class="nav-menu-item"><a href="./myworks.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link">Мои Работы</a></li>
-						<li class="nav-menu-item"><a href="./contactwithme.html" class="link-without-decorations nav-menu-item-link nav-menu-item-link-activePage">Обратная связь</a></li>
+				<!--SIDEBAR-->
+				<section class="sidebar">
+					<!-- Menu navigation-->
+					<ul class="menu-navigation side-bar__item">
+						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
+						<li class="menu-navigation__item"><a href="./myworks.html" class="link-without-decorations menu-navigation__link">Мои Работы</a></li>
+						<li class="menu-navigation__item"><a href="./contactwithme.html" class="link-without-decorations menu-navigation__link menu-navigation__active-page">Обратная связь</a></li>
 					</ul>
-					<div class="contact-menu">
-						<h2 class="contact-menu-header">Контакты</h2>
-						<ol class="contact-menu-list">
-							<li class="contact-menu-list-item">
-								<div class="contact-menu-list-item-icon mail-link"><a href="mailto:danadj@yandex.ru" class="link-without-decorations contact-menu-list-item-link">danadj@yandex.ru</a></div>
+					<!-- Menu contacts-->
+					<div class="menu-contacts side-bar__item">
+						<h2 class="menu-contacts__header">Контакты</h2>
+						<ol class="menu-contacts__list">
+							<li class="menu-contacts__item">
+								<div class="menu-contacts__item-icon menu-contacts__mail-img"><a href="mailto:danadj@yandex.ru" class="link-without-decorations menu-contacts__item-link">danadj@yandex.ru</a></div>
 							</li>
-							<li class="contact-menu-list-item">
-								<div class="contact-menu-list-item-icon celphone-link"><a href="tel:+79522775951" class="link-without-decorations contact-menu-list-item-link">+7952 277 59 51</a></div>
+							<li class="menu-contacts__item">
+								<div class="menu-contacts__item-icon menu-contacts__celphone-img"><a href="tel:+79522775951" class="link-without-decorations menu-contacts__item-link">+7952 277 59 51</a></div>
 							</li>
-							<li class="contact-menu-list-item">
-								<div class="contact-menu-list-item-icon skype-link"><a href="skype:danadjsaintpetersburg" class="link-without-decorations contact-menu-list-item-link">danadjsaintpetersburg</a></div>
+							<li class="menu-contacts__item">
+								<div class="menu-contacts__item-icon menu-contacts__skype-img"><a href="skype:danadjsaintpetersburg" class="link-without-decorations menu-contacts__item-link">danadjsaintpetersburg</a></div>
 							</li>
 						</ol>
 					</div>
 				</section>
-				<!--Основной контент страницы-->
+				<!--Main content of page-->
 				<main class="page-content">
 					<article class="page-content-item">
-						<h1 class="page-content-item-header">У вас интересный проект? Напишите мне</h1>
+						<h2 class="page-content-item-header">У вас интересный проект? Напишите мне</h2>
 						<div class="page-content-item-conteiner">
 							<form id="contactForms" action="#" class="contactForms">
 								<div class="contactForms-item-nameEmail-label">
@@ -125,47 +133,17 @@
 					</div>
 				</div>
 			</section>
-			<!--ПопАп окно авторизаци-->
-			<section id="modalWindow-autorization">
-				<h1 class="modalWindow-header">Авторизируйтесь</h1>
-				<div class="modalWindow-body">
-					<form id="modalWindow-autorization-form" class="form">
-						<div class="server-mes error-mes">
-							<h2 class="server-mes-header">Неудача!</h2>
-							<p class="server-mes-content">Неверные логин/пароль.</p>
-						</div>
-						<div class="server-mes succes-mes">
-							<h2 class="server-mes-header">Успешная авторизация!</h2>
-							<p class="server-mes-content">Добро пожаловать. Хозяяяин.</p>
-						</div>
-						<div class="form-group">
-							<div qtip-content="Требуется адрес электронной почты" qtip-position="left" class="modalWindow-autorization-label qtipBlock">
-								<div class="modalWindow-autorization-label-img first-img mail-img"></div>
-								<div class="modalWindow-autorization-label-img second-img"></div>
-								<input name="admin-name" type="text" placeholder="Введите Email" class="modalWindow-autorization-input">
-							</div>
-							<div qtip-content="Здесь нужен пароль" qtip-position="left" class="modalWindow-autorization-label qtipBlock">
-								<div class="modalWindow-autorization-label-img first-img key-img"></div>
-								<div class="modalWindow-autorization-label-img second-img"></div>
-								<input name="password" type="text" placeholder="Введите пароль" class="modalWindow-autorization-input">
-							</div>
-							<div class="modalWindow-autorization-labelForCheckbox">
-								<input name="projectName" type="checkbox" class="modalWindow-autorization-checkbox">
-								<div class="fake-checkbox"></div>
-								<div class="checbox-title">Запомнить меня?</div>
-							</div>
-						</div>
-						<div class="modalWindow-autorization-button">
-							<button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
-						</div>
-					</form>
-				</div>
-			</section>
 			<div class="empty"></div>
 		</div>
-		<!--Футер-->
+		<!--Footer-->
 		<footer class="footer">
-			<div class="conteiner footer-width"><span id="login" class="login"><a href="#" class="footer-login">вход</a></span><span class="footer-content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</span></div>
+			<div class="conteiner footer__width">
+				<!--Login-->
+				<div class="footer__login">
+					<div id="login" class="login"><a href="#" class="login__link">вход</a></div>
+				</div>
+				<div class="footer__content">&copy; 2015 Это мой сайт, пожалуйста, не копируйте и не воруйте его!</div>
+			</div>
 		</footer>
 		<!--build:js js/vendor.min.js-->
 		<!--bower:js-->

@@ -1,0 +1,17 @@
+article.page-content-item
+	h2.page-content-item__header Основная информация
+	div.page-content-item__conteiner.clearfix
+		div.my-photo
+			img.my-photo__img(src="images/myphoto.png" alt="Гордиенко Валентин - Фото")
+		ol.main-info.page-content-list
+			each point in about_me
+				if (point.header !== 'Ключевые навыки')
+					li.main-info__item
+						span.item-name #{point.header}:
+						span.item-content  #{point.value}
+				else
+					li.main-info__item
+						span.item-name #{point.header}:
+						ol.skills.main-info__item-content
+							each item in point.value
+								li.skills__skill #{item}

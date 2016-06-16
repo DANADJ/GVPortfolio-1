@@ -4,10 +4,12 @@ block description
 block title
 	|Контакты. Web разработчик фрилансер Гордиенко Валентин.
 block sidebar
-	+ sidebar(3)
+	section.sidebar
+		+menu-navigation(3,"side-bar__item")
+		+menu-contacts("side-bar__item")
 block content
 	article.page-content-item
-		h1.page-content-item-header У вас интересный проект? Напишите мне
+		h2.page-content-item-header У вас интересный проект? Напишите мне
 		.page-content-item-conteiner
 			form#contactForms.contactForms(action="#")
 				.contactForms-item-nameEmail-label

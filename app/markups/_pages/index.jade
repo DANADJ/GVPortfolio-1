@@ -6,37 +6,9 @@ block keywords
 block title
 	|Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.
 block sidebar
-	+ sidebar(1)
+	section.sidebar
+		+menu-navigation(1,"sidebar__item")
+		+menu-contacts("sidebar__item")
 block content
-	article.page-content-item
-		h2.page-content-item-header Основная информация
-		.page-content-item-conteiner
-			.main-info-myPhoto
-				img.main-info-myPhoto-img(src="images/myphoto.png" alt="Гордиенко Валентин - Фото")
-			ol.main-info-list.page-content-list
-				each point in about_me
-					if (point.header !== 'Ключевые навыки')
-						li.main-info-list-item
-							span.list-item-name #{point.header}:
-							span.list-item-content  #{point.value}
-					else
-						li.main-info-list-item
-							span.list-item-name #{point.header}:
-							ol.main-info-list-item-content-my-skills
-								each item in point.value
-									li.main-info-list-item-content-my-skills-skill #{item}
-	article.page-content-item
-		h2.page-content-item-header Образование
-		.page-content-item-conteiner
-			ol.page-content-list
-				each point in education
-					li.education-list-item
-						.education-list-item-icon.middle-education
-						.education-list-item-content
-							if (!point.link)
-								p.list-item-name.experience-education-name #{point.header}
-							else
-								p.list-item-name.experience-education-name
-									a.experience-education-name__link(href="#{point.link}")
-										|#{point.header}
-							p.list-item-content.experience-education-period #{point.value}
+	include ../_common/main_information
+	include ../_common/education
