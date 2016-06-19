@@ -1,8 +1,7 @@
 app/bower
 .idea
-dist
+public_html
 node_modules
 vendor
 .remotesettings
 composer.lock
-app/config.php

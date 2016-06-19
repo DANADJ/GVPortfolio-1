@@ -2,33 +2,32 @@ extends ../main
 block description
 	meta(name="description" content="Форма обратной связи с Web разработчиком Гордиенко Валентином.")
 block title
-	|Контакты. Web разработчик фрилансер Гордиенко Валентин.
+	| Контакты. Web разработчик фрилансер Гордиенко Валентин.
+block reCaptcha
+	//RECAPTCHA SCRIPT
+	script(src='https://www.google.com/recaptcha/api.js')
 block sidebar
 	section.sidebar
 		+menu-navigation(3,"side-bar__item")
 		+menu-contacts("side-bar__item")
 block content
+	//FEEDBACK FORM
 	article.page-content-item
-		h2.page-content-item-header У вас интересный проект? Напишите мне
-		.page-content-item-conteiner
-			form#contactForms.contactForms(action="#")
-				.contactForms-item-nameEmail-label
-					label.contactForms-item-label(for="name") Имя
-					label.contactForms-item-label.contactForms-item-right(for="email") Email
-				.contactForms-item
-					input#name.contactForms-item-input.qtipBlock(type="text" name="name" placeholder="Как к вам обращаться" qtip-content="Может быть всё-таки по имени?" qtip-position="left")
-				.contactForms-item
-					input#email.contactForms-item-input.contactForms-item-right.qtipBlock(type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right")
-				.contactForms-item.contactForms-item-100perc
-					label(for="message").contactForms-item-label Cообщение
-					textarea#message.contactForms-item-textarea.qtipBlock(name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left")
-				.contactForms-item-captcha
-					label.contactForms-item-label(for="captcha") Введите код, указанный на картинке
-					.contactForms-item.contactForms-item-captcha-img-conteiner
-						img.contactForms-item-captcha-img(src="images/captcha.png" alt="captcha")
-					input#captcha.contactForms-item-input.contactForms-item-input-code.qtipBlock(type="text" name="captcha" placeholder="Введите код" qtip-content="Вы же не робот?" qtip-position="right")
-				.contactForm-item-button-list.clearfix
-					input.contactForm-item-button.submit-button(type="submit" value="Отправить")
-					input.contactForm-item-button.clear-button(type="reset" value="Очистить")
-block modal_windows
-	include ../_common/contact_form
+		h2.page-content-item__header У вас интересный проект? Напишите мне
+		div.page-content-item__conteiner.clearfix
+			form#contactForms.feedback-form(action="#")
+				div.feedback-form__item.feedback-form__name.float-left
+					label.feedback-form__item-label(for="feedback-form__name") Ваше имя
+					input#feedback-form__name.feedback-form__item-input.qtipBlock(type="text" name="name" placeholder="Как к вам обращаться?" qtip-content="Может быть всё-таки по имени?" qtip-position="left")
+				div.feedback-form__item.feedback-form__email.float-right
+					label.feedback-form__item-label(for="feedback-form__email") Ваш email
+					input#feedback-form__email.feedback-form__item-input.qtipBlock(type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right")
+				div.feedback-form__item
+					label.feedback-form__item-label(for="feedback-form__message") Сообщение
+					textarea#feedback-form__message.feedback-form__item-textarea.qtipBlock(name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left")
+				div.feedback-form__item
+					p.feedback-form__item-label.text-center Пройдите проверку
+					div.qtipBlock.g-recaptcha(qtip-content="Вы же не робот?" qtip-position="left" data-sitekey="6LcR9SITAAAAAMS5fuWrC6Bd7VcnBvUQPS__6DtZ")
+				div.feedback-form__item
+					input.feedback-form__item-button.submit-button.float-left(type="submit" value="Отправить")
+					input.feedback-form__item-button.clear-button.float-right(type="reset" value="Очистить")

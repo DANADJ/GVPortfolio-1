@@ -1,6 +1,6 @@
 {
   "cache" : true,
-  "dest" : "app/js/modernizr.min.js",
+  "dest" : "app/js/modernizr.js",
   "options": [
 	"html5shiv",
 	"setClasses"
@@ -11,5 +11,5 @@
 	"test/css/borderradius",
 	"test/css/gradients"
   ],
-  "uglify": true
+  "uglify": false
 }

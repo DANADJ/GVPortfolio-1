@@ -8,7 +8,7 @@
 		<meta name="description" content="Основная информация о Web разработчике Гордиенко Валентине.">
 		<meta name="keywords" content="">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
-		<!--Title-->
+		<!--TITLE-->
 		<title>Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.</title>
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
@@ -31,7 +31,9 @@
 		<!--build:js js/ga.min.js-->
 		<script src="js/ga.js"></script>
 		<!--endbuild-->
-		<script src="js/modernizr.min.js"></script>
+		<!--build:js js/modernizr.min.js-->
+		<script src="js/modernizr.js"></script>
+		<!--endbuild-->
 	</head>
 	<body>
 		<!-- Yandex.Metrika counter-->
@@ -45,12 +47,12 @@
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		<div class="wrapper">
-			<!--Header-->
+			<!--HEADER-->
 			<header class="header">
 				<div class="conteiner header__width">
-					<!-- Logo-->
+					<!-- LOGO-->
 					<div class="header__logo"><a href="./" class="logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="logo__img"/></a></div>
-					<!--Menu social icon-->
+					<!--MENU SOCIAL ICONS-->
 					<div class="header__menu-social-icons">
 						<ul class="menu-social-icons">
 							<li class="menu-social-icons__item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk">vk</a></li>
@@ -60,16 +62,17 @@
 					</div>
 				</div>
 			</header>
+			<!--PAGE-->
 			<section class="page conteiner page-width clearfix">
 				<!--SIDEBAR-->
 				<section class="sidebar">
-					<!-- Menu navigation-->
+					<!-- MENU NAVIGATION-->
 					<ul class="menu-navigation sidebar__item">
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link menu-navigation--active-page">Обо мне</a></li>
-						<li class="menu-navigation__item"><a href="./myworks.html" class="link-without-decorations menu-navigation__link">Мои Работы</a></li>
+						<li class="menu-navigation__item"><a href="./portfolio.html" class="link-without-decorations menu-navigation__link">Портфолио</a></li>
 						<li class="menu-navigation__item"><a href="./contactwithme.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
 					</ul>
-					<!-- Menu contacts-->
+					<!-- MENU CONTACTS-->
 					<div class="menu-contacts sidebar__item">
 						<h2 class="menu-contacts__header">Контакты</h2>
 						<ol class="menu-contacts__list">
@@ -85,8 +88,9 @@
 						</ol>
 					</div>
 				</section>
-				<!--Main content of page-->
+				<!--MAIN CONTENT OF PAGE-->
 				<main class="page-content">
+					<!--MAIN INFORMATION-->
 					<article class="page-content-item">
 						<h2 class="page-content-item__header">Основная информация</h2>
 						<div class="page-content-item__conteiner clearfix">
@@ -115,6 +119,7 @@
 							</ol>
 						</div>
 					</article>
+					<!--EDUCATION-->
 					<article class="page-content-item">
 						<h2 class="page-content-item__header">Образование</h2>
 						<div class="page-content-item__conteiner clearfix">
@@ -154,10 +159,10 @@
 			</section>
 			<div class="empty"></div>
 		</div>
-		<!--Footer-->
+		<!--FOOTER-->
 		<footer class="footer">
 			<div class="conteiner footer__width">
-				<!--Login-->
+				<!--LOGIN-->
 				<div class="footer__login">
 					<div id="login" class="login"><a href="#" class="login__link">вход</a></div>
 				</div>

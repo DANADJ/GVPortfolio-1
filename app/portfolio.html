@@ -7,8 +7,8 @@
 		<!--SEO-->
 		<meta name="description" content="Портфолио и примеры работ Web разработчика Гордиенко Валентина.">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
-		<!--Title-->
-		<title>Примеры работ. Портфолио. Web разработчик фрилансер Гордиенко Валентин.</title>
+		<!--TITLE-->
+		<title>Портфолио. Примеры работ. Web разработчик фрилансер Гордиенко Валентин.</title>
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
 		<!--CSS STYLESHEETS-->
@@ -30,7 +30,9 @@
 		<!--build:js js/ga.min.js-->
 		<script src="js/ga.js"></script>
 		<!--endbuild-->
-		<script src="js/modernizr.min.js"></script>
+		<!--build:js js/modernizr.min.js-->
+		<script src="js/modernizr.js"></script>
+		<!--endbuild-->
 	</head>
 	<body>
 		<!-- Yandex.Metrika counter-->
@@ -44,12 +46,12 @@
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		<div class="wrapper">
-			<!--Header-->
+			<!--HEADER-->
 			<header class="header">
 				<div class="conteiner header__width">
-					<!-- Logo-->
+					<!-- LOGO-->
 					<div class="header__logo"><a href="./" class="logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="logo__img"/></a></div>
-					<!--Menu social icon-->
+					<!--MENU SOCIAL ICONS-->
 					<div class="header__menu-social-icons">
 						<ul class="menu-social-icons">
 							<li class="menu-social-icons__item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk">vk</a></li>
@@ -59,16 +61,17 @@
 					</div>
 				</div>
 			</header>
+			<!--PAGE-->
 			<section class="page conteiner page-width clearfix">
 				<!--SIDEBAR-->
 				<section class="sidebar">
-					<!-- Menu navigation-->
+					<!-- MENU NAVIGATION-->
 					<ul class="menu-navigation side-bar__item">
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
-						<li class="menu-navigation__item"><a href="./myworks.html" class="link-without-decorations menu-navigation__link menu-navigation--active-page">Мои Работы</a></li>
+						<li class="menu-navigation__item"><a href="./portfolio.html" class="link-without-decorations menu-navigation__link menu-navigation--active-page">Портфолио</a></li>
 						<li class="menu-navigation__item"><a href="./contactwithme.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
 					</ul>
-					<!-- Menu contacts-->
+					<!-- MENU CONTACTS-->
 					<div class="menu-contacts side-bar__item">
 						<h2 class="menu-contacts__header">Контакты</h2>
 						<ol class="menu-contacts__list">
@@ -84,65 +87,50 @@
 						</ol>
 					</div>
 				</section>
-				<!--Main content of page-->
+				<!--MAIN CONTENT OF PAGE-->
 				<main class="page-content">
+					<!--MYSELF PROJECT-->
 					<article class="page-content-item">
-						<h2 class="page-content-item-header">Мои работы</h2>
-						<div class="page-content-item-conteiner">
-							<ol class="page-content-list">
-								<li class="myWorks-item"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="myWorks-item-link"><img src="images/html5&amp;css3-cours.png" alt="Шпаргалка по html и css" class="myWorks-item-link-img"><span class="myWorks-item-more">Подробнее</span></a>
-									<p class="myWorks-item-header"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="link-without-decorations myWorks-item-header-link">Шпаргалка по HTML5 и CSS3</a></p>
-									<p class="myWorks-item-content">Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Пока ещё не закончил.</p>
+						<h2 class="page-content-item__header">Собственные проэкты</h2>
+						<div class="page-content-item__conteiner clearfix">
+							<ol class="my-works-list page-content-list">
+								<li class="my-works-item">
+									<div class="my-works-item__inner">
+										<div class="my-works-item__img-wrapper"><img src="images/html5-css3-cours.png" alt="Шпаргалка по html и css" class="my-works-item__img"/></div>
+										<p class="my-works-item__header"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="link-without-decorations my-works-item__header-link">Шпаргалка по HTML5 и CSS3</a></p>
+										<p class="my-works-item__content">Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Пока ещё не закончил.</p>
+									</div>
 								</li>
-								<li class="myWorks-item"><a id="add-new-project" href="#" class="link-without-decorations add-new-project modalWindow-start">
-										<div class="add-new-project-img"></div>
-										<p class="add-new-project-content">Добавить проект</p></a></li>
+								<li class="my-works-item"><a id="add-new-my-project" href="#" class="add-new-work">Добавить проект</a></li>
+							</ol>
+						</div>
+					</article>
+					<!--PROJECT FOR A CUSTOMER-->
+					<article class="page-content-item">
+						<h2 class="page-content-item__header">Проэкты заказчиков</h2>
+						<div class="page-content-item__conteiner clearfix">
+							<ol class="my-works-list page-content-list">
+								<li class="my-works-item"><a id="add-new-customer-project" href="#" class="add-new-work">Добавить проект</a></li>
+							</ol>
+						</div>
+					</article>
+					<!--MY TEST PROJECT-->
+					<article class="page-content-item">
+						<h2 class="page-content-item__header">Мои тестовые проэкты</h2>
+						<div class="page-content-item__conteiner clearfix">
+							<ol class="my-works-list page-content-list">
+								<li class="my-works-item"><a id="add-new-test-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
 					</article>
 				</main>
 			</section>
-			<!-- ПопАп окно добавления проекта-->
-			<section id="modalWindow-addNewProject">
-				<h1 class="modalWindow-header">Добавление проекта</h1>
-				<div class="modalWindow-body">
-					<form id="modalWindow-addNewProject-form" role="form" class="form">
-						<button type="button" class="close-button b-close"></button>
-						<div class="server-mes error-mes">
-							<h4 class="server-mes-header">Ошибка!</h4>
-							<p class="server-mes-content">На сервере произошла ошибка.</p>
-						</div>
-						<div class="server-mes succes-mes">
-							<h4 class="server-mes-header">Ура!</h4>
-							<p class="server-mes-content">Проект успешно добавлен.</p>
-						</div>
-						<div class="form-group">
-							<label for="projectName" class="modalWindow-addNewProject-label">Название проекта</label>
-							<input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left" class="modalWindow-addNewProject-input qtipBlock">
-						</div>
-						<div class="form-group clearfix"><span id="modalWindow-addNewProject-label" class="modalWindow-addNewProject-label">Картинка проекта</span>
-							<input name="projectImg" type="text" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left" class="modalWindow-addNewProject-input modalWindow-addNewProject-input-fake qtipBlock">
-							<div class="modalWindow-addNewProject-input-img"></div>
-							<input id="fileUpload" type="file" class="modalWindow-addNewProject-input-file">
-						</div>
-						<div class="form-group">
-							<label for="projectURL" class="modalWindow-addNewProject-label">URL проекта</label>
-							<input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="modalWindow-addNewProject-input qtipBlock">
-						</div>
-						<div class="form-group">
-							<label for="projectDescription" class="modalWindow-addNewProject-label">Описание</label>
-							<textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left" class="modalWindow-addNewProject-textarea qtipBlock"></textarea>
-						</div>
-						<button type="submit" name="add-button" value="Добавить" class="add-button">Добавить</button>
-					</form>
-				</div>
-			</section>
 			<div class="empty"></div>
 		</div>
-		<!--Footer-->
+		<!--FOOTER-->
 		<footer class="footer">
 			<div class="conteiner footer__width">
-				<!--Login-->
+				<!--LOGIN-->
 				<div class="footer__login">
 					<div id="login" class="login"><a href="#" class="login__link">вход</a></div>
 				</div>

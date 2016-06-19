@@ -7,7 +7,7 @@
 		<!--SEO-->
 		<meta name="description" content="Форма обратной связи с Web разработчиком Гордиенко Валентином.">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
-		<!--Title-->
+		<!--TITLE-->
 		<title>Контакты. Web разработчик фрилансер Гордиенко Валентин.</title>
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
@@ -30,7 +30,11 @@
 		<!--build:js js/ga.min.js-->
 		<script src="js/ga.js"></script>
 		<!--endbuild-->
-		<script src="js/modernizr.min.js"></script>
+		<!--build:js js/modernizr.min.js-->
+		<script src="js/modernizr.js"></script>
+		<!--endbuild-->
+		<!--RECAPTCHA SCRIPT-->
+		<script src="https://www.google.com/recaptcha/api.js"></script>
 	</head>
 	<body>
 		<!-- Yandex.Metrika counter-->
@@ -44,12 +48,12 @@
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		<div class="wrapper">
-			<!--Header-->
+			<!--HEADER-->
 			<header class="header">
 				<div class="conteiner header__width">
-					<!-- Logo-->
+					<!-- LOGO-->
 					<div class="header__logo"><a href="./" class="logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="logo__img"/></a></div>
-					<!--Menu social icon-->
+					<!--MENU SOCIAL ICONS-->
 					<div class="header__menu-social-icons">
 						<ul class="menu-social-icons">
 							<li class="menu-social-icons__item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk">vk</a></li>
@@ -59,16 +63,17 @@
 					</div>
 				</div>
 			</header>
+			<!--PAGE-->
 			<section class="page conteiner page-width clearfix">
 				<!--SIDEBAR-->
 				<section class="sidebar">
-					<!-- Menu navigation-->
+					<!-- MENU NAVIGATION-->
 					<ul class="menu-navigation side-bar__item">
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
-						<li class="menu-navigation__item"><a href="./myworks.html" class="link-without-decorations menu-navigation__link">Мои Работы</a></li>
+						<li class="menu-navigation__item"><a href="./portfolio.html" class="link-without-decorations menu-navigation__link">Портфолио</a></li>
 						<li class="menu-navigation__item"><a href="./contactwithme.html" class="link-without-decorations menu-navigation__link menu-navigation--active-page">Обратная связь</a></li>
 					</ul>
-					<!-- Menu contacts-->
+					<!-- MENU CONTACTS-->
 					<div class="menu-contacts side-bar__item">
 						<h2 class="menu-contacts__header">Контакты</h2>
 						<ol class="menu-contacts__list">
@@ -84,61 +89,44 @@
 						</ol>
 					</div>
 				</section>
-				<!--Main content of page-->
+				<!--MAIN CONTENT OF PAGE-->
 				<main class="page-content">
+					<!--FEEDBACK FORM-->
 					<article class="page-content-item">
-						<h2 class="page-content-item-header">У вас интересный проект? Напишите мне</h2>
-						<div class="page-content-item-conteiner">
-							<form id="contactForms" action="#" class="contactForms">
-								<div class="contactForms-item-nameEmail-label">
-									<label for="name" class="contactForms-item-label">Имя</label>
-									<label for="email" class="contactForms-item-label contactForms-item-right">Email</label>
+						<h2 class="page-content-item__header">У вас интересный проект? Напишите мне</h2>
+						<div class="page-content-item__conteiner clearfix">
+							<form id="contactForms" action="#" class="feedback-form">
+								<div class="feedback-form__item feedback-form__name float-left">
+									<label for="feedback-form__name" class="feedback-form__item-label">Ваше имя</label>
+									<input id="feedback-form__name" type="text" name="name" placeholder="Как к вам обращаться?" qtip-content="Может быть всё-таки по имени?" qtip-position="left" class="feedback-form__item-input qtipBlock">
 								</div>
-								<div class="contactForms-item">
-									<input id="name" type="text" name="name" placeholder="Как к вам обращаться" qtip-content="Может быть всё-таки по имени?" qtip-position="left" class="contactForms-item-input qtipBlock">
+								<div class="feedback-form__item feedback-form__email float-right">
+									<label for="feedback-form__email" class="feedback-form__item-label">Ваш email</label>
+									<input id="feedback-form__email" type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right" class="feedback-form__item-input qtipBlock">
 								</div>
-								<div class="contactForms-item">
-									<input id="email" type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right" class="contactForms-item-input contactForms-item-right qtipBlock">
+								<div class="feedback-form__item">
+									<label for="feedback-form__message" class="feedback-form__item-label">Сообщение</label>
+									<textarea id="feedback-form__message" name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left" class="feedback-form__item-textarea qtipBlock"></textarea>
 								</div>
-								<div class="contactForms-item contactForms-item-100perc">
-									<label for="message" class="contactForms-item-label">Cообщение</label>
-									<textarea id="message" name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left" class="contactForms-item-textarea qtipBlock"></textarea>
+								<div class="feedback-form__item">
+									<p class="feedback-form__item-label text-center">Пройдите проверку</p>
+									<div qtip-content="Вы же не робот?" qtip-position="left" data-sitekey="6LcR9SITAAAAAMS5fuWrC6Bd7VcnBvUQPS__6DtZ" class="qtipBlock g-recaptcha"></div>
 								</div>
-								<div class="contactForms-item-captcha">
-									<label for="captcha" class="contactForms-item-label">Введите код, указанный на картинке</label>
-									<div class="contactForms-item contactForms-item-captcha-img-conteiner"><img src="images/captcha.png" alt="captcha" class="contactForms-item-captcha-img"></div>
-									<input id="captcha" type="text" name="captcha" placeholder="Введите код" qtip-content="Вы же не робот?" qtip-position="right" class="contactForms-item-input contactForms-item-input-code qtipBlock">
-								</div>
-								<div class="contactForm-item-button-list clearfix">
-									<input type="submit" value="Отправить" class="contactForm-item-button submit-button">
-									<input type="reset" value="Очистить" class="contactForm-item-button clear-button">
+								<div class="feedback-form__item">
+									<input type="submit" value="Отправить" class="feedback-form__item-button submit-button float-left">
+									<input type="reset" value="Очистить" class="feedback-form__item-button clear-button float-right">
 								</div>
 							</form>
 						</div>
 					</article>
 				</main>
 			</section>
-			<!-- ПопАп окно статуса отправки сообщения-->
-			<section id="modalWindow-sendMessage">
-				<div class="modalWindow-body">
-					<div id="modalWindow-sendMessage-block" class="form">
-						<div class="server-mes error-mes">
-							<h4 class="server-mes-header">Упс! Проблемка!</h4>
-							<p class="server-mes-content">Не удалось отправить письмо :_(</p>
-						</div>
-						<div class="server-mes succes-mes">
-							<h4 class="server-mes-header">Письмо успешно отправлено!</h4>
-							<p class="server-mes-content">Скоро я вам отвечу.</p>
-						</div>
-					</div>
-				</div>
-			</section>
 			<div class="empty"></div>
 		</div>
-		<!--Footer-->
+		<!--FOOTER-->
 		<footer class="footer">
 			<div class="conteiner footer__width">
-				<!--Login-->
+				<!--LOGIN-->
 				<div class="footer__login">
 					<div id="login" class="login"><a href="#" class="login__link">вход</a></div>
 				</div>

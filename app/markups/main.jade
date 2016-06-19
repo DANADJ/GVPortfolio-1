@@ -12,7 +12,7 @@ html(lang='ru-RU')
 		block description
 		block keywords
 		meta(name="author" content="WEB-developer Valentin Gordienko")
-		//Title
+		//TITLE
 		title
 			block title
 		//FAVICONS
@@ -34,7 +34,10 @@ html(lang='ru-RU')
 		//build:js js/ga.min.js
 		script(src="js/ga.js")
 		//endbuild
-		script(src="js/modernizr.min.js")
+		//build:js js/modernizr.min.js
+		script(src="js/modernizr.js")
+		//endbuild
+		block reCaptcha
 	body
 		// Yandex.Metrika counter
 		//build:js js/yam.min.js
@@ -49,10 +52,11 @@ html(lang='ru-RU')
 		<![endif]-->
 		div.wrapper
 			include _common/header
+			//PAGE
 			section.page.conteiner.page-width.clearfix
 				//SIDEBAR
 				block sidebar
-				//Main content of page
+				//MAIN CONTENT OF PAGE
 				main.page-content
 					block content
 			block modal_windows

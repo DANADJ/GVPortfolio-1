@@ -21,9 +21,7 @@
 	border: 1px solid rgba(99, 99, 99, 0.35);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	background-image: -moz-linear-gradient(90deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
-	background-image: -webkit-linear-gradient(90deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
-	background-image: -ms-linear-gradient(90deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
+	background-image: linear-gradient(0deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
 	background-origin: border-box;
 	box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
 }
@@ -187,8 +185,8 @@
 	background: url(../images/file.png) no-repeat;
 }
 
-/*Страница-Мои работы*/
-.myWorks-item {
+/*Portfolio*/
+.my-works-item {
 	width: 167px;
 	display: inline-block;
 	vertical-align: top;
@@ -198,43 +196,40 @@
 	border-radius: 7px;
 	box-sizing: border-box;
 	overflow: hidden;
+	transition-duration: 0.3s;
 }
 
-.myWorks-item:nth-child(3n+1) {
+.my-works-item:hover {
+	box-shadow: rgba(242, 142, 36, 0.84) 0 0 10px 2px;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+.my-works-item:nth-child(3n+1) {
 	margin: 0 0 48px 13px;
 }
 
-.myWorks-item-link {
-	position: relative;
+.my-works-item__inner {
 	display: block;
 	width: 100%;
-	height: 120px;
-	line-height: 120px;
 	margin: 0;
 	padding: 0;
-	background: #727070;
-	font-size: 17px;
-	color: #dddde2;
-	text-shadow: 0 0 10px #0062ff;
+	background-color: #727070;
+	overflow: hidden;
+	text-decoration: none;
 }
 
-.myWorks-item-link-img {
+.my-works-item__img-wrapper {
 	width: 100%;
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	opacity: 1;
+	height: 100px;
+	overflow: hidden;
 }
 
-.myWorks-item-more {
-	display: none;
-	position: absolute;
+.my-works-item__img {
 	width: 100%;
-	top: 0;
-	text-align: center;
 }
 
-.myWorks-item-header {
+.my-works-item__header {
 	padding: 7px 10px;
 	margin: 0 auto;
 	background-color: #f2f2f2;
@@ -242,195 +237,116 @@
 	text-align: center;
 }
 
-.myWorks-item-header-link {
-	text-align: center;
+.my-works-item__header-link {
 	font: 13px 'open_sanssemibold';
 	color: #727070;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-	word-wrap: break-word;
 }
 
-.myWorks-item-content {
+.my-works-item:hover .my-works-item__header-link {
+	text-decoration: underline;
+}
+
+.my-works-item__content {
 	padding: 6px 7px;
 	margin: 0 auto;
 	background-color: #ffffff;
 	font: 12px 'open_sanslight';
 	color: #727070;
 	text-align: center;
-	word-wrap: break-word;
 }
 
-.myWorks-item:hover {
-	cursor: pointer;
-}
-
-.myWorks-item:hover .myWorks-item-link-img {
-	opacity: 0.4;
-	transition-duration: 0.5s;
-}
-
-.myWorks-item:hover .myWorks-item-more {
-	display: inline;
-}
-
-.myWorks-item:hover .myWorks-item-header-link {
-	text-decoration: underline;
-}
-
-.add-new-project {
+/*Add project's button*/
+.add-new-work {
 	display: block;
+	width: 100%;
+	height: 103px;
+	margin: 0 0 0 0;
+	padding: 31px 0 0 0;
+	color: #727070;
 	text-align: center;
 	font: 14px 'open_sanssemibold';
-	color: #727070;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
-	padding: 24px 10px 0 10px;
-	margin: 0;
+	text-decoration: none;
 	background-color: #f2f2f2;
-	background-origin: border-box;
-	border-radius: 5px;
-	background-image: -moz-linear-gradient(90deg, rgb(237, 235, 234) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
-	background-image: -webkit-linear-gradient(90deg, rgb(237, 235, 234) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
-	background-image: -ms-linear-gradient(90deg, rgb(237, 235, 234) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
+	background-image: linear-gradient(0deg, rgb(237, 235, 234) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
 	box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.07), inset 0 -2px 3px 0 rgba(41, 41, 41, 0.05);
-	word-wrap: break-word;
 }
 
-.add-new-project:hover {
-	background-image: -moz-linear-gradient(90deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
-	background-image: -webkit-linear-gradient(90deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
-	background-image: -ms-linear-gradient(90deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
+.add-new-work:before {
+	content: "";
+	position: relative;
+	top: -7px;
+	display: block;
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	background: url(../images/palaroid-sprite.png) no-repeat -10px -10px;
+}
+
+.add-new-work:hover {
+	background-image: linear-gradient(0deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
 	box-shadow: inset 0 -2px 3px 0 rgba(41, 41, 41, 0.05);
 }
 
-.add-new-project-content {
-	margin: 0;
-	padding: 7px 0 24px 0;
+.add-new-work:hover:before {
+	background: url(../images/palaroid-sprite.png) no-repeat -10px -90px;
 }
 
-.add-new-project-img {
-	width: 60px;
-	height: 60px;
-	margin: 0 auto 0;
-	padding: 0;
-	background: url(../images/palaroid-sprite.png) -10px -10px;
+/* Feedback form */
+.feedback-form {
+	width: 430px;
+	margin: 0 auto;
 }
 
-.add-new-project:hover .add-new-project-img {
-	background-position: -10px -90px;
-}
-
-/*Форма обратной связи*/
-.contactForms {
-	width: 404px;
-	margin: 1px auto 0;
-}
-
-.contactForms-item {
-	display: inline-block;
-	width: 192px;
-	text-align: center;
-	margin: 0 0 14px 0;
-	vertical-align: middle;
-}
-
-.contactForms-item-100perc {
+.feedback-form__item {
 	width: 100%;
-	height: auto;
-	margin: 0 0 9px 0;
+	margin: 0 0 14px 0;
 }
 
-.contactForms-item-label, .modalWindow-addNewProject-label {
+.feedback-form__name, .feedback-form__email {
+	width: 205px;
+}
+
+.feedback-form__item:last-child {
+	margin: 0 auto;
+	width: 380px;
+}
+
+.feedback-form__item-label, .modalWindow-addNewProject-label {
 	font: 14px 'open_sansregular';
 	display: block;
-	width: 190px;
 	margin: 0 0 7px 0;
 	color: #727070;
-	/*font-size: 14px;*/
 	text-align: left;
-	word-wrap: break-word;
 }
 
-.contactForms-item-right {
-	margin: 0 0 0 14px;
-}
-
-.contactForms-item-nameEmail-label .contactForms-item-label {
-	display: inline-block;
-}
-
-.contactForms-item-captcha .contactForms-item-label {
-	width: 100%;
-}
-
-.contactForms-item-input,
-.contactForms-item-textarea, .modalWindow-addNewProject-input, .modalWindow-addNewProject-textarea,
+.feedback-form__item-input,
+.feedback-form__item-textarea, .modalWindow-addNewProject-input, .modalWindow-addNewProject-textarea,
 .modalWindow-autorization-label {
 	border: 1px solid #d6d5d3;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	background-image: -moz-linear-gradient(90deg, rgb(233, 230, 229) 0%, rgb(255, 255, 255) 100%);
-	background-image: -webkit-linear-gradient(90deg, rgb(247, 246, 245) 0%, rgb(255, 255, 255) 100%);
-	background-image: -ms-linear-gradient(90deg, rgb(233, 230, 229) 0%, rgb(255, 255, 255) 100%);
-	-webkit-box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.35);
-	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.35);
-	width: 100%;
+	background-image: linear-gradient(0deg, rgb(233, 230, 229) 0%, rgb(255, 255, 255) 100%);
+	width: 89.268293%;
 	height: 41px;
-	padding: 0 0 0 10px;
-	outline: none;
+	padding: 0 10px;
 	border-radius: 4px;
 	font: 11px 'open_sansregular';
 }
 
-.contactForms-item-textarea, .modalWindow-addNewProject-textarea {
-	width: 100%;
+.feedback-form__item-textarea, .modalWindow-addNewProject-textarea {
+	width: 94.883721%;
 	height: 182px;
-	margin: 0;
 	resize: none;
 	padding-top: 11px;
 }
 
-.contactForms-item-input:focus,
-.contactForms-item-textarea:focus, .modalWindow-addNewProject-input:focus, .modalWindow-addNewProject-textarea:focus {
+.feedback-form__item-input:focus,
+.feedback-form__item-textarea:focus, .modalWindow-addNewProject-input:focus, .modalWindow-addNewProject-textarea:focus {
 	border-color: #6FDCC1;
 }
 
-.contactForms-item-captcha {
-	margin: 0 0 32px 0;
-}
-
-.contactForms-item-captcha .contactForms-item-input {
-	display: inline-block;
-}
-
-.contactForms-item-captcha-img-conteiner {
-	display: inline-block;
-	width: 188px;
-	height: 77px;
-	margin: 0;
-	padding: 0;
-	box-sizing: padding-box;
-	background-color: #fff;
-	border: 1px solid #d6d5d3;
-	border-radius: 3px;
-}
-
-.contactForms-item-captcha-img {
-	width: 100%;
-}
-
-.contactForms-item-input-code {
-	width: 192px;
-	height: 32px;
-	padding: 0 0 0 10px;
-	margin: 0 0 0 15px;
-}
-
-.contactForm-item-button-list {
-	margin: 0 auto;
-	width: 350px;
-}
-
-.contactForm-item-button, .add-button {
+.feedback-form__item-button, .add-button {
 	min-width: 126px;
 	max-width: 126px;
 	height: auto;
@@ -440,36 +356,37 @@
 	padding: 9px 23px;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 	text-align: center;
-	word-wrap: break-word;
 }
 
 .submit-button, .add-button {
-	float: left;
-	background: #4ABFA2;
-	background: -webkit-linear-gradient(90deg, #43b796 0%, #80e8cb 100%);
-	background: linear-gradient(0deg, #43b796 0%, #80e8cb 100%);
 	color: #1e7465;
+	background-color: #4ABFA2;
+	background-image: linear-gradient(0deg, #43b796 0%, #80e8cb 100%);
 }
 
 .submit-button:hover, .add-button:hover {
-	background: #3aa087;
-	background: -webkit-linear-gradient(90deg, #3aa087 0%, #5fdcbd 100%);
-	background: linear-gradient(0deg, #3aa087 0%, #5fdcbd 100%);
+	background-color: #3aa087;
+	background-image: linear-gradient(0deg, #3aa087 0%, #5fdcbd 100%);
 }
 
 .clear-button {
-	float: right;
-	background: -webkit-linear-gradient(90deg, #e9e6e4 0%, #fbf9f9 94%, #ffffff 100%);
-	background: linear-gradient(0deg, #e9e6e4 0%, #fbf9f9 94%, #ffffff 100%);
-	-webkit-box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.07);
-	box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.07);
 	color: #727070;
+	background-color: #fffcfa;
+	background-image: linear-gradient(0deg, #e9e6e4 0%, #fbf9f9 94%, #ffffff 100%);
 }
 
 .clear-button:hover {
-	background: #e9e6e4;
-	background: -webkit-linear-gradient(90deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
-	background: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
+	background-color: #e9e6e4;
+	background-image: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
+}
+
+.g-recaptcha {
+	margin: 0 auto 26px;
+	width: 300px;
+}
+
+.text-center{
+	text-align: center;
 }
 
 /*ПопАп окна добавления проекта и авторизации*/

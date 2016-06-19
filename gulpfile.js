@@ -1,5 +1,6 @@
 var jade_path = 'app/markups/_pages/*.jade',
-	modernizrSettings = require('./modernizr-config.json');
+	scss_path = 'app/scss/*.scss',
+	modernizrSettings = require('./modernizr_config.json');
 
 //Инициализация плагинов
 var gulp = require('gulp'),
@@ -14,7 +15,10 @@ var gulp = require('gulp'),
 	filter = require('gulp-filter'),//модуль фильтраци
 	imagemin = require('gulp-imagemin'),//модуль сжатия картинок
 	jade = require('gulp-jade'),//модуль компиляции jade
-	modernizr = require('customizr');//модуль компиляции modernizr.js
+	modernizr = require('customizr'),//модуль компиляции modernizr.js
+	autoprefixer = require('gulp-autoprefixer'),//модуль добавления префиксов в CSS
+	sass = require('gulp-sass');//модуль компиляции sass
+
 
 //Задача запуска сервера
 gulp.task('server', function () {
@@ -27,7 +31,7 @@ gulp.task('server', function () {
 });
 
 //Задача слежки за файлами проекта
-gulp.task('watch', function () {
+gulp.task('watch', ['wiredep', 'prefix-css'], function () {
 	gulp.watch([
 		'app/*.html',
 		'app/js/**/*.js',
@@ -38,7 +42,7 @@ gulp.task('watch', function () {
 	gulp.watch('app/markups/**/*.jade').on('change', function () {
 		gulp.start('wiredep')
 	});
-	gulp.watch('modernizr-config.json').on('change', function() {
+	gulp.watch('modernizr-config.json').on('change', function () {
 		gulp.start('modernizr')
 	})
 });
@@ -50,15 +54,37 @@ gulp.task('jade_watch', function () {
 	})
 });
 
+//Задача слежки за файлами scss
+gulp.task('sass_watch', function () {
+	gulp.watch(scss_path, ['sass']);
+});
+
 //Задача компиляции *.jade в *.html
 gulp.task('jade', function () {
 	var YOUR_LOCALS = {};
 	return gulp.src(jade_path)
-				.pipe(jade({
-					locals: YOUR_LOCALS,
-					pretty: '\t'
-				}))
-				.pipe(gulp.dest('app'));
+		.pipe(jade({
+			locals: YOUR_LOCALS,
+			pretty: '\t'
+		}))
+		.pipe(gulp.dest('app'));
+});
+
+//Задача компиляции *.scss в *.css
+gulp.task('sass', function () {
+	return gulp.src(scss_path)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('app/css'));
+});
+
+//Задача добавления префиксов в CSS
+gulp.task('prefix-css', ['sass'], function () {
+	return gulp.src('app/css/*.css')
+		.pipe(autoprefixer({
+			browsers: ['last 4 version'],
+			cascade: false
+		}))
+		.pipe(gulp.dest('app/css'));
 });
 
 //Задача слежки за bower и вставки нужных скриптов в html
@@ -68,20 +94,20 @@ gulp.task('wiredep', ['jade'], function () {
 		.pipe(gulp.dest('app'))
 });
 
-//Задача объединения, минификации css и js файлов, и переноса их вместе с html в директорию dist
-gulp.task('useref', ['wiredep'], function () {
-	return gulp.src('app/*.html')
-		.pipe(useref())
+//Задача объединения, минификации css и js файлов, и переноса их вместе с html в директорию public_html
+gulp.task('useref', ['wiredep', 'prefix-css', 'modernizr'], function () {
+	return gulp.src('app/*.*')
+		.pipe(gulpif('*.html', useref()))
 		.pipe(gulpif('*.js', uglify()))
 		.pipe(gulpif('*.css', csso()))
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('public_html'))
 });
 
 //Задача переноса шрифтов
 gulp.task('move_fonts', function () {
 	return gulp.src('app/fonts/*')
 		.pipe(filter(['*.eot', '*.svt', '*.ttf', '*.woff', '*.woff2']))
-		.pipe(gulp.dest('dist/fonts'))
+		.pipe(gulp.dest('public_html/fonts'))
 });
 
 //Задача минификации картинок
@@ -91,36 +117,36 @@ gulp.task('imagemin', function () {
 			progressive: true,
 			interlaced: true
 		}))
-		.pipe(gulp.dest('dist/images'))
+		.pipe(gulp.dest('public_html/images'))
 });
 
 //Задача компиляции файла Modernizr.json
-gulp.task('modernizr', function() {
+gulp.task('modernizr', function () {
 	modernizr(modernizrSettings)
 });
 
 //Задача переноса php файлов
 gulp.task('move_php', function () {
 	return gulp.src('app/**/*.php')
-		.pipe(gulp.dest('dist'))
+		.pipe(gulp.dest('public_html'))
 });
 
 
 //Задача сборки проекта и вывода размера окончательной директории
-gulp.task('create_dist', ['move_fonts', 'useref', 'imagemin', 'move_php'], function () {
-	return gulp.src('dist/**/*')
+gulp.task('create_public_html', ['move_fonts', 'useref', 'imagemin', 'move_php'], function () {
+	return gulp.src('public_html/**/*')
 		.pipe(size({title: 'build'}))
 });
 
 //Задача удаления папки с проектом
-gulp.task('delete_dist', function () {
-	return gulp.src('dist', {read: false})
+gulp.task('delete_public_html', function () {
+	return gulp.src('public_html', {read: false})
 		.pipe(rimraf())
 });
 
 //Задача полной сборки проекта
-gulp.task('build', ['delete_dist'], function () {
-	gulp.start('create_dist')
+gulp.task('build', ['delete_public_html'], function () {
+	gulp.start('create_public_html')
 });
 
 //Задача по умолчанию

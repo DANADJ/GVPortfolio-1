@@ -1,5 +1,5 @@
 .header {
-	background-image: url(../images/header_bg.png);
+	background: url(../images/header_bg.png);
 	height: 90px;
 	border-bottom: 7px solid #ffffff;
 	box-shadow: 0 0 3px #676767;

@@ -2,7 +2,7 @@ include _variables
 
 //- Menu navigation
 mixin menu-navigation(activePage, wrapperClass)
-	// Menu navigation
+	// MENU NAVIGATION
 	ul.menu-navigation(class="#{wrapperClass}")
 		each item in navigation
 			if item.pageNumber !== activePage
@@ -14,7 +14,7 @@ mixin menu-navigation(activePage, wrapperClass)
 
 //- Menu contacts
 mixin menu-contacts(wrapperClass)
-	// Menu contacts
+	// MENU CONTACTS
 	div.menu-contacts(class="#{wrapperClass}")
 		h2.menu-contacts__header Контакты
 		ol.menu-contacts__list
@@ -25,14 +25,14 @@ mixin menu-contacts(wrapperClass)
 
 //-Logo
 mixin logo(wrapperClass)
-	// Logo
+	// LOGO
 	div(class="#{wrapperClass}")
 		a.logo(href="./")
 			img.logo__img(src="images/logo.png" alt="Логотип LoftSchool")
 
 //-Menu social icon
 mixin menu-social-icons(wrapperClass)
-	//Menu social icon
+	//MENU SOCIAL ICONS
 	div(class="#{wrapperClass}")
 		ul.menu-social-icons
 			each val, index in socials
@@ -41,7 +41,24 @@ mixin menu-social-icons(wrapperClass)
 
 //-Login
 mixin login(wrapperClass)
-	//Login
+	//LOGIN
 	div(class="#{wrapperClass}")
 		div.login#login
 			a.login__link(href="#") вход
+
+//-Project list
+mixin project-list(header, addID, array)
+	article.page-content-item
+		h2.page-content-item__header #{header}
+		div.page-content-item__conteiner.clearfix
+			ol.my-works-list.page-content-list
+				each point in array
+					li.my-works-item
+						div.my-works-item__inner
+							div.my-works-item__img-wrapper
+								img.my-works-item__img(src="images/#{point.image}" alt="#{point.alt}")
+							p.my-works-item__header
+								a.link-without-decorations.my-works-item__header-link(href="#{point.link}" target="_blank") #{point.name}
+							p.my-works-item__content #{point.desc}
+				li.my-works-item
+					a.add-new-work(id="#{addID}" href="#") Добавить проект
