@@ -42,6 +42,9 @@ gulp.task('watch', ['wiredep', 'prefix-css'], function () {
 	gulp.watch('app/markups/**/*.jade').on('change', function () {
 		gulp.start('wiredep')
 	});
+	gulp.watch('app/scss/**/*.scss').on('change', function () {
+		gulp.start('prefix-css')
+	});
 	gulp.watch('modernizr-config.json').on('change', function () {
 		gulp.start('modernizr')
 	})

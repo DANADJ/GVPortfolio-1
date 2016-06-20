@@ -1,0 +1,70 @@
+doctype html
+html(lang='ru-RU')
+	head
+		meta(charset='UTF-8')
+		//- Указание браузеру использовать самую последнюю версию
+		meta(http-equiv='X-UA-Compatible', content="IE=edge")
+		//- Указание использовать для сайта ширину экрана
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//SEO
+		block description
+		block keywords
+		meta(name="author" content="WEB-developer Valentin Gordienko")
+		//TITLE
+		title
+			block title
+		//FAVICONS
+		link(rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16")
+		//CSS STYLESHEETS
+		// build:css css/vendor.min.css
+		// bower:css
+		// endbower
+		// endbuild
+		// build:css css/main.min.css
+		link(rel="stylesheet" href="fonts/stylesheet.css")
+		link(rel="stylesheet" href="css/main.css")
+		link(rel="stylesheet" href="css/header.css")
+		link(rel="stylesheet" href="css/side-nav-contact-menu.css")
+		link(rel="stylesheet" href="css/page-content.css")
+		link(rel="stylesheet" href="css/footer.css")
+		//endbuild
+		//START SCRIPTS AFTER LOUD PAGE
+		//build:js js/ga.min.js
+		script(src="js/ga.js")
+		//endbuild
+		//build:js js/modernizr.min.js
+		script(src="js/modernizr.js")
+		//endbuild
+
+	body
+		<!--[if lt IE8]>
+		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
+		<![endif]-->
+		div.wrapper
+			section.page.conteiner.page-width.clearfix
+				section.login-window
+					h1.login-window__header Авторизируйтесь
+					div.login-window__body
+						form.login-window__form(id="modalWindow-autorization-form")
+							div.login-window__server-mes.login-window__server-mes--error
+								h2.login-window__server-mes-header Неудача!
+								p.login-window__server-mes-content Неверные логин/пароль.
+							div.login-window__server-mes.login-window__server-mes--succes
+								h2.login-window__server-mes-header Успешная авторизация!
+								p.login-window__server-mes-content Добро пожаловать. Хозяяяин.
+							div.login-window__inputs-group
+								div.login-window__label.qtipBlock(qtip-content="Требуется адрес электронной почты" qtip-position="left")
+									div.login-window__label-img.first-img.mail-img
+									div.login-window__label-img.second-img
+									input.login-window__input(name="admin-name" type="text" placeholder="Введите Email")
+								div.login-window__label.qtipBlock(qtip-content="Здесь нужен пароль" qtip-position="left")
+									div.login-window__label-img.first-img.key-img
+									div.login-window__label-img.second-img
+									input.login-window__input(name="password" type="text" placeholder="Введите пароль")
+								div.login-window__label
+									input.login-window__label--checkbox(name="projectName" type="checkbox")
+									div.fake-checkbox
+									div.checbox-title Запомнить меня?
+							div.login-window__button
+								button.add-button(type="submit" name="add-button" value="Добавить") Войти
+								button.reset()

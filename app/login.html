@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--SEO-->
+		<meta name="author" content="WEB-developer Valentin Gordienko">
+		<!--TITLE-->
+		<title>
+		</title>
+		<!--FAVICONS-->
+		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
+		<!--CSS STYLESHEETS-->
+		<!-- build:css css/vendor.min.css-->
+		<!-- bower:css-->
+		<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
+		<!-- endbower-->
+		<!-- endbuild-->
+		<!-- build:css css/main.min.css-->
+		<link rel="stylesheet" href="fonts/stylesheet.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/header.css">
+		<link rel="stylesheet" href="css/side-nav-contact-menu.css">
+		<link rel="stylesheet" href="css/page-content.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<!--endbuild-->
+		<!--START SCRIPTS AFTER LOUD PAGE-->
+		<!--build:js js/ga.min.js-->
+		<script src="js/ga.js"></script>
+		<!--endbuild-->
+		<!--build:js js/modernizr.min.js-->
+		<script src="js/modernizr.js"></script>
+		<!--endbuild-->
+	</head>
+	<body>
+		<!--[if lt IE8]>
+		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
+		<![endif]-->
+		<div class="wrapper">
+			<section class="page conteiner page-width clearfix">
+				<section class="login-window">
+					<h1 class="login-window__header">Авторизируйтесь</h1>
+					<div class="login-window__body">
+						<form id="modalWindow-autorization-form" class="login-window__form">
+							<div class="login-window__server-mes login-window__server-mes--error">
+								<h2 class="login-window__server-mes-header">Неудача!</h2>
+								<p class="login-window__server-mes-content">Неверные логин/пароль.</p>
+							</div>
+							<div class="login-window__server-mes login-window__server-mes--succes">
+								<h2 class="login-window__server-mes-header">Успешная авторизация!</h2>
+								<p class="login-window__server-mes-content">Добро пожаловать. Хозяяяин.</p>
+							</div>
+							<div class="login-window__inputs-group">
+								<div qtip-content="Требуется адрес электронной почты" qtip-position="left" class="login-window__label qtipBlock">
+									<div class="login-window__label-img first-img mail-img"></div>
+									<div class="login-window__label-img second-img"></div>
+									<input name="admin-name" type="text" placeholder="Введите Email" class="login-window__input">
+								</div>
+								<div qtip-content="Здесь нужен пароль" qtip-position="left" class="login-window__label qtipBlock">
+									<div class="login-window__label-img first-img key-img"></div>
+									<div class="login-window__label-img second-img"></div>
+									<input name="password" type="text" placeholder="Введите пароль" class="login-window__input">
+								</div>
+								<div class="login-window__label">
+									<input name="projectName" type="checkbox" class="login-window__label--checkbox">
+									<div class="fake-checkbox"></div>
+									<div class="checbox-title">Запомнить меня?</div>
+								</div>
+							</div>
+							<div class="login-window__button">
+								<button type="submit" name="add-button" value="Добавить" class="add-button">Войти</button>
+								<button class="reset"></button>
+							</div>
+						</form>
+					</div>
+				</section>
+			</section>
+		</div>
+	</body>
+</html>

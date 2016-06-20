@@ -1,0 +1,64 @@
+@import "variables";
+
+/*Прибитие футера к низу экрана*/
+.empty {
+	position: relative;
+	height: $footer-height;
+}
+
+/*Оформление футера*/
+.footer {
+	position: relative;
+	margin-top: -$footer-height;
+	height: $footer-height;
+	background-color: $bg-light-gray;
+
+	&__login {
+		float: left;
+		margin: ($footer-height - 30px)/2 5px ($footer-height - 30px)/2 270px;
+	}
+
+	&__content {
+		color: $menu-navigation__link__font-color--active;
+		font: 12px 'open_sanslight';
+		line-height: $footer-height;
+	}
+}
+
+.login {
+	width: 73px;
+	height: 30px;
+	margin: 0;
+	padding: 0 5px;
+
+	&__link {
+		padding: 0 0 0 10px;
+		color: $font-color-footer-lint;
+		font: 14px 'open_sansbold';
+		text-decoration: none;
+		font-weight: bold;
+		text-shadow: 0 1px 1px $font-showdow-footer-link;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			width: 16px;
+			height: 21px;
+			background: url(../images/locked-unlocked-sprite.png) -10px -10px;
+			position: relative;
+			right: 10px;
+			top: 5px;
+		}
+	}
+
+	&:hover .login__link {
+		padding-left: 2px;
+
+		&:before {
+			background-position: -10px -51px;
+			width: 24px;
+			right: 4px;
+			top: 4px;
+		}
+	}
+}
