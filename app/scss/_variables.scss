@@ -2,15 +2,11 @@
 $footer-height: 60px;
 
 /*Colors*/
-$bg-light-gray: #dedcdc;
-$font-color-footer-lint: #9b9b9b;
-$font-showdow-footer-link: rgba(255, 255, 255, 0.85);
-$LG-menu-navigation-link: linear-gradient(0deg, rgb(233, 230, 229) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
-$BS-menu-navigation-link: 0 2px 1px 0 rgba(9, 9, 9, 0.07), inset 0 -2px 3px 0 rgba(41, 41, 41, 0.05);
-$border-navigation-link: #b7b7b7;
-$font-color-navigation-link-hover: rgb(114, 112, 112);
-$TS: 0 1px 0 rgba(255, 255, 255, 0.75);
-$LG-button: linear-gradient(0deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
+$text-color: rgb(114, 112, 112);
+$header-color: rgb(238, 237, 236);
+$dark-gray-gradient: linear-gradient(0deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
+$light-gray-gradient: linear-gradient(0deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 86%, rgb(232, 231, 231) 90%, rgb(232, 231, 231) 100%);
+$light-gradient: linear-gradient(0deg, rgb(209, 206, 204) 0%, rgb(238, 236, 236) 96%, rgb(255, 255, 255) 100%);
 
 /*Оформление неактивного пункта меню и кнопки*/
 $menu-navigation__link__font-color: #727070;

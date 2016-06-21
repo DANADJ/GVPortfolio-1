@@ -41,7 +41,7 @@
   padding: 0;
   margin: 7px 0 0 0; }
 
-.item-name, .education-name__link {
+.item-name, .education__item-name--link {
   font: 14px 'open_sanssemibold';
   color: #727070;
   line-height: 1.2;
@@ -140,6 +140,7 @@
   margin: 0 0 0 96px; }
 
 .education__item-name, .education__item-period {
+  color: #727070;
   padding: 0;
   margin: 0 0 5px 0; }
 
@@ -230,7 +231,7 @@
     padding: 0 0 0 0;
     background: url(../images/palaroid-sprite.png) no-repeat -10px -10px; }
   .add-new-work:hover {
-    background-image: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 87%, #e6e4e4 90%, #e8e7e7 100%);
+    background-image: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
     box-shadow: inset 0 -2px 3px 0 rgba(41, 41, 41, 0.05); }
   .add-new-work:hover:before {
     background: url(../images/palaroid-sprite.png) no-repeat -10px -90px; }
@@ -279,23 +280,6 @@
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
     text-align: center; }
 
-.submit-button, .add-button {
-  color: #1e7465;
-  background-color: #4ABFA2;
-  background-image: linear-gradient(0deg, #43b796 0%, #80e8cb 100%); }
-
-.submit-button:hover, .add-button:hover {
-  background-color: #3aa087;
-  background-image: linear-gradient(0deg, #3aa087 0%, #5fdcbd 100%); }
-
-.clear-button {
-  color: #727070;
-  background-color: #fffcfa;
-  background-image: linear-gradient(0deg, #e9e6e4 0%, #fbf9f9 94%, #ffffff 100%); }
-  .clear-button:hover {
-    background-color: #e9e6e4;
-    background-image: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%); }
-
 .g-recaptcha {
   margin: 0 auto 26px;
   width: 300px; }
@@ -305,7 +289,9 @@
 
 /*Страница авторизации*/
 .login-window {
-  width: 332px; }
+  position: absolute;
+  top: 50%;
+  margin-top: -150px; }
   .login-window__header {
     font: 12px 'open_sanslight';
     color: black;
@@ -322,7 +308,6 @@
     background-color: #f1f0ef;
     background-origin: border-box; }
   .login-window__server-mes {
-    display: none;
     box-sizing: border-box;
     width: 100%;
     margin: 0 0 24px 0;
@@ -334,17 +319,19 @@
   .login-window__server-mes-content {
     font: 14px "open_sansregular";
     margin: 0; }
-  .login-window__server-mes--error {
+  .login-window__server-mes--error, .login-window__server--error {
+    display: none;
     border: 1px solid #cb6945;
     background-color: rgba(203, 105, 69, 0.329);
     color: #cb6945; }
   .login-window__server-mes--succes {
+    display: none;
     border: 1px solid #49bb7b;
     background-color: #bce1cb;
     color: #49bb7b; }
   .login-window__inputs-group {
     margin: 0 0 6px 0; }
-  .login-window__label {
+  .login-window__inner {
     box-sizing: border-box;
     border: 1px solid #d6d5d3;
     background-image: linear-gradient(0deg, #e9e6e5 0%, white 100%);
@@ -355,20 +342,22 @@
     font: 11px 'open_sansregular';
     display: block;
     margin-bottom: 24px; }
-  .login-window__label-img {
+  .login-window__inner-first-img {
     float: left;
+    width: 43px;
+    height: 39px;
     margin: 0;
     padding: 0; }
-  .login-window__label .first-img {
-    width: 43px;
-    height: 39px; }
-  .login-window__label .mail-img {
+  .login-window__inner .mail-img {
     background: url(../images/email-autorization.png) no-repeat 13px 13px; }
-  .login-window__label .key-img {
+  .login-window__inner .key-img {
     background: url(../images/key-autorization.png) no-repeat 14px 12px; }
-  .login-window__label .second-img {
+  .login-window__inner-second-img {
+    float: left;
     width: 11px;
     height: 40px;
+    margin: 0;
+    padding: 0;
     background: url(../images/arrow.png) no-repeat center center; }
   .login-window__input {
     display: block;
@@ -381,26 +370,22 @@
     padding: 0 0 0 17px;
     font: 12px "open_sanslight"; }
   .login-window__button {
-    text-align: center;
-    margin: 0 0 13px 0; }
-  .login-window__button .add-button {
-    position: static;
-    left: 0;
-    max-width: 152px;
-    width: 152px; }
-  .login-window__label--checkbox {
+    margin: 0; }
+  .login-window__inner--checkbox {
     display: block;
-    width: 100%;
+    width: 150px;
     height: 22px;
-    margin: -8px 0 18px 0; }
-  .login-window__label--checkbox {
-    position: absolute; }
+    margin: 0 auto 18px; }
+  .login-window__checkbox {
+    position: absolute;
+    left: -10000px; }
 
 .fake-checkbox {
   float: left;
   width: 22px;
   height: 22px;
   margin: 0 0 0 -2px;
+  background: #929292;
   background: url(../images/checkbox.png) no-repeat -10px -51px; }
 
 .checbox-title {
@@ -409,7 +394,7 @@
   color: #727070;
   font: 14px "open_sansregular"; }
 
-.login-window__label--checkbox:checked + .fake-checkbox {
+.login-window__checkbox:checked + .fake-checkbox {
   background-position: -10px -10px; }
 
 /*ПопАп окна добавления*/
@@ -440,7 +425,6 @@
   left: 322px; }
 
 .add-button {
-  float: none;
   position: relative;
   left: 89px;
   max-width: 125px;
@@ -479,3 +463,50 @@
 
 #modalWindow-addNewProject-form .succes-mes {
   margin-top: 9px; }
+
+/*Buttons' decoration*/
+.button {
+  max-width: 125px;
+  min-width: 125px;
+  height: 40px;
+  margin: 0;
+  padding: 9px 23px;
+  border: 1px solid #c3c2c2;
+  border-radius: 5px;
+  color: #727070;
+  font: 14px "open_sanssemibold";
+  text-align: center;
+  text-shadow: 2px 1px 3px 0 rgba(44, 44, 44, 0.34);
+  background-color: #d1cecc;
+  background-image: linear-gradient(0deg, #d1cecc 0%, #eeecec 96%, white 100%);
+  box-shadow: 0 1px 2px 0 rgba(91, 91, 91, 0.2); }
+  .button:hover {
+    background-color: #e9e6e4;
+    background-image: linear-gradient(0deg, #c2c0c0 0%, #e3e1e1 86%, #e8e7e7 90%, #e8e7e7 100%);
+    box-shadow: inset 0 -1px 1px 0 rgba(178, 178, 178, 0.75); }
+  .button:active {
+    color: #eeedec;
+    border-color: #7b7878;
+    text-shadow: 2px 0 2px rgba(102, 101, 101, 0.75);
+    background-image: linear-gradient(0deg, #7b7878 0%, #a9a8a8 100%);
+    box-shadow: 0 2px 3px 0 rgba(9, 9, 9, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
+  .button--a {
+    box-sizing: border-box;
+    line-height: 40px;
+    text-decoration: none;
+    padding: 0; }
+  .button--green {
+    color: #1e7465;
+    border-color: #39a68b;
+    background-color: #4abfa2;
+    background-image: linear-gradient(0deg, #43b796 0%, #80e8cb 97%, white 100%); }
+    .button--green:hover {
+      background-color: #4fe3c4;
+      background-image: linear-gradient(0deg, #35a085 0%, #42d0ae 90%, #6cc7b1 100%);
+      box-shadow: inset 0 -1px 1px 0 rgba(178, 178, 178, 0.75); }
+    .button--green:active {
+      color: #f3f2f1;
+      border-color: rgba(67, 145, 117, 0.75);
+      text-shadow: 2px 0 2px rgba(102, 101, 101, 0.75);
+      background-image: linear-gradient(0deg, #44b799 0%, #86e6c6 100%);
+      box-shadow: 0 2px 3px 0 rgba(9, 9, 9, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }

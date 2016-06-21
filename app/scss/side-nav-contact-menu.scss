@@ -25,35 +25,35 @@
 
 	&__link {
 		padding: 18px 27px 16px 27px;
-		color: $menu-navigation__link__font-color;
+		color: $text-color;
 		font: 20px 'open_sanssemibold';
 		display: block;
 		line-height: 1;
 		text-align: left;
 		text-shadow: 0 1px 0 #fff;
-		border: 1px solid $border-navigation-link;
+		border: 1px solid #b7b7b7;
 		border-radius: 2px;
-		background-image: $menu-navigation__link__bg;
-		box-shadow: $BS-menu-navigation-link;
+		background-image: linear-gradient(0deg, rgb(233, 230, 229) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);;
+		box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.07), inset 0 -2px 3px 0 rgba(41, 41, 41, 0.05);
 		word-wrap: break-word;
 
 		&:hover {
-			color: $font-color-navigation-link-hover;
-			text-shadow: $TS;
-			background-image: $menu-navigation__link__bg--hover;
+			color: rgb(114, 112, 112);
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+			background-image: $light-gray-gradient;
 		}
 
 		&:active {
-			color: #eeedec;
+			color: $header-color;
 			border: $menu-navigation__link__border;
 			text-shadow: $menu-navigation__link__font-shadow--active;
-			background-image: $menu-navigation__link__bg--active;
+			background-image: $dark-gray-gradient;
 			box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
 		}
 	}
 }
 
-.menu-navigation--active-page {
+.menu-navigation__link--active-page {
 	color: $menu-navigation--active-page__font-color;
 	text-shadow: $menu-navigation--active-page__font-shadow;
 	border: $menu-navigation--active-page__border;
@@ -134,7 +134,7 @@
 	&__item-link {
 		display: block;
 		font: 14px 'open_sansregular';
-		color: $menu-navigation__link__font-color;
+		color: $text-color;
 		line-height: 1.2;
 	}
 }

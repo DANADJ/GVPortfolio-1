@@ -29,9 +29,6 @@ html(lang='ru-RU')
 		link(rel="stylesheet" href="css/footer.css")
 		//endbuild
 		//START SCRIPTS AFTER LOUD PAGE
-		//build:js js/ga.min.js
-		script(src="js/ga.js")
-		//endbuild
 		//build:js js/modernizr.min.js
 		script(src="js/modernizr.js")
 		//endbuild
@@ -41,11 +38,14 @@ html(lang='ru-RU')
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		div.wrapper
-			section.page.conteiner.page-width.clearfix
-				section.login-window
+			section.login-page
+				div.login-window
 					h1.login-window__header Авторизируйтесь
 					div.login-window__body
-						form.login-window__form(id="modalWindow-autorization-form")
+						form.login-window__form#login-window__form
+							div.login-window__server-mes.login-window__server--error
+								h2.login-window__server-mes-header Неудача!
+								p.login-window__server-mes-content На сервере какие-то неполадки.
 							div.login-window__server-mes.login-window__server-mes--error
 								h2.login-window__server-mes-header Неудача!
 								p.login-window__server-mes-content Неверные логин/пароль.
@@ -53,18 +53,26 @@ html(lang='ru-RU')
 								h2.login-window__server-mes-header Успешная авторизация!
 								p.login-window__server-mes-content Добро пожаловать. Хозяяяин.
 							div.login-window__inputs-group
-								div.login-window__label.qtipBlock(qtip-content="Требуется адрес электронной почты" qtip-position="left")
-									div.login-window__label-img.first-img.mail-img
-									div.login-window__label-img.second-img
+								div.login-window__inner.qtipBlock(qtip-content="Требуется адрес электронной почты" qtip-position="left")
+									div.login-window__inner-first-img.mail-img
+									div.login-window__inner-second-img
 									input.login-window__input(name="admin-name" type="text" placeholder="Введите Email")
-								div.login-window__label.qtipBlock(qtip-content="Здесь нужен пароль" qtip-position="left")
-									div.login-window__label-img.first-img.key-img
-									div.login-window__label-img.second-img
+								div.login-window__inner.qtipBlock(qtip-content="Здесь нужен пароль" qtip-position="left")
+									div.login-window__inner-first-img.key-img
+									div.login-window__inner-second-img
 									input.login-window__input(name="password" type="text" placeholder="Введите пароль")
-								div.login-window__label
-									input.login-window__label--checkbox(name="projectName" type="checkbox")
-									div.fake-checkbox
+								div.login-window__inner--checkbox
+									input.login-window__checkbox#remember-me(name="remember-me" type="checkbox")
+									label.fake-checkbox(for="remember-me")
 									div.checbox-title Запомнить меня?
-							div.login-window__button
-								button.add-button(type="submit" name="add-button" value="Добавить") Войти
-								button.reset()
+							div.login-window__button.clearfix
+								button.button.button--green.float-left(type="submit" name="login-button") Войти
+								a.button.button--a.float-right(href="./") Отмена
+		//build:js js/vendor.min.js
+		//bower:js
+		//endbower
+		//endbuild
+		//build:js js/main.min.js
+		script(src="js/main.js")
+		script(src="js/validation.js")
+		//endbuild

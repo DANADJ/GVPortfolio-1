@@ -14,6 +14,7 @@ body {
 	font: 14px/1.41 'Verdana', 'Arial', sans-serif;
 	background: url(../images/bg-main.png) no-repeat fixed center center;
 	background-size: cover;
+	color: rgb(114, 112, 112);
 	word-wrap: break-word;
 }
 
@@ -52,6 +53,11 @@ table {
 
 .footer__width {
 	width: 960px;
+}
+
+.login-page {
+	width: 332px;
+	margin:0 auto ;
 }
 
 .link-without-decorations {

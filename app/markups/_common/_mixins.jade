@@ -10,7 +10,7 @@ mixin menu-navigation(activePage, wrapperClass)
 					a.link-without-decorations.menu-navigation__link(href="#{item.pageLink}") #{item.pageContent}
 			else
 				li.menu-navigation__item
-					a.link-without-decorations.menu-navigation__link.menu-navigation--active-page(href="#{item.pageLink}") #{item.pageContent}
+					a.link-without-decorations.menu-navigation__link.menu-navigation__link--active-page(href="#{item.pageLink}") #{item.pageContent}
 
 //- Menu contacts
 mixin menu-contacts(wrapperClass)
@@ -43,7 +43,7 @@ mixin menu-social-icons(wrapperClass)
 mixin login(wrapperClass)
 	//LOGIN
 	div(class="#{wrapperClass}")
-		div.login#login
+		div.login
 			a.login__link(href="./login.html") вход
 
 //-Project list

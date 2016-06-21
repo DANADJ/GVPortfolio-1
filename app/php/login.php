@@ -14,7 +14,6 @@ if($data['admin-name'] !== '' && $data['password'] !== ''){//если обе я�
    $dataStatus['status'] = 'error';//... иначе, присваиваю переменной Status ответного массива значение Error
 };
 header("content-Type: application/json");//Не понимаю эту строчку
-echo json_encode($dataStatus);
-exit(json_encode());
+exit(json_encode($dataStatus));
 
 ?>

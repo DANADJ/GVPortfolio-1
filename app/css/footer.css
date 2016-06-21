@@ -18,7 +18,7 @@
     float: left;
     margin: 15px 5px 15px 270px; }
   .footer__content {
-    color: #EEEDEC;
+    color: #727070;
     font: 12px 'open_sanslight';
     line-height: 60px; }
 
@@ -29,7 +29,7 @@
   padding: 0 5px; }
   .login__link {
     padding: 0 0 0 10px;
-    color: #9b9b9b;
+    color: #9c9c9c;
     font: 14px 'open_sansbold';
     text-decoration: none;
     font-weight: bold;

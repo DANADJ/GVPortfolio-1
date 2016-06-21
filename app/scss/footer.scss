@@ -11,7 +11,7 @@
 	position: relative;
 	margin-top: -$footer-height;
 	height: $footer-height;
-	background-color: $bg-light-gray;
+	background-color: #dedcdc;
 
 	&__login {
 		float: left;
@@ -19,7 +19,7 @@
 	}
 
 	&__content {
-		color: $menu-navigation__link__font-color--active;
+		color: $text-color;
 		font: 12px 'open_sanslight';
 		line-height: $footer-height;
 	}
@@ -33,11 +33,11 @@
 
 	&__link {
 		padding: 0 0 0 10px;
-		color: $font-color-footer-lint;
+		color: rgb(156, 156, 156);
 		font: 14px 'open_sansbold';
 		text-decoration: none;
 		font-weight: bold;
-		text-shadow: 0 1px 1px $font-showdow-footer-link;
+		text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
 
 		&:before {
 			content: "";

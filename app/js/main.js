@@ -12,16 +12,15 @@ var mainJS = (function () {
 
 	//Универсальная функция AJAX запроса к серверу для выполнения задачи
 	var _ajaxForServer = function (form, url) {
-		var data = form.serialize(),//создаю ассоциативный массив DATA и сохраняю в него данные из формы
-			phpAnswer = $.ajax({ //создаю переменную с запросом на сервер
+		var data = form.serialize();//создаю ассоциативный массив DATA и сохраняю в него данные из формы
+			return $.ajax({ //создаю переменную с запросом на сервер
 				url: url, //указываю путь к файлу обработчику
 				type: 'POST', //указываю способ передачи данных
 				dataType: 'JSON', //указываю формат передачи данных
 				data: data //передаю ассоциативный массив с сохранёнными в нём данными из формы
-			}).fail(function () {
-				form.find('.error-mes').show();
-			});
-		return phpAnswer;//возвращаю результат обращения к серверу
+				}).fail(function () {
+					form.find('.login-window__server--error').show();
+				});
 	};
 
 	//Универсальная функция запуска JS валидации, отправки данных на сервер и вывода результа пользователю
@@ -31,11 +30,12 @@ var mainJS = (function () {
 			resultValidation = _ajaxFormJSValidation(form); //результат проверки формы на заполненность полей в JS
 		if (resultValidation === true) {
 			var serverAnswer = _ajaxForServer(form, target_url);//массив с результатом обращения к серверу
+			console.log(serverAnswer);
 			serverAnswer.done(function (ans) {
 				var succesBox, errorBox, formGroup, addButton;
 				if (target_url !== 'php/contact_with_me.php') {
-					succesBox = form.find('.succes-mes');
-					errorBox = form.find('.error-mes');
+					succesBox = form.find('.login-window__server-mes--succes');
+					errorBox = form.find('.login-window__server-mes--error');
 					formGroup = form.find('.form-group');
 					addButton = form.find('.add-button');
 					if (ans.status === 'ok') {
@@ -103,24 +103,15 @@ var mainJS = (function () {
 		});
 
 		//Прослушка нажатия кнопки отправки формы добавления проекта
-		$('#modalWindow-addNewProject-form').submit(function (event) {
+		$('#login-wind').submit(function (event) {
 			event.preventDefault();
-			_validation_server_answer('php/add_new_project.php', $('#modalWindow-addNewProject-form'));
-		});
-
-		//Прослушка нажатия кнопки аторизации
-		$('#login').click(function (event) {
-			event.preventDefault();
-			var modalWindow = $('#modalWindow-autorization'),
-				moalWindowForm = modalWindow.find('#modalWindow-autorization-form');
-
-			_showModalWindow(modalWindow, moalWindowForm);
+			_validation_server_answer('php/add_new_project.php', $('#login-window__form'));
 		});
 
 		//Прослушка нажатия кнопки отправки формы авторизации
-		$('#modalWindow-autorization-form').submit(function (event) {
+		$('#login-window__form').submit(function (event) {
 			event.preventDefault();
-			_validation_server_answer('php/login.php', $('#modalWindow-autorization-form'));
+			_validation_server_answer('php/login.php', $('#login-window__form'));
 		});
 
 		//Прослушка кнопки отправки формы
