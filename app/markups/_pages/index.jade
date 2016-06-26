@@ -5,6 +5,10 @@ block keywords
 	meta(name="keywords" content="")
 block title
 	|Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.
+block stylesheets
+	//build:css css/index.min.css
+	link(rel="stylesheet" href="css/index.css")
+	//endbuild
 block sidebar
 	section.sidebar
 		+menu-navigation(1,"sidebar__item")

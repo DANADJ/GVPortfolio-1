@@ -7,12 +7,10 @@ html(lang='ru-RU')
 		//- Указание использовать для сайта ширину экрана
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		//SEO
-		block description
-		block keywords
+		meta(name="description" content="Страница входа на сайт")
 		meta(name="author" content="WEB-developer Valentin Gordienko")
 		//TITLE
-		title
-			block title
+		title LogIn
 		//FAVICONS
 		link(rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16")
 		//CSS STYLESHEETS
@@ -20,52 +18,60 @@ html(lang='ru-RU')
 		// bower:css
 		// endbower
 		// endbuild
-		// build:css css/main.min.css
+		// build:css css/login.min.css
 		link(rel="stylesheet" href="fonts/stylesheet.css")
-		link(rel="stylesheet" href="css/main.css")
-		link(rel="stylesheet" href="css/header.css")
-		link(rel="stylesheet" href="css/side-nav-contact-menu.css")
-		link(rel="stylesheet" href="css/page-content.css")
-		link(rel="stylesheet" href="css/footer.css")
+		link(rel="stylesheet" href="css/login.css")
 		//endbuild
 		//START SCRIPTS AFTER LOUD PAGE
+		//build:js js/ga.min.js
+		script(src="js/ga.js")
+		//endbuild
 		//build:js js/modernizr.min.js
 		script(src="js/modernizr.js")
 		//endbuild
-
+		block reCaptcha
 	body
+		// Yandex.Metrika counter
+		//build:js js/yam.min.js
+		script(src="js/yam.js")
+		//endbuild
+		noscript
+			div
+				img(src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt="")
+		//Yandex.Metrika counter
 		<!--[if lt IE8]>
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		div.wrapper
 			section.login-page
 				div.login-window
-					h1.login-window__header Авторизируйтесь
-					div.login-window__body
-						form.login-window__form#login-window__form
-							div.login-window__server-mes.login-window__server--error
-								h2.login-window__server-mes-header Неудача!
-								p.login-window__server-mes-content На сервере какие-то неполадки.
-							div.login-window__server-mes.login-window__server-mes--error
-								h2.login-window__server-mes-header Неудача!
-								p.login-window__server-mes-content Неверные логин/пароль.
-							div.login-window__server-mes.login-window__server-mes--succes
-								h2.login-window__server-mes-header Успешная авторизация!
-								p.login-window__server-mes-content Добро пожаловать. Хозяяяин.
-							div.login-window__inputs-group
-								div.login-window__inner.qtipBlock(qtip-content="Требуется адрес электронной почты" qtip-position="left")
-									div.login-window__inner-first-img.mail-img
-									div.login-window__inner-second-img
-									input.login-window__input(name="admin-name" type="text" placeholder="Введите Email")
-								div.login-window__inner.qtipBlock(qtip-content="Здесь нужен пароль" qtip-position="left")
-									div.login-window__inner-first-img.key-img
-									div.login-window__inner-second-img
-									input.login-window__input(name="password" type="text" placeholder="Введите пароль")
-								div.login-window__inner--checkbox
-									input.login-window__checkbox#remember-me(name="remember-me" type="checkbox")
-									label.fake-checkbox(for="remember-me")
-									div.checbox-title Запомнить меня?
-							div.login-window__button.clearfix
+					h1.form__header.form__header--login Авторизируйтесь
+					div.form__body.form__body--login
+						form#login-window__form
+							div.form__item.form-message#error-server
+								h2.form-message__header Неудача!
+								p.form-message__content На сервере какие-то неполадки.
+							div.form__item.form-message#error
+								h2.form-message__header Неудача!
+								p.form-message__content Неверные логин/пароль.
+							div.form__item.form-message.form-message__succes#succes
+								h2.form-message__header Успешная авторизация!
+								p.form-message__content Добро пожаловать. Хозяяяин.
+							div.form__item#form-inputs
+								div.input-group.input-group-login.qtipBlock(qtip-content="Требуется адрес электронной почты"
+								qtip-position="left")
+									div.input-group-login__first-img.input-group-login__first-img--mail.float-left
+									div.input-group-login__second-img.float-left
+									input.input-group-login__input.float-left(name="admin-name" type="text" placeholder="Введите Email")
+								div.input-group.input-group-login.qtipBlock(qtip-content="Здесь нужен пароль" qtip-position="left")
+									div.input-group-login__first-img.input-group-login__first-img--key.float-left
+									div.input-group-login__second-img.float-left
+									input.input-group-login__input.float-left(name="password" type="text" placeholder="Введите пароль")
+								div.input-group.input-group-login-checkbox
+									input.input-group-login-checkbox__checkbox#remember-me(name="remember-me" type="checkbox")
+									label.input-group-login-checkbox__fake-checkbox.float-left(for="remember-me")
+									div.input-group-login-checkbox__checkbox-title.float-left Запомнить меня?
+							div.form__item.clearfix#form-buttons
 								button.button.button--green.float-left(type="submit" name="login-button") Войти
 								a.button.button--a.float-right(href="./") Отмена
 		//build:js js/vendor.min.js

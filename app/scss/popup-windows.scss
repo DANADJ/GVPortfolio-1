@@ -1,0 +1,316 @@
+/*Add prroject's popup window*/
+.modal-window-add-work {
+	display: none;
+	box-sizing: border-box;
+	width: 360px;
+}
+
+/*Page Login*/
+.login-window {
+	width: 350px;
+	position: absolute;
+	top: 50%;
+	margin-top: -150px;
+}
+
+/*Feedback form*/
+.feedback-form {
+	box-sizing: border-box;
+	width: 73.846154%;
+	margin: 0 auto;
+
+	.form__item:last-child {
+		margin: 0 auto;
+		width: 88.372093%;
+	}
+}
+
+/*Forms*/
+.form {
+
+	&__header {
+		height: 19px;
+		margin: 2px 0 1px 0;
+		padding: 0 0 0 22px;
+		line-height: 19px;
+		font: 12px 'open_sanslight';
+
+		&--login {
+			color: black;
+		}
+
+		&--add-work, {
+			color: white;
+		}
+	}
+
+	&__body {
+		box-sizing: border-box;
+		border-radius: 5px;
+		border: 1px solid #acaaaa;
+		background-color: #f1f0ef;
+		background-origin: border-box;
+
+		&--login {
+			padding: 35px;
+		}
+
+		&--add-work {
+			padding: 25px 40px 35px;
+		}
+
+		&--send-message {
+			padding: 40px 40px 40px 40px;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		margin: 0;
+	}
+}
+
+.form-message {
+	display: none;
+	margin: 0 0 25px 0;
+	padding: 3px 10px 5px 10px;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 105, 69);
+	background-color: rgba(203, 105, 69, 0.329);
+	color: #cb6945;
+
+	&__header {
+		font: 16px "open_sanssemibold";
+		margin: 0;
+	}
+
+	&__content {
+		font: 14px "open_sansregular";
+		margin: 0;
+	}
+
+	&__succes {
+		margin-bottom: 0;
+		border: 1px solid #49bb7b;
+		background-color: #bce1cb;
+		color: #49bb7b;
+	}
+}
+
+.modal-window-add-work .form-message__succes {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.input-group {
+	box-sizing: border-box;
+	margin: 0 0 25px 0;
+	padding: 0;
+	font: 11px 'open_sansregular';
+
+	&__label {
+		display: block;
+		box-sizing: border-box;
+		margin: 0 0 7px 0;
+		color: $text-color;
+		font-size: 14px;
+		text-align: left;
+	}
+
+	&__name, &__email {
+		width: 46.875%;
+	}
+
+	&__input {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		height: 40px;
+		margin: 0;
+		padding: 0 10px;
+		border: 1px solid #d6d5d3;
+		border-radius: 4px;
+		background-image: linear-gradient(0deg, rgb(233, 230, 229) 0%, rgb(255, 255, 255) 100%);
+
+		&:focus {
+			border-color: #6FDCC1;
+		}
+	}
+
+	&__textarea {
+		resize: none;
+		padding-top: 11px;
+
+		&--add-work {
+			min-height: 100px;
+			height: auto;
+		}
+
+		&--feedback {
+			height: 180px;
+		}
+	}
+
+	&__input-fake {
+		box-sizing: border-box;
+		float: left;
+		width: 82.014388%;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	&__input-img {
+		box-sizing: border-box;
+		float: right;
+		width: 50px;
+		height: 40px;
+		background: url(../images/iCloud-down.png) no-repeat center center, linear-gradient(0deg, #EAE8E9 0%, #F9FAF9 100%) 0 0;
+		border: 1px solid #d6d5d3;
+		border-left: none;
+		border-top-right-radius: 5px;
+		border-bottom-right-radius: 5px;
+	}
+
+	&__input-file {
+		display: none;
+	}
+}
+
+.input-group-login {
+	height: 40px;
+	border: 1px solid #d6d5d3;
+	border-radius: 4px;
+	background-image: linear-gradient(0deg, rgb(233, 230, 229) 0%, rgb(255, 255, 255) 100%);
+
+	&__first-img {
+		box-sizing: border-box;
+		width: 43px;
+		height: 40px;
+		margin: 0;
+		padding: 0;
+
+		&--mail {
+			background: url(../images/email-autorization.png) no-repeat 13px 13px;
+		}
+
+		&--key {
+			background: url(../images/key-autorization.png) no-repeat 14px 12px;
+		}
+	}
+
+	&__second-img {
+		box-sizing: border-box;
+		width: 11px;
+		height: 40px;
+		margin: 0;
+		padding: 0;
+		background: url(../images/arrow.png) no-repeat center center;
+	}
+
+	&__input {
+		box-sizing: border-box;
+		border: none;
+		background: none;
+		width: 80.215827%;
+		height: 38px;
+		padding: 0 15px;
+		font: 12px "open_sanslight";
+	}
+}
+
+.input-group-login-checkbox {
+	width: 150px;
+	height: 22px;
+	margin: 0 auto 18px;
+
+	&__checkbox {
+		position: absolute;
+		left: -10000px;
+
+		&:checked + .input-group-login-checkbox__fake-checkbox {
+			background-position: -10px -10px;
+		}
+	}
+
+	&__fake-checkbox {
+		width: 22px;
+		height: 22px;
+		margin: 0 0 0 -2px;
+		background: rgb(146, 146, 146);
+		background: url(../images/checkbox.png) no-repeat -10px -51px;
+	}
+
+	&__checkbox-title {
+		margin: 1px 0 0 8px;
+		color: $menu-navigation__link__font-color;
+		font-size: 14px;
+	}
+}
+
+.g-recaptcha {
+	margin: 0 auto 26px;
+	width: 300px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.button {
+	max-width: 130px;
+	min-width: 130px;
+	height: 40px;
+	margin: 0;
+	padding: 9px 23px;
+	border: 1px solid rgb(195, 194, 194);
+	border-radius: 5px;
+	color: rgb(114, 112, 112);
+	font: 14px "open_sanssemibold";
+	text-align: center;
+	text-shadow: 2px 1px 3px 0 rgba(44, 44, 44, 0.34);
+	background-color: rgb(209, 206, 204);
+	background-image: $light-gradient;
+	box-shadow: 0 1px 2px 0 rgba(91, 91, 91, 0.2);
+
+	&:hover {
+		background-color: rgb(233, 230, 228);
+		background-image: $light-gray-gradient;
+		box-shadow: inset 0 -1px 1px 0 rgba(178, 178, 178, 0.75);
+	}
+
+	&:active {
+		color: $header-color;
+		border-color: rgba(123, 120, 120, 075);
+		text-shadow: 2px 0 2px rgba(102, 101, 101, 0.75);
+		background-image: $dark-gray-gradient;
+		box-shadow: 0 2px 3px 0 rgba(9, 9, 9, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+	}
+
+	&--a {
+		box-sizing: border-box;
+		line-height: 40px;
+		text-decoration: none;
+		padding: 0;
+	}
+
+	&--green {
+		color: rgb(30, 116, 101);
+		border-color: rgb(57, 166, 139);
+		background-color: rgb(74, 191, 162);
+		background-image: linear-gradient(0deg, rgb(67, 183, 150) 0%, rgb(128, 232, 203) 97%, rgb(255, 255, 255) 100%);
+
+		&:hover {
+			background-color: rgb(79, 227, 196);
+			background-image: linear-gradient(0deg, rgb(53, 160, 133) 0%, rgb(66, 208, 174) 90%, rgb(108, 199, 177) 100%);
+			box-shadow: inset 0 -1px 1px 0 rgba(178, 178, 178, 0.75);
+		}
+
+		&:active {
+			color: rgb(243, 242, 241);
+			border-color: rgba(67, 145, 117, 0.75);
+			text-shadow: 2px 0 2px rgba(102, 101, 101, 0.75);
+			background-image: linear-gradient(0deg, rgb(68, 183, 153) 0%, rgb(134, 230, 198) 100%);
+			box-shadow: 0 2px 3px 0 rgba(9, 9, 9, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+		}
+	}
+}

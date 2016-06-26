@@ -12,19 +12,18 @@
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
 		<!--CSS STYLESHEETS-->
-		<!-- build:css css/vendor.min.css-->
-		<!-- bower:css-->
+		<!--build:css css/vendor.min.css-->
+		<!--bower:css-->
 		<link rel="stylesheet" href="bower/qtip2/jquery.qtip.css" />
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
-		<!-- endbower-->
-		<!-- endbuild-->
-		<!-- build:css css/main.min.css-->
+		<!--endbower-->
+		<!--endbuild-->
+		<!--build:css css/main.min.css-->
 		<link rel="stylesheet" href="fonts/stylesheet.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/header.css">
-		<link rel="stylesheet" href="css/side-nav-contact-menu.css">
-		<link rel="stylesheet" href="css/page-content.css">
-		<link rel="stylesheet" href="css/footer.css">
+		<!--endbuild-->
+		<!--build:css css/portfolio.min.css-->
+		<link rel="stylesheet" href="css/portfolio.css">
 		<!--endbuild-->
 		<!--START SCRIPTS AFTER LOUD PAGE-->
 		<!--build:js js/ga.min.js-->
@@ -69,7 +68,7 @@
 					<ul class="menu-navigation side-bar__item">
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
 						<li class="menu-navigation__item"><a href="./portfolio.html" class="link-without-decorations menu-navigation__link menu-navigation__link--active-page">Портфолио</a></li>
-						<li class="menu-navigation__item"><a href="./contactwithme.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
+						<li class="menu-navigation__item"><a href="./feedback.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
 					</ul>
 					<!-- MENU CONTACTS-->
 					<div class="menu-contacts side-bar__item">
@@ -124,6 +123,45 @@
 						</div>
 					</article>
 				</main>
+			</section>
+			<!-- ПопАп окно добавления проекта-->
+			<section id="modal-window-add-work" class="modal-window-add-work">
+				<h2 class="form__header form__header--add-work">Добавление проекта</h2>
+				<div class="form__body form__body--add-work">
+					<form id="modal-window-add-work__form" role="form">
+						<div id="error-server" class="form__item form-message">
+							<h2 class="form-message__header">Неудача!</h2>
+							<p class="form-message__content">На сервере какие-то неполадки.</p>
+						</div>
+						<div id="succes" class="form__item form-message form-message__succes">
+							<h2 class="form-message__header">Ура!</h2>
+							<p class="form-message__content">Проект успешно добавлен.</p>
+						</div>
+						<div id="form-inputs" class="form__item">
+							<div class="input-group">
+								<label for="projectName" class="input-group__label">Название проекта</label>
+								<input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left" class="input-group__input qtipBlock">
+							</div>
+							<div class="input-group clearfix">
+								<label id="add-work__label" class="input-group__label">Картинка проекта</label>
+								<input id="add-work__fake-input" name="projectImg" type="text" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left" class="input-group__input input-group__input-fake qtipBlock">
+								<div id="add-work__fake-img" class="input-group__input-img"></div>
+								<input id="fileUpload" type="file" class="input-group__input-file">
+							</div>
+							<div class="input-group">
+								<label for="projectURL" class="input-group__label">URL проекта</label>
+								<input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="input-group__input qtipBlock">
+							</div>
+							<div class="input-group">
+								<label for="projectDescription" class="input-group__label">Описание</label>
+								<textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left" class="input-group__input input-group__textarea input-group__textarea--add-work qtipBlock"></textarea>
+							</div>
+						</div>
+						<div id="form-buttons" class="form__item">
+							<button type="submit" name="add-button" value="Добавить" class="button button--green">Добавить</button><a href="#" class="button button--a float-right b-close">Отмена</a>
+						</div>
+					</form>
+				</div>
 			</section>
 			<div class="empty"></div>
 		</div>

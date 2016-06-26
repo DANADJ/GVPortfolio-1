@@ -1,5 +1,5 @@
 var jade_path = 'app/markups/_pages/*.jade',
-	scss_path = 'app/scss/*.scss',
+	scss_path = 'app/scss/_pages/*.scss',
 	modernizrSettings = require('./modernizr_config.json');
 
 //Инициализация плагинов
@@ -42,7 +42,7 @@ gulp.task('watch', ['wiredep', 'prefix-css'], function () {
 	gulp.watch('app/markups/**/*.jade').on('change', function () {
 		gulp.start('wiredep')
 	});
-	gulp.watch('app/scss/**/*.scss').on('change', function () {
+	gulp.watch('app/scss/*.scss').on('change', function () {
 		gulp.start('prefix-css')
 	});
 	gulp.watch('modernizr-config.json').on('change', function () {
@@ -59,7 +59,7 @@ gulp.task('jade_watch', function () {
 
 //Задача слежки за файлами scss
 gulp.task('sass_watch', function () {
-	gulp.watch(scss_path, ['sass']);
+	gulp.watch('scss/*.scss', ['sass']);
 });
 
 //Задача компиляции *.jade в *.html

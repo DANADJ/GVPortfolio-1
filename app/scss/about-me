@@ -1,0 +1,67 @@
+/* Main information */
+.my-photo {
+	width: 133px;
+	height: 133px;
+	margin: 8px 0 0 13px;
+	border: 10px solid #f6f5f4;
+	border-radius: 50%;
+	float: left;
+	box-shadow: 3px 2px 27px 5px rgba(236, 232, 227, 0.75), inset 0 2px 24px 0 rgba(121, 121, 121, 0.23);
+	overflow: hidden;
+
+	&__img {
+		width: 100%;
+		position: relative;
+		top: -12px;
+	}
+}
+
+.main-info {
+	width: 394px;
+	padding: 0;
+	margin: 0;
+	float: right;
+
+	&__item {
+		padding: 3px 0 3px 0;
+
+		&:last-child {
+			padding: 13px 0 3px 0
+		}
+	}
+}
+
+.skills {
+	padding: 0 0 0 135px;
+	margin-top: -20px;
+
+	&__skill {
+		color: #1e7465;
+		font: 600 9px 'open_sansregular';
+		text-transform: uppercase;
+		position: relative;
+		height: 16px;
+		line-height: 10px;
+		padding-top: 4px;
+		padding-left: 5px;
+		padding-right: 1px;
+		margin-left: 18px;
+		margin-bottom: 5px;
+		display: inline-block;
+		background: url(../images/bg-skill-body.png) repeat-x;
+
+		&:before {
+			content: url(../images/bg-skill-start.png);
+			position: absolute;
+			left: -10px;
+			top: 0;
+		}
+
+		&:after {
+			content: url(../images/bg-skill-end.png);
+			position: absolute;
+			right: -5px;
+			top: 0;
+		}
+	}
+}

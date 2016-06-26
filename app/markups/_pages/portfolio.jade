@@ -3,6 +3,10 @@ block description
 	meta(name="description" content="Портфолио и примеры работ Web разработчика Гордиенко Валентина.")
 block title
 	|Портфолио. Примеры работ. Web разработчик фрилансер Гордиенко Валентин.
+block stylesheets
+	//build:css css/portfolio.min.css
+	link(rel="stylesheet" href="css/portfolio.css")
+	//endbuild
 block sidebar
 	section.sidebar
 		+menu-navigation(2,"side-bar__item")
@@ -14,3 +18,5 @@ block content
 	+project-list("Проэкты заказчиков", "add-new-customer-project", customer_portfolio)
 	//MY TEST PROJECT
 	+project-list("Мои тестовые проэкты", "add-new-test-project", test_portfolio)
+block modal_windows
+	include ../_common/add_project

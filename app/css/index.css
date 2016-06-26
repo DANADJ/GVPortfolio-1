@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/*Dimentions*/
+/*Colors*/
+/*Оформление неактивного пункта меню и кнопки*/
+/*Оформление активного пункта меню*/
+/* Main information */
+.my-photo {
+  width: 133px;
+  height: 133px;
+  margin: 8px 0 0 13px;
+  border: 10px solid #f6f5f4;
+  border-radius: 50%;
+  float: left;
+  box-shadow: 3px 2px 27px 5px rgba(236, 232, 227, 0.75), inset 0 2px 24px 0 rgba(121, 121, 121, 0.23);
+  overflow: hidden; }
+  .my-photo__img {
+    width: 100%;
+    position: relative;
+    top: -12px; }
+
+.main-info {
+  width: 394px;
+  padding: 0;
+  margin: 0;
+  float: right; }
+  .main-info__item {
+    padding: 3px 0 3px 0; }
+    .main-info__item:last-child {
+      padding: 13px 0 3px 0; }
+
+.skills {
+  padding: 0 0 0 135px;
+  margin-top: -20px; }
+  .skills__skill {
+    color: #1e7465;
+    font: 600 9px 'open_sansregular';
+    text-transform: uppercase;
+    position: relative;
+    height: 16px;
+    line-height: 10px;
+    padding-top: 4px;
+    padding-left: 5px;
+    padding-right: 1px;
+    margin-left: 18px;
+    margin-bottom: 5px;
+    display: inline-block;
+    background: url(../images/bg-skill-body.png) repeat-x; }
+    .skills__skill:before {
+      content: url(../images/bg-skill-start.png);
+      position: absolute;
+      left: -10px;
+      top: 0; }
+    .skills__skill:after {
+      content: url(../images/bg-skill-end.png);
+      position: absolute;
+      right: -5px;
+      top: 0; }
+
+/* Education */
+.education__item-icon {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 50%;
+  margin-top: -34px;
+  background: url(../images/portfel.png) no-repeat; }
+
+.education__item {
+  margin: 0 20px 0 13px;
+  padding: 17px 0 0 0;
+  position: relative;
+  word-wrap: break-word;
+  box-sizing: padding-box; }
+  .education__item:after {
+    content: " ";
+    display: block;
+    border-radius: 1px;
+    box-shadow: inset 0 1px 1px 0 rgba(128, 128, 128, 0.29);
+    width: 100%;
+    height: 2px;
+    margin: 28px 0 9px 0; }
+  .education__item:last-child:after {
+    display: none; }
+  .education__item:last-child .education__item-icon {
+    margin-top: -18px; }
+
+.education__item-content {
+  box-sizing: padding-box;
+  padding: 0;
+  margin: 0 0 0 96px; }
+
+.education__item-name, .education__item-period {
+  color: #727070;
+  padding: 0;
+  margin: 0 0 5px 0; }
+
+.education__item-period {
+  margin: 0; }
+
+.higher-education {
+  background: url(../images/cap.png) no-repeat; }
+
+.course {
+  background: url(../images/file.png) no-repeat; }

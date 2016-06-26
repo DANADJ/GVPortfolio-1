@@ -19,7 +19,7 @@ var mainJS = (function () {
 				dataType: 'JSON', //указываю формат передачи данных
 				data: data //передаю ассоциативный массив с сохранёнными в нём данными из формы
 				}).fail(function () {
-					form.find('.login-window__server--error').show();
+					form.find('#error-server').show();
 				});
 	};
 
@@ -34,17 +34,16 @@ var mainJS = (function () {
 			serverAnswer.done(function (ans) {
 				var succesBox, errorBox, formGroup, addButton;
 				if (target_url !== 'php/contact_with_me.php') {
-					succesBox = form.find('.login-window__server-mes--succes');
-					errorBox = form.find('.login-window__server-mes--error');
-					formGroup = form.find('.form-group');
-					addButton = form.find('.add-button');
+					succesBox = form.find('#succes');
+					errorBox = form.find('#error');
+					formGroup = form.find('#form-inputs');
+					addButton = form.find('#form-buttons');
 					if (ans.status === 'ok') {
 						errorBox.hide();
 						formGroup.hide();
 						addButton.hide();
 						succesBox.show();
 					} else {
-						succesBox.hide();
 						errorBox.show();
 					}
 				} else {
@@ -94,18 +93,18 @@ var mainJS = (function () {
 	var _setUpListners = function () {
 
 		//Прослушка нажатия кнопки добавления проекта
-		$('#add-new-project').click(function (event) {
+		$('.add-new-work').click(function (event) {
 			event.preventDefault();
-			var modalWindow = $('#modalWindow-addNewProject'),
-				modalWindowForm = modalWindow.find('#modalWindow-addNewProject-form');
+			var modalWindow = $('#modal-window-add-work'),
+				modalWindowForm = modalWindow.find('#modal-window-add-work__form');
 
 			_showModalWindow(modalWindow, modalWindowForm);
 		});
 
 		//Прослушка нажатия кнопки отправки формы добавления проекта
-		$('#login-wind').submit(function (event) {
+		$('#modal-window-add-work__form').submit(function (event) {
 			event.preventDefault();
-			_validation_server_answer('php/add_new_project.php', $('#login-window__form'));
+			_validation_server_answer('php/add_new_project.php', $('#modal-window-add-work__form'));
 		});
 
 		//Прослушка нажатия кнопки отправки формы авторизации
@@ -118,13 +117,19 @@ var mainJS = (function () {
 		$('#contactForms').on('submit', _submitForm_contactWithMe);
 
 		//Прослушка нажатия на фэйковую форму загрузки картинки и генерации клика по полю загрузки файла
-		$('#modalWindow-addNewProject-label, .modalWindow-addNewProject-input-img').on('click', function () {
+		$('#add-work__label, #add-work__fake-img, #add-work__fake-input').on('click', function () {
 			$('#fileUpload').trigger('click');
 		});
 
 		//Прослушка выбора файла на поле загрузки файла и вставка его значения в фэйковое поле загрузки картинки
 		$('#fileUpload').on('change', function () {
-			$('.modalWindow-addNewProject-input-fake').val($(this).val()).qtip('destroy', true);
+			$('#add-work__fake-input').val($(this).val()).qtip('destroy', true);
+		});
+
+		//Прослушка нажатия на плашке проэкта
+		$('.my-works-item__').on('click', function () {
+			console.log('Нажатие на кнопку проэкта');
+			$('.add-new-work').trigger('click');
 		});
 	};
 

@@ -5,10 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--SEO-->
+		<meta name="description" content="Страница входа на сайт">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
 		<!--TITLE-->
-		<title>
-		</title>
+		<title>LogIn</title>
 		<!--FAVICONS-->
 		<link rel="icon" type="image/vdn.microsoft.ico" href="images/favicon.ico" sizes="16x16">
 		<!--CSS STYLESHEETS-->
@@ -18,59 +18,65 @@
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css" />
 		<!-- endbower-->
 		<!-- endbuild-->
-		<!-- build:css css/main.min.css-->
+		<!-- build:css css/login.min.css-->
 		<link rel="stylesheet" href="fonts/stylesheet.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/header.css">
-		<link rel="stylesheet" href="css/side-nav-contact-menu.css">
-		<link rel="stylesheet" href="css/page-content.css">
-		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/login.css">
 		<!--endbuild-->
 		<!--START SCRIPTS AFTER LOUD PAGE-->
+		<!--build:js js/ga.min.js-->
+		<script src="js/ga.js"></script>
+		<!--endbuild-->
 		<!--build:js js/modernizr.min.js-->
 		<script src="js/modernizr.js"></script>
 		<!--endbuild-->
 	</head>
 	<body>
-		<!--[if lt IE8]>
+		<!-- Yandex.Metrika counter-->
+		<!--build:js js/yam.min.js-->
+		<script src="js/yam.js"></script>
+		<!--endbuild-->
+		<noscript>
+			<div><img src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt=""></div>
+		</noscript>
+		<!--Yandex.Metrika counter--><!--[if lt IE8]>
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
 		<![endif]-->
 		<div class="wrapper">
 			<section class="login-page">
 				<div class="login-window">
-					<h1 class="login-window__header">Авторизируйтесь</h1>
-					<div class="login-window__body">
-						<form id="login-window__form" class="login-window__form">
-							<div class="login-window__server-mes login-window__server--error">
-								<h2 class="login-window__server-mes-header">Неудача!</h2>
-								<p class="login-window__server-mes-content">На сервере какие-то неполадки.</p>
+					<h1 class="form__header form__header--login">Авторизируйтесь</h1>
+					<div class="form__body form__body--login">
+						<form id="login-window__form">
+							<div id="error-server" class="form__item form-message">
+								<h2 class="form-message__header">Неудача!</h2>
+								<p class="form-message__content">На сервере какие-то неполадки.</p>
 							</div>
-							<div class="login-window__server-mes login-window__server-mes--error">
-								<h2 class="login-window__server-mes-header">Неудача!</h2>
-								<p class="login-window__server-mes-content">Неверные логин/пароль.</p>
+							<div id="error" class="form__item form-message">
+								<h2 class="form-message__header">Неудача!</h2>
+								<p class="form-message__content">Неверные логин/пароль.</p>
 							</div>
-							<div class="login-window__server-mes login-window__server-mes--succes">
-								<h2 class="login-window__server-mes-header">Успешная авторизация!</h2>
-								<p class="login-window__server-mes-content">Добро пожаловать. Хозяяяин.</p>
+							<div id="succes" class="form__item form-message form-message__succes">
+								<h2 class="form-message__header">Успешная авторизация!</h2>
+								<p class="form-message__content">Добро пожаловать. Хозяяяин.</p>
 							</div>
-							<div class="login-window__inputs-group">
-								<div qtip-content="Требуется адрес электронной почты" qtip-position="left" class="login-window__inner qtipBlock">
-									<div class="login-window__inner-first-img mail-img"></div>
-									<div class="login-window__inner-second-img"></div>
-									<input name="admin-name" type="text" placeholder="Введите Email" class="login-window__input">
+							<div id="form-inputs" class="form__item">
+								<div qtip-content="Требуется адрес электронной почты" qtip-position="left" class="input-group input-group-login qtipBlock">
+									<div class="input-group-login__first-img input-group-login__first-img--mail float-left"></div>
+									<div class="input-group-login__second-img float-left"></div>
+									<input name="admin-name" type="text" placeholder="Введите Email" class="input-group-login__input float-left">
 								</div>
-								<div qtip-content="Здесь нужен пароль" qtip-position="left" class="login-window__inner qtipBlock">
-									<div class="login-window__inner-first-img key-img"></div>
-									<div class="login-window__inner-second-img"></div>
-									<input name="password" type="text" placeholder="Введите пароль" class="login-window__input">
+								<div qtip-content="Здесь нужен пароль" qtip-position="left" class="input-group input-group-login qtipBlock">
+									<div class="input-group-login__first-img input-group-login__first-img--key float-left"></div>
+									<div class="input-group-login__second-img float-left"></div>
+									<input name="password" type="text" placeholder="Введите пароль" class="input-group-login__input float-left">
 								</div>
-								<div class="login-window__inner--checkbox">
-									<input id="remember-me" name="remember-me" type="checkbox" class="login-window__checkbox">
-									<label for="remember-me" class="fake-checkbox"></label>
-									<div class="checbox-title">Запомнить меня?</div>
+								<div class="input-group input-group-login-checkbox">
+									<input id="remember-me" name="remember-me" type="checkbox" class="input-group-login-checkbox__checkbox">
+									<label for="remember-me" class="input-group-login-checkbox__fake-checkbox float-left"></label>
+									<div class="input-group-login-checkbox__checkbox-title float-left">Запомнить меня?</div>
 								</div>
 							</div>
-							<div class="login-window__button clearfix">
+							<div id="form-buttons" class="form__item clearfix">
 								<button type="submit" name="login-button" class="button button--green float-left">Войти</button><a href="./" class="button button--a float-right">Отмена</a>
 							</div>
 						</form>

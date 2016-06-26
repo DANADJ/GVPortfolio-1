@@ -1,0 +1,143 @@
+/*Main*/
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font: 14px/1.41 'Verdana', 'Arial', sans-serif;
+	background: url(../images/bg-main.png) no-repeat fixed center center;
+	background-size: cover;
+	color: rgb(114, 112, 112);
+	word-wrap: break-word;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Page*/
+.wrapper {
+	position: relative;
+	min-height: 100%;
+	min-width: 960px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.page {
+	padding: 35px 0 0 0 !important;
+}
+
+.page-content-item {
+	box-sizing: border-box;
+	margin: 0 0 35px 0;
+	padding: 0;
+
+	&__header {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 17px 40px;
+		font: 24px 'open_sansregular';
+		color: $header-color;
+		line-height: 0.9;
+		text-align: left;
+		text-shadow: 1px 1px 3px #666565;
+		border: 1px solid rgba(99, 99, 99, 0.35);
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		background-image: $dark-gray-gradient;
+		background-origin: border-box;
+		box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+	}
+
+	&__conteiner {
+		box-sizing: border-box;
+		padding: 28px 27px 28px 28px;
+		border: 1px solid #acaaaa;
+		background-color: #f1f0ef;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		background-origin: border-box;
+	}
+}
+
+.page-content {
+	box-sizing: border-box;
+	width: 650px;
+	margin: 0 0 35px 60px;
+	padding: 0;
+	float: left;
+}
+
+
+.page-content-list {
+	list-style: none;
+	padding: 0;
+	margin: 7px 0 0 0;
+}
+
+.item-name, .education__item-name--link {
+	font: 14px 'open_sanssemibold';
+	color: $text-color;
+	line-height: 1.2;
+	text-align: left;
+}
+
+.item-content {
+	font: 14px 'open_sansregular';
+	color: $text-color;
+	line-height: 1.2;
+	text-align: left;
+}
+
+/*Position content*/
+.conteiner {
+	min-height: 100%;
+	height: auto !important;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.header__width {
+	max-width: 1200px;
+}
+
+.page-width {
+	width: 966px;
+}
+
+.footer__width {
+	width: 960px;
+}
+
+.login-page {
+	width: 360px;
+	margin:0 auto ;
+}
+
+.link-without-decorations {
+	text-decoration: none;
+}
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
