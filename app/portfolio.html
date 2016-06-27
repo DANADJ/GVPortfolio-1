@@ -61,9 +61,9 @@
 				</div>
 			</header>
 			<!--PAGE-->
-			<section class="page conteiner page-width clearfix">
+			<main class="page conteiner page-width clearfix">
 				<!--SIDEBAR-->
-				<section class="sidebar">
+				<aside class="sidebar">
 					<!-- MENU NAVIGATION-->
 					<ul class="menu-navigation side-bar__item">
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
@@ -71,7 +71,7 @@
 						<li class="menu-navigation__item"><a href="./feedback.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
 					</ul>
 					<!-- MENU CONTACTS-->
-					<div class="menu-contacts side-bar__item">
+					<section class="menu-contacts side-bar__item">
 						<h2 class="menu-contacts__header">Контакты</h2>
 						<ol class="menu-contacts__list">
 							<li class="menu-contacts__item">
@@ -84,18 +84,18 @@
 								<div class="menu-contacts__item-icon menu-contacts__skype-img"><a href="skype:danadjsaintpetersburg" class="link-without-decorations menu-contacts__item-link">danadjsaintpetersburg</a></div>
 							</li>
 						</ol>
-					</div>
-				</section>
+					</section>
+				</aside>
 				<!--MAIN CONTENT OF PAGE-->
-				<main class="page-content">
+				<div class="page-content">
 					<!--MYSELF PROJECT-->
-					<article class="page-content-item">
+					<section class="page-content-item">
 						<h2 class="page-content-item__header">Собственные проэкты</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<ol class="my-works-list page-content-list">
 								<li class="my-works-item">
 									<div class="my-works-item__inner">
-										<div class="my-works-item__img-wrapper"><img src="images/html5-css3-cours.png" alt="Шпаргалка по html и css" class="my-works-item__img"/></div>
+										<div class="my-works-item__img-wrapper"><img src="images/html5-css3-cours.jpg" alt="Шпаргалка по html и css" class="my-works-item__img"/></div>
 										<p class="my-works-item__header"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="link-without-decorations my-works-item__header-link">Шпаргалка по HTML5 и CSS3</a></p>
 										<p class="my-works-item__content">Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Пока ещё не закончил.</p>
 									</div>
@@ -103,32 +103,32 @@
 								<li class="my-works-item"><a id="add-new-my-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
-					</article>
+					</section>
 					<!--PROJECT FOR A CUSTOMER-->
-					<article class="page-content-item">
+					<section class="page-content-item">
 						<h2 class="page-content-item__header">Проэкты заказчиков</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<ol class="my-works-list page-content-list">
 								<li class="my-works-item"><a id="add-new-customer-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
-					</article>
+					</section>
 					<!--MY TEST PROJECT-->
-					<article class="page-content-item">
+					<section class="page-content-item">
 						<h2 class="page-content-item__header">Мои тестовые проэкты</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<ol class="my-works-list page-content-list">
 								<li class="my-works-item"><a id="add-new-test-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
-					</article>
-				</main>
-			</section>
-			<!-- ПопАп окно добавления проекта-->
-			<section id="modal-window-add-work" class="modal-window-add-work">
+					</section>
+				</div>
+			</main>
+			<!--Add work's window-->
+			<section id="form-add-work" class="form-add-work">
 				<h2 class="form__header form__header--add-work">Добавление проекта</h2>
 				<div class="form__body form__body--add-work">
-					<form id="modal-window-add-work__form" role="form">
+					<form id="form-add-work__form">
 						<div id="error-server" class="form__item form-message">
 							<h2 class="form-message__header">Неудача!</h2>
 							<p class="form-message__content">На сервере какие-то неполадки.</p>
@@ -138,23 +138,23 @@
 							<p class="form-message__content">Проект успешно добавлен.</p>
 						</div>
 						<div id="form-inputs" class="form__item">
-							<div class="input-group">
+							<div qtip-content="Проект без названия?!" qtip-position="left" class="input-group qtipBlock">
 								<label for="projectName" class="input-group__label">Название проекта</label>
-								<input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left" class="input-group__input qtipBlock">
+								<input id="projectName" name="projectName" type="text" placeholder="Введите название" class="input-group__input">
 							</div>
-							<div class="input-group clearfix">
+							<div qtip-content="Без картинки не загружу!" qtip-position="left" class="input-group qtipBlock clearfix">
 								<label id="add-work__label" class="input-group__label">Картинка проекта</label>
-								<input id="add-work__fake-input" name="projectImg" type="text" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left" class="input-group__input input-group__input-fake qtipBlock">
+								<input id="add-work__fake-input" name="projectImg" type="text" placeholder="Загрузите изображение" class="input-group__input input-group__input-fake">
 								<div id="add-work__fake-img" class="input-group__input-img"></div>
 								<input id="fileUpload" type="file" class="input-group__input-file">
 							</div>
-							<div class="input-group">
+							<div qtip-content="Ну а ссылка?!" qtip-position="left" class="input-group qtipBlock">
 								<label for="projectURL" class="input-group__label">URL проекта</label>
-								<input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="input-group__input qtipBlock">
+								<input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" class="input-group__input">
 							</div>
-							<div class="input-group">
+							<div qtip-content="Напиши пару слов о проекте!" qtip-position="left" class="input-group qtipBlock">
 								<label for="projectDescription" class="input-group__label">Описание</label>
-								<textarea id="projectDescription" name="projectDescription" type="text" placeholder="Пара слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left" class="input-group__input input-group__textarea input-group__textarea--add-work qtipBlock"></textarea>
+								<textarea id="projectDescription" name="projectDescription" placeholder="Пара слов о Вашем проекте" class="input-group__input input-group__textarea input-group__textarea--add-work"></textarea>
 							</div>
 						</div>
 						<div id="form-buttons" class="form__item">

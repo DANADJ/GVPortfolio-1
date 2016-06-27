@@ -63,9 +63,9 @@
 				</div>
 			</header>
 			<!--PAGE-->
-			<section class="page conteiner page-width clearfix">
+			<main class="page conteiner page-width clearfix">
 				<!--SIDEBAR-->
-				<section class="sidebar">
+				<aside class="sidebar">
 					<!-- MENU NAVIGATION-->
 					<ul class="menu-navigation side-bar__item">
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
@@ -73,7 +73,7 @@
 						<li class="menu-navigation__item"><a href="./feedback.html" class="link-without-decorations menu-navigation__link menu-navigation__link--active-page">Обратная связь</a></li>
 					</ul>
 					<!-- MENU CONTACTS-->
-					<div class="menu-contacts side-bar__item">
+					<section class="menu-contacts side-bar__item">
 						<h2 class="menu-contacts__header">Контакты</h2>
 						<ol class="menu-contacts__list">
 							<li class="menu-contacts__item">
@@ -86,15 +86,15 @@
 								<div class="menu-contacts__item-icon menu-contacts__skype-img"><a href="skype:danadjsaintpetersburg" class="link-without-decorations menu-contacts__item-link">danadjsaintpetersburg</a></div>
 							</li>
 						</ol>
-					</div>
-				</section>
+					</section>
+				</aside>
 				<!--MAIN CONTENT OF PAGE-->
-				<main class="page-content">
+				<div class="page-content">
 					<!--FEEDBACK FORM-->
-					<article class="page-content-item">
+					<section class="page-content-item">
 						<h2 class="page-content-item__header">У вас интересный проект? Напишите мне</h2>
 						<div class="page-content-item__conteiner clearfix">
-							<form id="contactForms" action="#" class="feedback-form">
+							<form id="feedback-form" class="feedback-form">
 								<div class="form__item form-inputs">
 									<div class="input-group input-group__name float-left">
 										<label for="form__name" class="input-group__label">Ваше имя</label>
@@ -119,9 +119,22 @@
 								</div>
 							</form>
 						</div>
-					</article>
-				</main>
-			</section>
+					</section>
+				</div>
+			</main>
+			<!--Message status-->
+			<div id="form-message-status" class="form-message-status">
+				<div class="form__body form__body--message-status">
+					<div id="error-server" class="form__item form-message">
+						<h2 class="form-message__header">Упс! Проблемка!</h2>
+						<p class="form-message__content">Не удалось отправить письмо :_(</p>
+					</div>
+					<div id="succes" class="form__item form-message form-message__succes">
+						<h2 class="form-message__header">Письмо успешно отправлено!</h2>
+						<p class="form-message__content">Скоро я вам отвечу.</p>
+					</div>
+				</div>
+			</div>
 			<div class="empty"></div>
 		</div>
 		<!--FOOTER-->

@@ -19,7 +19,18 @@ var mainJS = (function () {
 				dataType: 'JSON', //указываю формат передачи данных
 				data: data //передаю ассоциативный массив с сохранёнными в нём данными из формы
 				}).fail(function () {
-					form.find('#error-server').show();
+					if (url !== 'php/contact_with_me.php'){
+						form.find('#error-server').show();
+					} else {
+						var modalWindow_sendMessage = $('#form-message-status');
+						modalWindow_sendMessage.find('#error-server').show();
+						modalWindow_sendMessage.bPopup({
+							onClose: function () {
+								modalWindow_sendMessage.hide();
+							}
+						});
+					}
+
 				});
 	};
 
@@ -30,7 +41,6 @@ var mainJS = (function () {
 			resultValidation = _ajaxFormJSValidation(form); //результат проверки формы на заполненность полей в JS
 		if (resultValidation === true) {
 			var serverAnswer = _ajaxForServer(form, target_url);//массив с результатом обращения к серверу
-			console.log(serverAnswer);
 			serverAnswer.done(function (ans) {
 				var succesBox, errorBox, formGroup, addButton;
 				if (target_url !== 'php/contact_with_me.php') {
@@ -47,21 +57,21 @@ var mainJS = (function () {
 						errorBox.show();
 					}
 				} else {
-					var modalWindow_sendMessage = $('#modalWindow-sendMessage');
-					succesBox = modalWindow_sendMessage.find('.succes-mes');
-					errorBox = modalWindow_sendMessage.find('.error-mes');
-					modalWindow_sendMessage.bPopup({
-						onClose: function () {
-							modalWindowForm.find('.server-mes').hide();
-						}
-					});
+					var modalWindow_sendMessage = $('#form-message-status');
+						succesBox = modalWindow_sendMessage.find('#succes');
+						errorBox = modalWindow_sendMessage.find('#error-server');
 					if (ans.status === 'ok') {
-						errorBox.hide();
+						//errorBox.hide();
 						succesBox.show();
 					} else {
-						succesBox.hide();
+						//succesBox.hide();
 						errorBox.show();
 					}
+					modalWindow_sendMessage.bPopup({
+						onClose: function () {
+							modalWindow_sendMessage.hide();
+						}
+					});
 				}
 			});
 		}
@@ -95,16 +105,15 @@ var mainJS = (function () {
 		//Прослушка нажатия кнопки добавления проекта
 		$('.add-new-work').click(function (event) {
 			event.preventDefault();
-			var modalWindow = $('#modal-window-add-work'),
-				modalWindowForm = modalWindow.find('#modal-window-add-work__form');
-
+			var modalWindow = $('#form-add-work'),
+				modalWindowForm = modalWindow.find('#form-add-work__form');
 			_showModalWindow(modalWindow, modalWindowForm);
 		});
 
 		//Прослушка нажатия кнопки отправки формы добавления проекта
-		$('#modal-window-add-work__form').submit(function (event) {
+		$('#form-add-work__form').submit(function (event) {
 			event.preventDefault();
-			_validation_server_answer('php/add_new_project.php', $('#modal-window-add-work__form'));
+			_validation_server_answer('php/add_new_project.php', $('#form-add-work__form'));
 		});
 
 		//Прослушка нажатия кнопки отправки формы авторизации
@@ -113,8 +122,8 @@ var mainJS = (function () {
 			_validation_server_answer('php/login.php', $('#login-window__form'));
 		});
 
-		//Прослушка кнопки отправки формы
-		$('#contactForms').on('submit', _submitForm_contactWithMe);
+		//Прослушка кнопки отправки формы обратной связи
+		$('#feedback-form').on('submit', _submitForm_contactWithMe);
 
 		//Прослушка нажатия на фэйковую форму загрузки картинки и генерации клика по полю загрузки файла
 		$('#add-work__label, #add-work__fake-img, #add-work__fake-input').on('click', function () {
@@ -124,12 +133,6 @@ var mainJS = (function () {
 		//Прослушка выбора файла на поле загрузки файла и вставка его значения в фэйковое поле загрузки картинки
 		$('#fileUpload').on('change', function () {
 			$('#add-work__fake-input').val($(this).val()).qtip('destroy', true);
-		});
-
-		//Прослушка нажатия на плашке проэкта
-		$('.my-works-item__').on('click', function () {
-			console.log('Нажатие на кнопку проэкта');
-			$('.add-new-work').trigger('click');
 		});
 	};
 

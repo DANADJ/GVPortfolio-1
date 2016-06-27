@@ -11,15 +11,15 @@ block reCaptcha
 	//RECAPTCHA SCRIPT
 	script(src='https://www.google.com/recaptcha/api.js')
 block sidebar
-	section.sidebar
+	aside.sidebar
 		+menu-navigation(3,"side-bar__item")
 		+menu-contacts("side-bar__item")
 block content
 	//FEEDBACK FORM
-	article.page-content-item
+	section.page-content-item
 		h2.page-content-item__header У вас интересный проект? Напишите мне
 		div.page-content-item__conteiner.clearfix
-			form.feedback-form#contactForms(action="#")
+			form.feedback-form#feedback-form
 				div.form__item.form-inputs
 					div.input-group.input-group__name.float-left
 						label.input-group__label(for="form__name") Ваше имя
@@ -37,3 +37,5 @@ block content
 				div.form__item.clearfix
 					button.button.button--green.float-left(type="submit") Отправить
 					button.button.float-right(type="reset") Очистить
+block modal_windows
+	include ../_common/message-status

@@ -1,8 +1,8 @@
-// ПопАп окно добавления проекта
-section.modal-window-add-work#modal-window-add-work
+//Add work's window
+section.form-add-work#form-add-work
 	h2.form__header.form__header--add-work Добавление проекта
 	div.form__body.form__body--add-work
-		form#modal-window-add-work__form(role="form")
+		form#form-add-work__form
 			div.form__item.form-message#error-server
 				h2.form-message__header Неудача!
 				p.form-message__content На сервере какие-то неполадки.
@@ -10,24 +10,23 @@ section.modal-window-add-work#modal-window-add-work
 				h2.form-message__header Ура!
 				p.form-message__content Проект успешно добавлен.
 			div.form__item#form-inputs
-				div.input-group
+				div.input-group.qtipBlock(qtip-content="Проект без названия?!" qtip-position="left")
 					label.input-group__label(for="projectName") Название проекта
-					input.input-group__input.qtipBlock#projectName(name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left")
-				div.input-group.clearfix
+					input.input-group__input#projectName(name="projectName" type="text" placeholder="Введите название")
+				div.input-group.qtipBlock.clearfix(qtip-content="Без картинки не загружу!" qtip-position="left")
 					label.input-group__label#add-work__label Картинка проекта
-					input.input-group__input.input-group__input-fake.qtipBlock#add-work__fake-input(name="projectImg" type="text"
+					input.input-group__input.input-group__input-fake#add-work__fake-input(name="projectImg" type="text"
 					placeholder="Загрузите " +
-					"изображение" qtip-content="Без картинки не загружу!" qtip-position="left")
+					"изображение")
 					div.input-group__input-img#add-work__fake-img
 					input.input-group__input-file#fileUpload(type="file")
-				div.input-group
+				div.input-group.qtipBlock(qtip-content="Ну а ссылка?!" qtip-position="left")
 					label.input-group__label(for="projectURL") URL проекта
-					input.input-group__input.qtipBlock#projectURL(name="projectURL" type="text" placeholder="Добавьте ссылку"
-					qtip-content="Ну а ссылка?!" qtip-position="left")
-				div.input-group
+					input.input-group__input#projectURL(name="projectURL" type="text" placeholder="Добавьте ссылку")
+				div.input-group.qtipBlock(qtip-content="Напиши пару слов о проекте!" qtip-position="left")
 					label.input-group__label(for="projectDescription") Описание
-					textarea.input-group__input.input-group__textarea.input-group__textarea--add-work.qtipBlock#projectDescription(name="projectDescription" type="text" placeholder="Пара " +
-					"слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left")
+					textarea.input-group__input.input-group__textarea.input-group__textarea--add-work#projectDescription(name="projectDescription" placeholder="Пара " +
+					"слов о Вашем проекте")
 			div.form__item#form-buttons
 				button.button.button--green(type="submit" name="add-button" value="Добавить") Добавить
 				a.button.button--a.float-right.b-close(href="#") Отмена

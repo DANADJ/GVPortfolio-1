@@ -10,11 +10,7 @@ $dataStatus['status'] = 'ok';//
 //проверяю значения пришедшие из формы
 if($data['name'] === '' || $data['email'] === '' || $data['message'] === '' || $data['captcha'] === ''){//если хотя бы одна ячейка формы не заполнена...
    $dataStatus['status'] = 'error';//...присваиваю переменной Status ответного массива значение Error
-} else {
-
-};
+}
 header("content-Type: application/json");//Не понимаю эту строчку
-echo json_encode($dataStatus);
-exit(json_encode());
-
+exit (json_encode($dataStatus));
 ?>

@@ -4,7 +4,7 @@
 /*Оформление неактивного пункта меню и кнопки*/
 /*Оформление активного пункта меню*/
 /*Add prroject's popup window*/
-.modal-window-add-work {
+.form-add-work, .form-message-status {
   display: none;
   box-sizing: border-box;
   width: 360px; }
@@ -47,7 +47,7 @@
     padding: 35px; }
   .form__body--add-work {
     padding: 25px 40px 35px; }
-  .form__body--send-message {
+  .form__body--message-status {
     padding: 40px 40px 40px 40px; }
 
 .form__item {
@@ -74,9 +74,12 @@
     background-color: #bce1cb;
     color: #49bb7b; }
 
-.modal-window-add-work .form-message__succes {
+.form-add-work .form-message__succes {
   margin-top: 15px;
   margin-bottom: 5px; }
+
+.form-message-status .form-message__succes {
+  margin-bottom: 0; }
 
 .input-group {
   box-sizing: border-box;

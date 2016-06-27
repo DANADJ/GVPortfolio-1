@@ -15,5 +15,4 @@ if($data['admin-name'] !== '' && $data['password'] !== ''){//если обе я�
 };
 header("content-Type: application/json");//Не понимаю эту строчку
 exit(json_encode($dataStatus));
-
 ?>

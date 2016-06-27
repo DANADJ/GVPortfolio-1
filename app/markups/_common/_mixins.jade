@@ -15,7 +15,7 @@ mixin menu-navigation(activePage, wrapperClass)
 //- Menu contacts
 mixin menu-contacts(wrapperClass)
 	// MENU CONTACTS
-	div.menu-contacts(class="#{wrapperClass}")
+	section.menu-contacts(class="#{wrapperClass}")
 		h2.menu-contacts__header Контакты
 		ol.menu-contacts__list
 			each point in contacts
@@ -48,7 +48,7 @@ mixin login(wrapperClass)
 
 //-Project list
 mixin project-list(header, addID, array)
-	article.page-content-item
+	section.page-content-item
 		h2.page-content-item__header #{header}
 		div.page-content-item__conteiner.clearfix
 			ol.my-works-list.page-content-list
