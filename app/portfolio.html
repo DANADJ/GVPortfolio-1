@@ -51,7 +51,7 @@
 					<!-- LOGO-->
 					<div class="header__logo"><a href="./" class="logo"><img src="images/logo.png" alt="Логотип LoftSchool" class="logo__img"/></a></div>
 					<!--MENU SOCIAL ICONS-->
-					<div class="mini-menu"></div>
+					<div id="mini-menu" class="mini-menu"></div>
 					<div class="header__menu-social-icons">
 						<ul class="menu-social-icons">
 							<li class="menu-social-icons__item"><a href="https://vk.com/danadj" target="_blank" class="social-icon vk">vk</a></li>
@@ -103,7 +103,8 @@
 				<!--SIDEBAR-->
 				<aside class="sidebar">
 					<!-- MENU NAVIGATION-->
-					<ul class="menu-navigation side-bar__item">
+					<ul id="menu-navigation" class="menu-navigation side-bar__item">
+						<li class="menu-navigation__item"></li>
 						<li class="menu-navigation__item"><a href="./" class="link-without-decorations menu-navigation__link">Обо мне</a></li>
 						<li class="menu-navigation__item"><a href="./portfolio.html" class="link-without-decorations menu-navigation__link menu-navigation__link--active-page">Портфолио</a></li>
 						<li class="menu-navigation__item"><a href="./feedback.html" class="link-without-decorations menu-navigation__link">Обратная связь</a></li>
@@ -139,23 +140,23 @@
 							<p class="form-message__content">Проект успешно добавлен.</p>
 						</div>
 						<div id="form-inputs" class="form__item">
-							<div qtip-content="Проект без названия?!" qtip-position="left" class="input-group qtipBlock">
+							<div class="input-group">
 								<label for="projectName" class="input-group__label">Название проекта</label>
-								<input id="projectName" name="projectName" type="text" placeholder="Введите название" class="input-group__input">
+								<input id="projectName" name="projectName" type="text" placeholder="Введите название" qtip-content="Проект без названия?!" qtip-position="left" class="input-group__input qtipBlock">
 							</div>
-							<div qtip-content="Без картинки не загружу!" qtip-position="left" class="input-group qtipBlock clearfix">
+							<div class="input-group clearfix">
 								<label id="add-work__label" class="input-group__label">Картинка проекта</label>
-								<input id="add-work__fake-input" name="projectImg" type="text" placeholder="Загрузите изображение" class="input-group__input input-group__input-fake">
+								<input id="add-work__fake-input" name="projectImg" type="text" placeholder="Загрузите изображение" qtip-content="Без картинки не загружу!" qtip-position="left" class="input-group__input input-group__input-fake qtipBlock">
 								<div id="add-work__fake-img" class="input-group__input-img"></div>
 								<input id="fileUpload" type="file" class="input-group__input-file">
 							</div>
-							<div qtip-content="Ну а ссылка?!" qtip-position="left" class="input-group qtipBlock">
+							<div class="input-group">
 								<label for="projectURL" class="input-group__label">URL проекта</label>
-								<input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" class="input-group__input">
+								<input id="projectURL" name="projectURL" type="text" placeholder="Добавьте ссылку" qtip-content="Ну а ссылка?!" qtip-position="left" class="input-group__input qtipBlock">
 							</div>
-							<div qtip-content="Напиши пару слов о проекте!" qtip-position="left" class="input-group qtipBlock">
+							<div class="input-group">
 								<label for="projectDescription" class="input-group__label">Описание</label>
-								<textarea id="projectDescription" name="projectDescription" placeholder="Пара слов о Вашем проекте" class="input-group__input input-group__textarea input-group__textarea--add-work"></textarea>
+								<textarea id="projectDescription" name="projectDescription" placeholder="Пара слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left" class="input-group__input input-group__textarea input-group__textarea--add-work qtipBlock"></textarea>
 							</div>
 						</div>
 						<div id="form-buttons" class="form__item">

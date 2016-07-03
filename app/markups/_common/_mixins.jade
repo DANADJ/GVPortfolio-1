@@ -3,7 +3,8 @@ include _variables
 //- Menu navigation
 mixin menu-navigation(activePage, wrapperClass)
 	// MENU NAVIGATION
-	ul.menu-navigation(class="#{wrapperClass}")
+	ul.menu-navigation#menu-navigation(class="#{wrapperClass}")
+		li.menu-navigation__item
 		each item in navigation
 			if item.pageNumber !== activePage
 				li.menu-navigation__item
@@ -33,7 +34,7 @@ mixin logo(wrapperClass)
 //-Menu social icon
 mixin menu-social-icons(wrapperClass)
 	//MENU SOCIAL ICONS
-	div.mini-menu
+	div.mini-menu#mini-menu
 	div(class="#{wrapperClass}")
 		ul.menu-social-icons
 			each val, index in socials

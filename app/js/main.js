@@ -13,25 +13,25 @@ var mainJS = (function () {
 	//Универсальная функция AJAX запроса к серверу для выполнения задачи
 	var _ajaxForServer = function (form, url) {
 		var data = form.serialize();//создаю ассоциативный массив DATA и сохраняю в него данные из формы
-			return $.ajax({ //создаю переменную с запросом на сервер
-				url: url, //указываю путь к файлу обработчику
-				type: 'POST', //указываю способ передачи данных
-				dataType: 'JSON', //указываю формат передачи данных
-				data: data //передаю ассоциативный массив с сохранёнными в нём данными из формы
-				}).fail(function () {
-					if (url !== 'php/contact_with_me.php'){
-						form.find('#error-server').show();
-					} else {
-						var modalWindow_sendMessage = $('#form-message-status');
-						modalWindow_sendMessage.find('#error-server').show();
-						modalWindow_sendMessage.bPopup({
-							onClose: function () {
-								modalWindow_sendMessage.hide();
-							}
-						});
+		return $.ajax({ //создаю переменную с запросом на сервер
+			url: url, //указываю путь к файлу обработчику
+			type: 'POST', //указываю способ передачи данных
+			dataType: 'JSON', //указываю формат передачи данных
+			data: data //передаю ассоциативный массив с сохранёнными в нём данными из формы
+		}).fail(function () {
+			if (url !== 'php/contact_with_me.php') {
+				form.find('#error-server').show();
+			} else {
+				var modalWindow_sendMessage = $('#form-message-status');
+				modalWindow_sendMessage.find('#error-server').show();
+				modalWindow_sendMessage.bPopup({
+					onClose: function () {
+						modalWindow_sendMessage.hide();
 					}
-
 				});
+			}
+
+		});
 	};
 
 	//Универсальная функция запуска JS валидации, отправки данных на сервер и вывода результа пользователю
@@ -58,8 +58,8 @@ var mainJS = (function () {
 					}
 				} else {
 					var modalWindow_sendMessage = $('#form-message-status');
-						succesBox = modalWindow_sendMessage.find('#succes');
-						errorBox = modalWindow_sendMessage.find('#error-server');
+					succesBox = modalWindow_sendMessage.find('#succes');
+					errorBox = modalWindow_sendMessage.find('#error-server');
 					if (ans.status === 'ok') {
 						//errorBox.hide();
 						succesBox.show();
@@ -122,7 +122,7 @@ var mainJS = (function () {
 			_validation_server_answer('php/login.php', $('#login-window__form'));
 		});
 
-		//Прослушка кнопки отправки формы обратной связи
+		//Прослушка нажатия кнопки отправки формы обратной связи
 		$('#feedback-form').on('submit', _submitForm_contactWithMe);
 
 		//Прослушка нажатия на фэйковую форму загрузки картинки и генерации клика по полю загрузки файла
@@ -133,6 +133,10 @@ var mainJS = (function () {
 		//Прослушка выбора файла на поле загрузки файла и вставка его значения в фэйковое поле загрузки картинки
 		$('#fileUpload').on('change', function () {
 			$('#add-work__fake-input').val($(this).val()).qtip('destroy', true);
+		});
+		//Прослушка нажатия на кнопку мини-меню и вывода/скрытия меню
+		$('#mini-menu').click(function () {
+			$('#menu-navigation').toggle();
 		});
 	};
 
