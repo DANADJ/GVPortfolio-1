@@ -14,12 +14,22 @@
 	&__login {
 		float: left;
 		margin: ($footer-height - 30px)/2 5px ($footer-height - 30px)/2 270px;
+
+		@media screen and (max-width: 1023px) {
+			position: absolute;
+			float: none;
+			margin: ($footer-height - 30px)/2 5px ($footer-height - 30px)/2;
+		}
 	}
 
 	&__content {
 		color: $text-color;
 		font: 12px 'open_sanslight';
 		line-height: $footer-height;
+
+		@media screen and (max-width: 1023px) {
+			text-align: center;
+		}
 	}
 }
 

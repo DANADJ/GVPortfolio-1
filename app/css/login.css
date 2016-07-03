@@ -26,12 +26,13 @@ table {
 .wrapper {
   position: relative;
   min-height: 100%;
-  min-width: 960px;
+  min-width: 320px;
   overflow: hidden;
   margin: 0 auto; }
 
 .page {
-  padding: 35px 0 0 0 !important; }
+  padding: 0;
+  position: relative; }
 
 .page-content-item {
   box-sizing: border-box;
@@ -64,9 +65,13 @@ table {
 .page-content {
   box-sizing: border-box;
   width: 650px;
-  margin: 0 0 35px 60px;
+  margin: 0 0 0 40px;
   padding: 0;
-  float: left; }
+  float: right; }
+  @media screen and (max-width: 1023px) {
+    .page-content {
+      float: none;
+      margin: 0 auto; } }
 
 .page-content-list {
   list-style: none;
@@ -87,6 +92,7 @@ table {
 
 /*Position content*/
 .conteiner {
+  box-sizing: border-box;
   min-height: 100%;
   height: auto !important;
   margin: 0 auto;
@@ -94,12 +100,21 @@ table {
 
 .header__width {
   max-width: 1200px; }
+  @media screen and (max-width: 1023px) {
+    .header__width {
+      max-width: 750px; } }
 
 .page-width {
-  width: 966px; }
+  max-width: 970px; }
+  @media screen and (max-width: 1023px) {
+    .page-width {
+      max-width: 750px; } }
 
 .footer__width {
-  width: 960px; }
+  max-width: 970px; }
+  @media screen and (max-width: 1023px) {
+    .footer__width {
+      max-width: 680px; } }
 
 .login-page {
   width: 360px;
@@ -121,6 +136,7 @@ table {
 .float-right {
   float: right; }
 
+/*Adaptive*/
 /*Add prroject's popup window*/
 .form-add-work, .form-message-status {
   display: none;

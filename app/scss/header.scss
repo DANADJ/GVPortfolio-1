@@ -3,16 +3,29 @@
 	height: 90px;
 	border-bottom: 7px solid #ffffff;
 	box-shadow: 0 0 3px #676767;
+	margin: 0 0 35px 0;
+
+	@media screen and (max-width: 1023px) {
+		height: 70px;
+	}
 
 	&__logo {
 		width: 95px;
 		padding: 10px 0 0 0;
 		float: left;
+
+		@media screen and (max-width: 1023px) {
+			width: 75px;
+		}
 	}
 
 	&__menu-social-icons {
 		float: right;
 		margin: 25px 0;
+
+		@media screen and (max-width: 1023px) {
+			margin: 15px 0;
+		}
 	}
 }
 
@@ -22,13 +35,13 @@
 
 .menu-social-icons {
 	height: 40px;
-	width: 130px;
 	padding: 0;
 	margin: 0;
 
 	&__item {
 		list-style: none;
 		display: inline-block;
+		margin: 0 2px;
 	}
 }
 
@@ -42,25 +55,56 @@
 }
 
 .fb {
-	background: url(../images/social-icon-sprite.png) no-repeat -6px -5px;
+	background: url(../images/social-icon-sprite.png) no-repeat -5px -106px;
 
 	&:hover {
-		background: url(../images/social-icon-sprite.png) no-repeat -6px -53px;
+		background: url(../images/social-icon-sprite.png) no-repeat -5px -155px;
 	}
 }
 
 .vk {
-	background: url(../images/social-icon-sprite.png) no-repeat -5px -303px;
+	background: url(../images/social-icon-sprite.png) no-repeat -5px -305px;
 
 	&:hover {
-		background: url(../images/social-icon-sprite.png) no-repeat -6px -353px;
+		background: url(../images/social-icon-sprite.png) no-repeat -6px -355px;
 	}
 }
 
 .git {
-	background: url(../images/social-icon-sprite.png) no-repeat -5px -103px;
+	background: url(../images/social-icon-sprite.png) no-repeat -4px -203px;
 
 	&:hover {
-		background: url(../images/social-icon-sprite.png) no-repeat -6px -153px;
+		background: url(../images/social-icon-sprite.png) no-repeat -5px -253px;
+	}
+}
+
+.mini-menu {
+	position: relative;
+	float: right;
+	width: 40px;
+	height: 40px;
+	margin: 15px 0;
+	cursor: pointer;
+	margin-left: 12px;
+	background: url(../images/social-icon-sprite.png) no-repeat -5px -55px;
+
+	&:active {
+		background: url(../images/social-icon-sprite.png) no-repeat -5px -5px;
+	}
+
+	&:after {
+		display: none;
+		content: "";
+		position: absolute;
+		top: 24px;
+		left: 9px;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom: 14px solid white;
+	}
+
+	@media screen and (min-width: 1023px){
+		display: none;
 	}
 }

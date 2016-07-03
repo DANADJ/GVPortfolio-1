@@ -2,6 +2,13 @@
 .sidebar {
 	width: 250px;
 	float: left;
+
+	@media screen and (max-width: 1023px){
+		width: 100%;
+		float: none;
+		margin: 0 auto;
+		max-width: 650px;
+	}
 }
 
 /*Sidebar - Menu navigation*/
@@ -10,6 +17,14 @@
 	padding: 0;
 	margin: 0 0 35px 0;
 	width: 100%;
+
+	@media screen and (max-width: 1023px) {
+		display: none;
+		position: absolute;
+		top: -52px;
+		right: 16px;
+		width: 200px;
+	}
 
 	&__item:first-child .menu-navigation__link {
 		border-top-left-radius: 4px;
@@ -22,18 +37,23 @@
 	}
 
 	&__link {
-		padding: 18px 27px 16px 27px;
+		padding: 18px 27px 16px;
 		color: $text-color;
 		font: 20px 'open_sanssemibold';
 		display: block;
 		line-height: 1;
 		text-align: left;
-		text-shadow: 0 1px 0 #fff;
+		text-shadow: 0 1px 0 #ffffff;
 		border: 1px solid #b7b7b7;
 		border-radius: 2px;
 		background-image: linear-gradient(0deg, rgb(233, 230, 229) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);;
 		box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.07), inset 0 -2px 3px 0 rgba(41, 41, 41, 0.05);
 		word-wrap: break-word;
+
+		@media screen and (max-width: 1023px){
+			font-size: 16px;
+			padding: 13px 15px 11px;
+		}
 
 		&:hover {
 			color: rgb(114, 112, 112);
@@ -90,6 +110,10 @@
 		border-radius: 4px 4px 2px 2px;
 		background-image: linear-gradient(0deg, rgb(220, 177, 93) 0%, rgb(244, 204, 126) 90%);
 		box-shadow: 0 2px 1px 0 rgba(9, 9, 9, 0.17), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
+
+		@media screen and (max-width: 1023px){
+			display: none;
+		}
 	}
 
 	&__item {
@@ -99,9 +123,19 @@
 		background-image: linear-gradient(0deg, #e9e7e7 0%, #fbf9f9 100%);
 		box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.35), inset 0 2px 2px 0 rgba(114, 112, 112, 0.1);
 
+		@media screen and (max-width: 1023px) {
+			float: left;
+			width: 33%;
+			margin-bottom: 35px;
+		}
+
 		&:last-child {
 			border-bottom-right-radius: 4px;
 			border-bottom-left-radius: 4px;
+
+			@media screen and (max-width: 1023px) {
+				border-radius: 0;
+			}
 		}
 
 		&:hover {
@@ -112,21 +146,37 @@
 	&__item-icon {
 		padding: 10px 9px 9px 60px;
 		text-align: center;
+
+		@media screen and (max-width: 1023px) {
+			padding-left: 50px;
+		}
 	}
 
 	&__mail-img {
 		background: url(../images/>.png) no-repeat 50px 0, url(../images/mail.png) no-repeat 18px 50%;
 		background-size: 8px 100%, 16px 13px;
+
+		@media screen and (max-width: 1023px) {
+			background-position: 40px 0, 13px 50%;
+		}
 	}
 
 	&__celphone-img {
 		background: url(../images/>.png) no-repeat 50px 0, url(../images/celphone.png) no-repeat 18px 50%;
 		background-size: 8px 100%, 16px 21px;
+
+		@media screen and (max-width: 1023px) {
+			background-position: 40px 0, 13px 50%;
+		}
 	}
 
 	&__skype-img {
 		background: url(../images/>.png) no-repeat 50px 0, url(../images/skype.png) no-repeat 19px 50%;
 		background-size: 8px 100%, 18px 18px;
+
+		@media screen and (max-width: 1023px) {
+			background-position: 40px 0, 14px 50%;
+		}
 	}
 
 	&__item-link {
@@ -136,5 +186,3 @@
 		line-height: 1.2;
 	}
 }
-
-
