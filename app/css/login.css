@@ -38,13 +38,15 @@ table {
   box-sizing: border-box;
   margin: 0 0 35px 0;
   padding: 0; }
+  @media screen and (max-width: 1023px) {
+    .page-content-item {
+      margin-bottom: 22px; } }
   .page-content-item__header {
     box-sizing: border-box;
     margin: 0;
-    padding: 17px 40px;
+    padding: 12px 40px;
     font: 24px 'open_sansregular';
     color: #eeedec;
-    line-height: 0.9;
     text-align: left;
     text-shadow: 1px 1px 3px #666565;
     border: 1px solid rgba(99, 99, 99, 0.35);
@@ -53,6 +55,9 @@ table {
     background-image: linear-gradient(0deg, #7b7878 0%, #a9a8a8 100%);
     background-origin: border-box;
     box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
+    @media screen and (max-width: 1023px) {
+      .page-content-item__header {
+        padding: 4px 40px; } }
   .page-content-item__conteiner {
     box-sizing: border-box;
     padding: 28px 27px 28px 28px;
@@ -123,11 +128,11 @@ table {
 .link-without-decorations {
   text-decoration: none; }
 
-.clearfix:before, .clearfix:after {
+.clearfix::before, .clearfix::after {
   content: " ";
   display: table; }
 
-.clearfix:after {
+.clearfix::after {
   clear: both; }
 
 .float-left {
@@ -136,7 +141,6 @@ table {
 .float-right {
   float: right; }
 
-/*Adaptive*/
 /*Add prroject's popup window*/
 .form-add-work, .form-message-status {
   display: none;

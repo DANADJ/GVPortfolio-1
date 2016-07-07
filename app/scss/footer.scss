@@ -1,34 +1,44 @@
 /*Прибитие футера к низу экрана*/
 .empty {
 	position: relative;
-	height: $footer-height;
+	height: $footer-height-destop;
+
+	@media screen and (max-width: 1023px){
+		height: $footer-height-tablet;
+	}
 }
 
 /*Оформление футера*/
 .footer {
 	position: relative;
-	margin-top: -$footer-height;
-	height: $footer-height;
+	margin-top: -$footer-height-destop;
+	height: $footer-height-destop;
 	background-color: #dedcdc;
+
+	@media screen and (max-width: 1023px){
+		margin-top: -$footer-height-tablet;
+		height: $footer-height-tablet;
+	}
 
 	&__login {
 		float: left;
-		margin: ($footer-height - 30px)/2 5px ($footer-height - 30px)/2 270px;
+		margin: ($footer-height-destop - 30px)/2 5px ($footer-height-destop - 30px)/2 270px;
 
 		@media screen and (max-width: 1023px) {
 			position: absolute;
 			float: none;
-			margin: ($footer-height - 30px)/2 5px ($footer-height - 30px)/2;
+			margin: ($footer-height-tablet - 30px)/2 5px ($footer-height-tablet - 30px)/2;
 		}
 	}
 
 	&__content {
 		color: $text-color;
 		font: 12px 'open_sanslight';
-		line-height: $footer-height;
+		line-height: $footer-height-destop;
 
 		@media screen and (max-width: 1023px) {
 			text-align: center;
+			line-height: $footer-height-tablet;
 		}
 	}
 }
