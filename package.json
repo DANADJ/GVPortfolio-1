@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/DANADJ/GVPortfolio-1#readme",
   "devDependencies": {
-    "browser-sync": "^2.11.1",
+    "browser-sync": "^2.13.0",
     "customizr": "^1.0.0-alpha",
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-csso": "^1.0.1",
     "gulp-filter": "^3.0.1",
@@ -29,7 +29,7 @@
     "gulp-rimraf": "^0.2.0",
     "gulp-sass": "^2.3.2",
     "gulp-size": "^2.0.0",
-    "gulp-uglify": "^1.5.1",
+    "gulp-uglify": "^1.5.4",
     "gulp-useref": "^3.1.0",
     "wiredep": "^3.0.0"
   },

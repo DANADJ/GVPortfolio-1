@@ -13,6 +13,12 @@
   float: left;
   box-shadow: 3px 2px 27px 5px rgba(236, 232, 227, 0.75), inset 0 2px 24px 0 rgba(121, 121, 121, 0.23);
   overflow: hidden; }
+  @media screen and (max-width: 600px) {
+    .my-photo {
+      float: none;
+      margin: 10px auto 25px;
+      width: 200px;
+      height: 200px; } }
   .my-photo__img {
     width: 100%;
     position: relative;
@@ -23,14 +29,29 @@
   padding: 0;
   margin: 0;
   float: right; }
+  @media screen and (min-width: 601px) and (max-width: 694px) {
+    .main-info {
+      min-width: 318px;
+      width: 65.099458%; } }
+  @media screen and (max-width: 600px) {
+    .main-info {
+      width: 100%; } }
   .main-info__item {
     padding: 3px 0 3px 0; }
+    @media screen and (max-width: 600px) {
+      .main-info__item {
+        margin-bottom: 15px; } }
     .main-info__item:last-child {
       padding: 13px 0 3px 0; }
 
 .skills {
   padding: 0 0 0 135px;
   margin-top: -20px; }
+  @media screen and (max-width: 600px) {
+    .skills {
+      width: 100%;
+      padding: 5px 0 0 0;
+      margin-top: 0; } }
   .skills__skill {
     color: #1e7465;
     font: 600 9px 'open_sansregular';
@@ -62,8 +83,10 @@
   height: 55px;
   position: absolute;
   top: 50%;
-  margin-top: -34px;
-  background: url(../images/portfel.png) no-repeat; }
+  margin-top: -34px; }
+  @media screen and (max-width: 480px) {
+    .education__item-icon {
+      display: none; } }
 
 .education__item {
   margin: 0 20px 0 13px;
@@ -71,6 +94,11 @@
   position: relative;
   word-wrap: break-word;
   box-sizing: padding-box; }
+  @media screen and (max-width: 480px) {
+    .education__item {
+      margin: 0; }
+      .education__item:first-child {
+        padding-top: 0; } }
   .education__item:after {
     content: " ";
     display: block;
@@ -88,6 +116,9 @@
   box-sizing: padding-box;
   padding: 0;
   margin: 0 0 0 96px; }
+  @media screen and (max-width: 480px) {
+    .education__item-content {
+      margin: 0; } }
 
 .education__item-name, .education__item-period {
   color: #727070;

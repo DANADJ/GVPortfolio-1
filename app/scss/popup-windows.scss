@@ -8,9 +8,13 @@
 /*Page Login*/
 .login-window {
 	width: 350px;
+	height: 282px;
 	position: absolute;
-	top: 50%;
-	margin-top: -150px;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 /*Feedback form*/
@@ -19,9 +23,23 @@
 	width: 73.846154%;
 	margin: 0 auto;
 
+	@media screen and (max-width: 480px){
+		width: 100%;
+	}
+
 	.form__item:last-child {
 		margin: 0 auto;
 		width: 88.372093%;
+
+		@media screen and (max-width: 480px){
+			width: 100%;
+
+			.button {
+				max-width: 47.2103%;
+				min-width: 47.2103%;
+				padding: 9px 10px;
+			}
+		}
 	}
 }
 
@@ -123,6 +141,11 @@
 
 	&__name, &__email {
 		width: 46.875%;
+
+		@media screen and (max-width: 480px){
+			width: 100%;
+			float: none;
+		}
 	}
 
 	&__input {
@@ -249,11 +272,6 @@
 		color: $menu-navigation__link__font-color;
 		font-size: 14px;
 	}
-}
-
-.g-recaptcha {
-	margin: 0 auto 26px;
-	width: 300px;
 }
 
 .text-center {

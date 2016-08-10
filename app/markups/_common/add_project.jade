@@ -28,6 +28,6 @@ qtip-content="Проект без названия?!" qtip-position="left")
 					label.input-group__label(for="projectDescription") Описание
 					textarea.input-group__input.input-group__textarea.input-group__textarea--add-work.qtipBlock#projectDescription(name="projectDescription" placeholder="Пара " +
 					"слов о Вашем проекте" qtip-content="Напиши пару слов о проекте!" qtip-position="left")
-			div.form__item#form-buttons
-				button.button.button--green(type="submit" name="add-button" value="Добавить") Добавить
-				a.button.button--a.float-right.b-close(href="#") Отмена
+			div.form__item.clearfix#form-buttons
+				a.button.button--a.b-close.float-left(href="#") Отмена
+				button.button.button--green.float-right(type="submit" name="add-button" value="Добавить") Добавить

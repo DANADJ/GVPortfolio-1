@@ -7,9 +7,6 @@ block stylesheets
 	//build:css css/feedback.min.css
 	link(rel="stylesheet" href="css/feedback.css")
 	//endbuild
-block reCaptcha
-	//RECAPTCHA SCRIPT
-	script(src='https://www.google.com/recaptcha/api.js')
 block sidebar
 	aside.sidebar
 		+menu-navigation(3,"side-bar__item")
@@ -17,25 +14,24 @@ block sidebar
 block content
 	//FEEDBACK FORM
 	section.page-content-item
-		h2.page-content-item__header У вас интересный проект? Напишите мне
+		h2.page-content-item__header Связаться со мной
 		div.page-content-item__conteiner.clearfix
 			form.feedback-form#feedback-form(action="" method="POST")
 				div.form__item.form-inputs
-					div.input-group.input-group__name.float-left
-						label.input-group__label(for="form__name") Ваше имя
-						input.input-group__input.qtipBlock#form__name(type="text" name="name" placeholder="Как к вам обращаться?" qtip-content="Может быть всё-таки по имени?" qtip-position="left")
-					div.input-group.input-group__email.float-right
-						label.input-group__label(for="form__email") Ваш email
-						input.input-group__input.qtipBlock#form__email(type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right")
+					div.clearfix
+						div.input-group.input-group__name.float-left
+							label.input-group__label(for="form__name") Ваше имя
+							input.input-group__input.qtipBlock#form__name(type="text" name="name" placeholder="Как к вам обращаться?" qtip-content="Может быть всё-таки по имени?" qtip-position="left")
+						div.input-group.input-group__email.float-right
+							label.input-group__label(for="form__email") Ваш e-mail
+							input.input-group__input.qtipBlock#form__email(type="email" name="email" placeholder="Куда мне ответить?"
+							qtip-content="Куда мне вам ответить?" qtip-position="right")
 					div.input-group
 						label.input-group__label(for="form__message") Сообщение
 						textarea.input-group__input.input-group__textarea.input-group__textarea--feedback.qtipBlock#form__message(name="message"
-						placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left")
-					div.input-group
-						p.input-group__label.text-center Пройдите проверку
-						div.g-recaptcha.qtipBlock(qtip-content="Вы же не робот?" qtip-position="left" data-sitekey="6LcR9SITAAAAAMS5fuWrC6Bd7VcnBvUQPS__6DtZ")
+						placeholder="Ваше предложение..." qtip-content="О чём будем общаться?" qtip-position="left")
 				div.form__item.clearfix
-					button.button.button--green.float-left(type="submit") Отправить
-					button.button.float-right(type="reset") Очистить
+					button.button.float-left(type="reset") Очистить
+					button.button.button--green.float-right(type="submit") Отправить
 block modal_windows
 	include ../_common/message-status

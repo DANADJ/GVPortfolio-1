@@ -32,8 +32,6 @@
 		<!--build:js js/modernizr.min.js-->
 		<script src="js/modernizr.js"></script>
 		<!--endbuild-->
-		<!--RECAPTCHA SCRIPT-->
-		<script src="https://www.google.com/recaptcha/api.js"></script>
 	</head>
 	<body>
 		<!-- Yandex.Metrika counter-->
@@ -69,30 +67,28 @@
 				<div class="page-content">
 					<!--FEEDBACK FORM-->
 					<section class="page-content-item">
-						<h2 class="page-content-item__header">У вас интересный проект? Напишите мне</h2>
+						<h2 class="page-content-item__header">Связаться со мной</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<form id="feedback-form" action="" method="POST" class="feedback-form">
 								<div class="form__item form-inputs">
-									<div class="input-group input-group__name float-left">
-										<label for="form__name" class="input-group__label">Ваше имя</label>
-										<input id="form__name" type="text" name="name" placeholder="Как к вам обращаться?" qtip-content="Может быть всё-таки по имени?" qtip-position="left" class="input-group__input qtipBlock">
-									</div>
-									<div class="input-group input-group__email float-right">
-										<label for="form__email" class="input-group__label">Ваш email</label>
-										<input id="form__email" type="email" name="email" placeholder="Куда мне писать" qtip-content="Куда мне вам ответить?" qtip-position="right" class="input-group__input qtipBlock">
+									<div class="clearfix">
+										<div class="input-group input-group__name float-left">
+											<label for="form__name" class="input-group__label">Ваше имя</label>
+											<input id="form__name" type="text" name="name" placeholder="Как к вам обращаться?" qtip-content="Может быть всё-таки по имени?" qtip-position="left" class="input-group__input qtipBlock">
+										</div>
+										<div class="input-group input-group__email float-right">
+											<label for="form__email" class="input-group__label">Ваш e-mail</label>
+											<input id="form__email" type="email" name="email" placeholder="Куда мне ответить?" qtip-content="Куда мне вам ответить?" qtip-position="right" class="input-group__input qtipBlock">
+										</div>
 									</div>
 									<div class="input-group">
 										<label for="form__message" class="input-group__label">Сообщение</label>
-										<textarea id="form__message" name="message" placeholder="Кратко в чём суть" qtip-content="О чём будем общаться?" qtip-position="left" class="input-group__input input-group__textarea input-group__textarea--feedback qtipBlock"></textarea>
-									</div>
-									<div class="input-group">
-										<p class="input-group__label text-center">Пройдите проверку</p>
-										<div qtip-content="Вы же не робот?" qtip-position="left" data-sitekey="6LcR9SITAAAAAMS5fuWrC6Bd7VcnBvUQPS__6DtZ" class="g-recaptcha qtipBlock"></div>
+										<textarea id="form__message" name="message" placeholder="Ваше предложение..." qtip-content="О чём будем общаться?" qtip-position="left" class="input-group__input input-group__textarea input-group__textarea--feedback qtipBlock"></textarea>
 									</div>
 								</div>
 								<div class="form__item clearfix">
-									<button type="submit" class="button button--green float-left">Отправить</button>
-									<button type="reset" class="button float-right">Очистить</button>
+									<button type="reset" class="button float-left">Очистить</button>
+									<button type="submit" class="button button--green float-right">Отправить</button>
 								</div>
 							</form>
 						</div>

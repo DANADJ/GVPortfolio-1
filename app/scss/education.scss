@@ -5,7 +5,10 @@
 	position: absolute;
 	top: 50%;
 	margin-top: -34px;
-	background: url(../images/portfel.png) no-repeat;
+
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
 }
 
 .education__item {
@@ -14,6 +17,13 @@
 	position: relative;
 	word-wrap: break-word;
 	box-sizing: padding-box;
+
+	@media screen and (max-width: 480px) {
+		margin: 0;
+		&:first-child {
+			padding-top: 0;
+		}
+	}
 
 	&:after {
 		content: " ";
@@ -38,6 +48,10 @@
 	box-sizing: padding-box;
 	padding: 0;
 	margin: 0 0 0 96px;
+
+	@media screen and (max-width: 480px) {
+		margin: 0;
+	}
 }
 
 .education__item-name, .education__item-period {

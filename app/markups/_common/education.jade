@@ -9,11 +9,13 @@ section.page-content-item
 						div.education__item-icon(class="#{point.type}")
 						div.education__item-content
 							p.item-name.education__item-name #{point.header}
+							p.item-name.education__item-name #{point.header2}
 							p.item-content.education__item-period #{point.value}
 				else
 					li.education__item
 						div.education__item-icon(class="#{point.type}")
 						div.education__item-content
+							p.item-name.education__item-name #{point.header}
 							p.education__item-name
-								a.education__item-name--link(href="#{point.link}") #{point.header}
+								a.education__item-name--link(href="#{point.link}") #{point.header2}
 							p.item-content.education__item-period #{point.value}

@@ -20,6 +20,11 @@
 		height: $footer-height-tablet;
 	}
 
+	@media screen and (max-width: 480px){
+		margin-top: -$footer-height-tablet;
+		height: $footer-height-tablet;
+	}
+
 	&__login {
 		float: left;
 		margin: ($footer-height-destop - 30px)/2 5px ($footer-height-destop - 30px)/2 270px;
@@ -29,16 +34,28 @@
 			float: none;
 			margin: ($footer-height-tablet - 30px)/2 5px ($footer-height-tablet - 30px)/2;
 		}
+
+		@media screen and (max-width: 480px) {
+			position: static;
+			float: left;
+			margin: ($footer-height-tablet - 30px)/2 5px ($footer-height-tablet - 30px)/2;
+		}
 	}
 
 	&__content {
 		color: $text-color;
 		font: 12px 'open_sanslight';
-		line-height: $footer-height-destop;
+		line-height: 12px;
+		padding: ($footer-height-destop - 12px)/2 0;
 
 		@media screen and (max-width: 1023px) {
 			text-align: center;
-			line-height: $footer-height-tablet;
+			padding: ($footer-height-tablet - 12px)/2 0;
+		}
+
+		@media screen and (max-width: 480px) {
+			line-height: 12px;
+			padding: ($footer-height-tablet - 24px)/2 0;
 		}
 	}
 }

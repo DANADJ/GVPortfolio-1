@@ -4,33 +4,49 @@
 	box-sizing: border-box;
 	width: 167px;
 	vertical-align: top;
-	margin: 0 0 48px 27px;
+	margin: 0 0 35px 27px;
 	padding: 0;
 	border: 1px solid #b4b3b3;
 	border-radius: 7px;
 	overflow: hidden;
-	transition-duration: 0.3s;
-
-	@media screen and (max-width: 1023px) {
-		width: 250px;
-		margin: 0 0 35px 35px;
-	}
-
-	&:hover {
-		box-shadow: rgba(242, 142, 36, 0.84) 0 0 10px 2px;
-		transition-duration: 0.3s;
-	}
+	//transition-duration: 0.3s;
 
 	@media screen and (min-width: 1024px) {
+
 		&:nth-child(3n+1) {
 			margin-left: 13px;
 		}
 	}
 
-	@media screen and (max-width: 1023px) {
+	@media screen and (min-width: 669px) and (max-width: 1023px){
+		width: 250px;
+	}
+
+	@media screen and (min-width: 481px) and (max-width: 668px){
+		width: 46.361746%;
+
 		&:nth-child(odd) {
-			margin-left: 26px;
+			margin-left: 0;
 		}
+
+		&:nth-child(even) {
+			margin-left: 6%;
+		}
+	}
+
+	@media screen and (max-width: 480px){
+		width: 223px;
+		display: block;
+		margin: 0 auto 25px;
+
+		&:last-child{
+			margin-bottom: 5px;
+		}
+	}
+
+	&:hover {
+		box-shadow: rgba(242, 142, 36, 0.84) 0 0 10px 2px;
+		//transition-duration: 0.3s;
 	}
 
 	&__inner {
@@ -111,6 +127,11 @@
 		height: 140px;
 		padding-top: 66px;
 		font-size: 20px;
+	}
+
+	@media screen and (max-width: 480px) {
+		height: 110px;
+		padding-top: 35px;
 	}
 
 	&:before {

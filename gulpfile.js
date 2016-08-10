@@ -42,8 +42,8 @@ gulp.task('watch', ['wiredep', 'prefix-css'], function () {
 	gulp.watch('app/markups/**/*.jade').on('change', function () {
 		gulp.start('wiredep')
 	});
-	gulp.watch('app/scss/*.scss').on('change', function () {
-		gulp.start('prefix-css')
+	gulp.watch('app/scss/**/*.scss').on('change', function () {
+		gulp.start('sass')
 	});
 	gulp.watch('modernizr-config.json').on('change', function () {
 		gulp.start('modernizr')
@@ -59,7 +59,7 @@ gulp.task('jade_watch', function () {
 
 //Задача слежки за файлами scss
 gulp.task('sass_watch', function () {
-	gulp.watch('scss/*.scss', ['sass']);
+	gulp.watch('scss/**/*.scss', ['sass']);
 });
 
 //Задача компиляции *.jade в *.html

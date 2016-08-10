@@ -12,18 +12,32 @@
 /*Page Login*/
 .login-window {
   width: 350px;
+  height: 282px;
   position: absolute;
-  top: 50%;
-  margin-top: -150px; }
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
 
 /*Feedback form*/
 .feedback-form {
   box-sizing: border-box;
   width: 73.846154%;
   margin: 0 auto; }
+  @media screen and (max-width: 480px) {
+    .feedback-form {
+      width: 100%; } }
   .feedback-form .form__item:last-child {
     margin: 0 auto;
     width: 88.372093%; }
+    @media screen and (max-width: 480px) {
+      .feedback-form .form__item:last-child {
+        width: 100%; }
+        .feedback-form .form__item:last-child .button {
+          max-width: 47.2103%;
+          min-width: 47.2103%;
+          padding: 9px 10px; } }
 
 /*Forms*/
 .form__header {
@@ -95,6 +109,10 @@
     text-align: left; }
   .input-group__name, .input-group__email {
     width: 46.875%; }
+    @media screen and (max-width: 480px) {
+      .input-group__name, .input-group__email {
+        width: 100%;
+        float: none; } }
   .input-group__input {
     display: block;
     box-sizing: border-box;
@@ -184,10 +202,6 @@
     margin: 1px 0 0 8px;
     color: #727070;
     font-size: 14px; }
-
-.g-recaptcha {
-  margin: 0 auto 26px;
-  width: 300px; }
 
 .text-center {
   text-align: center; }
