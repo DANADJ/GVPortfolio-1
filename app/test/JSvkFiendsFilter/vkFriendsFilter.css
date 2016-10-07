@@ -1,0 +1,205 @@
+body {
+	background-color: #999999;
+	font: 16px "Fira Sans";
+}
+
+.conteiner {
+	box-sizing: border-box;
+	width: 620px;
+	height: 490px;
+	border-radius: 10px;
+	margin: auto;
+	overflow: hidden;
+	background-color: #f0f0f0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.header {
+	box-sizing: border-box;
+	height: 46px;
+	background-color: #ff8663;
+	padding: 15px;
+}
+
+.heading {
+	color: #ffffff;
+	font-size: 16px;
+	height: 16px;
+	padding: 0;
+	margin: 0;
+	line-height: 16px;
+}
+
+.close {
+	box-sizing: border-box;
+	width: 14px;
+	height: 14px;
+	border: none;
+	background: none, url("./img/close.png");
+	cursor: pointer;
+}
+
+.listConteiner {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 309px;
+}
+
+.wrapperInput {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 10px 15px;
+	height: 46px;
+}
+
+.input {
+	box-sizing: border-box;
+	margin: 0;
+	height: 26px;
+	width: 100%;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 13px;
+}
+
+.wrapperList {
+	box-sizing: border-box;
+	height: 352px;
+	margin: 0;
+	padding: 0 15px;
+	border: none;
+	background-color: #ffffff;
+}
+
+.headerList, .headerList_content {
+	box-sizing: border-box;
+	height: 32px;
+	border: none;
+	border-bottom: 1px solid #f0f0f0;
+	margin: 1px 0 0 0;
+}
+
+.headerList_content {
+	margin: 0;
+	line-height: 16px;
+	padding: 8px 0;
+	border: none;
+}
+
+.wrapperListFriends {
+	box-sizing: border-box;
+	height: 320px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	overflow: hidden;
+}
+
+.listFriends {
+	list-style: none;
+	width: 294px;
+	height: 335px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: none;
+	overflow: scroll;
+}
+
+.listItem {
+	box-sizing: border-box;
+	height: 64px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	border-bottom: 1px solid #f0f0f0;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.listItem:hover {
+	background: rgba(240, 240, 240, 0.92);
+}
+
+.wrapperFoto {
+	box-sizing: border-box;
+	width: 52px;
+	height: 52px;
+	margin: 6px;
+	border: 1px solid #b0b0b0;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.foto {
+	width: 100%;
+}
+
+.name {
+	box-sizing: border-box;
+	width: 260px;
+	height: 64px;
+	line-height: 20px;
+	padding: 22px 10px 22px 68px;
+	cursor: pointer;
+	word-wrap: break-word;
+}
+
+.addOrDelButton, .addOrDelAll {
+	width: 16px;
+	height: 16px;
+	border: none;
+	margin: 24px 6px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.addOrDelAll {
+	margin: 8px 6px;
+}
+
+.addAll{
+	background: none, url("./img/addAll.png");
+}
+.delAll{
+	background: none, url("./img/delAll.png");
+}
+
+#vkListFriends .addOrDelButton {
+	background: none, url("./img/plus.png");
+}
+
+#myListFriends .addOrDelButton {
+	background: none, url("./img/closeGray.png");
+}
+
+.save {
+	box-sizing: border-box;
+	width: 86px;
+	height: 30px;
+	margin: 8px;
+	border: none;
+	border-radius: 10px;
+	color: #ffffff;
+	background-color: #ff8663;
+	cursor: pointer;
+}
+
+.left, .heading {
+	float: left;
+}
+
+.right, .close {
+	float: right;
+}
+
+.added, .hidden {
+	display: none;
+}
+
+input:focus, button:focus { outline: none }

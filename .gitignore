@@ -2,6 +2,8 @@ app/bower
 .idea
 public_html
 node_modules
-vendor
+vendorPHP
 .remotesettings
 composer.lock
+app/php/lib/
+app/test

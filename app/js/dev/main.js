@@ -1,8 +1,11 @@
+'use strict';
+
 //Основоной модуль
-var mainJS = (function () {
+
+var mainJS = function () {
 
 	//Универсальная функция AJAX запроса для валидации формы в JS
-	var _ajaxFormJSValidation = function (form) {
+	var _ajaxFormJSValidation = function _ajaxFormJSValidation(form) {
 		var resultJSValidation = true;
 		if (!validation.validateForm(form)) {
 			resultJSValidation = false;
@@ -11,8 +14,8 @@ var mainJS = (function () {
 	};
 
 	//Универсальная функция AJAX запроса к серверу для выполнения задачи
-	var _ajaxForServer = function (form, url) {
-		var data = form.serialize();//создаю ассоциативный массив DATA и сохраняю в него данные из формы
+	var _ajaxForServer = function _ajaxForServer(form, url) {
+		var data = form.serialize(); //создаю ассоциативный массив DATA и сохраняю в него данные из формы
 		return $.ajax({ //создаю переменную с запросом на сервер
 			url: url, //указываю путь к файлу обработчику
 			type: 'POST', //указываю способ передачи данных
@@ -25,22 +28,24 @@ var mainJS = (function () {
 				var modalWindow_sendMessage = $('#form-message-status');
 				modalWindow_sendMessage.find('#error-server').show();
 				modalWindow_sendMessage.bPopup({
-					onClose: function () {
+					onClose: function onClose() {
 						modalWindow_sendMessage.hide();
 					}
 				});
 			}
-
 		});
 	};
 
 	//Универсальная функция запуска JS валидации, отправки данных на сервер и вывода результа пользователю
-	var _validation_server_answer = function (url, modalWindowForm) {
+	var _validation_server_answer = function _validation_server_answer(url, modalWindowForm) {
 		var form = modalWindowForm,
-			target_url = url,//путь к файлу обработчику
-			resultValidation = _ajaxFormJSValidation(form); //результат проверки формы на заполненность полей в JS
+		    target_url = url,
+
+
+		//путь к файлу обработчику
+		resultValidation = _ajaxFormJSValidation(form); //результат проверки формы на заполненность полей в JS
 		if (resultValidation === true) {
-			var serverAnswer = _ajaxForServer(form, target_url);//массив с результатом обращения к серверу
+			var serverAnswer = _ajaxForServer(form, target_url); //массив с результатом обращения к серверу
 			serverAnswer.done(function (ans) {
 				var succesBox, errorBox, formGroup, addButton;
 				if (target_url !== 'php/contact_with_me.php') {
@@ -68,7 +73,7 @@ var mainJS = (function () {
 						errorBox.show();
 					}
 					modalWindow_sendMessage.bPopup({
-						onClose: function () {
+						onClose: function onClose() {
 							modalWindow_sendMessage.hide();
 						}
 					});
@@ -78,9 +83,9 @@ var mainJS = (function () {
 	};
 
 	//Функция вывода модального окна
-	var _showModalWindow = function (modalWindow, modalWindowForm) {
+	var _showModalWindow = function _showModalWindow(modalWindow, modalWindowForm) {
 		modalWindow.bPopup({
-			onClose: function () {
+			onClose: function onClose() {
 				modalWindowForm.find('.server-mes').hide();
 				modalWindowForm.find('.form-group').show();
 				modalWindowForm.find('.add-button').show();
@@ -92,21 +97,21 @@ var mainJS = (function () {
 	};
 
 	//Функция запуска проверки формы ОБРАТНОЙ СВЯЗИ при её отправке
-	var _submitForm_contactWithMe = function (event) {
-		event.preventDefault();//cброс стандартного поведения кнопки отправки даных формы
+	var _submitForm_contactWithMe = function _submitForm_contactWithMe(event) {
+		event.preventDefault(); //cброс стандартного поведения кнопки отправки даных формы
 		var form = $(this),
-			url = 'php/contact_with_me.php';//путь к файлу обработчику
+		    url = 'php/contact_with_me.php'; //путь к файлу обработчику
 		_validation_server_answer(url, form);
 	};
 
 	//Функция прослушивания событий
-	var _setUpListners = function () {
+	var _setUpListners = function _setUpListners() {
 
 		//Прослушка нажатия кнопки добавления проекта
 		$('.add-new-work').click(function (event) {
 			event.preventDefault();
 			var modalWindow = $('#form-add-work'),
-				modalWindowForm = modalWindow.find('#form-add-work__form');
+			    modalWindowForm = modalWindow.find('#form-add-work__form');
 			_showModalWindow(modalWindow, modalWindowForm);
 		});
 
@@ -141,7 +146,7 @@ var mainJS = (function () {
 	};
 
 	//Функция инициализации модуля
-	var init = function () {
+	var init = function init() {
 		_setUpListners();
 	};
 
@@ -149,6 +154,6 @@ var mainJS = (function () {
 	return {
 		init: init
 	};
-})();
+}();
 
 mainJS.init();

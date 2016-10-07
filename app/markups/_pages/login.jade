@@ -24,9 +24,8 @@ html(lang='ru-RU')
 		//endbuild
 		//START SCRIPTS AFTER LOUD PAGE
 		//build:js js/modernizr.min.js
-		script(src="js/modernizr.js")
+		script(src="js/prod/modernizr.js")
 		//endbuild
-		block reCaptcha
 	body
 		<!--[if lt IE8]>
 		<p class="oldBrowser">Ваш браузер устарел. Для корректного отображения сайта воспользуйтесь более современным браузером.</p>
@@ -68,6 +67,6 @@ html(lang='ru-RU')
 		//endbower
 		//endbuild
 		//build:js js/main.min.js
-		script(src="js/main.js")
-		script(src="js/validation.js")
+		script(src="js/prod/main.js")
+		script(src="js/prod/validation.js")
 		//endbuild

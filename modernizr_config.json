@@ -1,6 +1,6 @@
 {
   "cache" : true,
-  "dest" : "app/js/modernizr.js",
+  "dest" : "app/js/prod/modernizr.js",
   "options": [
 	"html5shiv",
 	"setClasses"

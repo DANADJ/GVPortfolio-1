@@ -29,15 +29,15 @@ html(lang='ru-RU')
 		block stylesheets
 		//START SCRIPTS AFTER LOUD PAGE
 		//build:js js/ga.min.js
-		script(src="js/ga.js")
+		script(src="js/prod/ga.js")
 		//endbuild
 		//build:js js/modernizr.min.js
-		script(src="js/modernizr.js")
+		script(src="js/prod/modernizr.js")
 		//endbuild
 	body
 		// Yandex.Metrika counter
 		//build:js js/yam.min.js
-		script(src="js/yam.js")
+		script(src="js/prod/yam.js")
 		//endbuild
 		noscript
 			div
@@ -48,7 +48,7 @@ html(lang='ru-RU')
 		<![endif]-->
 		div.wrapper
 			include _common/header
-			//PAGE
+			PAGE
 			main.page.conteiner.page-width.clearfix
 				//MAIN CONTENT OF PAGE
 				div.page-content
@@ -63,6 +63,6 @@ html(lang='ru-RU')
 		//endbower
 		//endbuild
 		//build:js js/main.min.js
-		script(src="js/main.js")
-		script(src="js/validation.js")
+		script(src="js/prod/main.js")
+		script(src="js/prod/validation.js")
 		//endbuild

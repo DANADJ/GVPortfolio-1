@@ -133,6 +133,9 @@
   right: 0;
   bottom: 0;
   left: 0; }
+  @media screen and (max-width: 640px) {
+    .login-window {
+      width: 300px; } }
 
 /*Feedback form*/
 .feedback-form {
@@ -173,6 +176,9 @@
   background-origin: border-box; }
   .form__body--login {
     padding: 35px; }
+    @media screen and (max-width: 640px) {
+      .form__body--login {
+        padding: 20px; } }
   .form__body--add-work {
     padding: 25px 40px 35px; }
   .form__body--message-status {
@@ -296,6 +302,9 @@
     height: 38px;
     padding: 0 15px;
     font: 12px "open_sanslight"; }
+    @media screen and (max-width: 640px) {
+      .input-group-login__input {
+        width: 78.215827%; } }
 
 .input-group-login-checkbox {
   width: 150px;
@@ -365,3 +374,7 @@
       text-shadow: 2px 0 2px rgba(102, 101, 101, 0.75);
       background-image: linear-gradient(0deg, #44b799 0%, #86e6c6 100%);
       box-shadow: 0 2px 3px 0 rgba(9, 9, 9, 0.16), inset 0 1px 0 0 rgba(255, 255, 255, 0.3); }
+
+@media screen and (max-width: 640px) {
+  .form__body--login .button {
+    min-width: 120px; } }

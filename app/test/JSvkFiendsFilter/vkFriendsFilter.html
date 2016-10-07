@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Examination #1</title>
+	<link rel="stylesheet" href="vkFriendsFilter.css">
+</head>
+<body>
+<!-- Yandex.Metrika counter-->
+<script src="js/yam.min.js"></script>
+<noscript>
+	<div><img src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt=""></div>
+</noscript>
+<!--Yandex.Metrika counter-->
+<div class="conteiner" id="conteiner">
+	<header class="header">
+		<div class="heading">Выберите друзей</div>
+		<button class="close" id="close"></button>
+	</header>
+	<main id="main">
+		<section class="listConteiner left">
+			<div class="wrapperInput">
+				<input type="text" class="input" id="findFriend" placeholder="Начните вводить имя друга">
+			</div>
+			<div class="wrapperList">
+				<div class="headerList">
+					<button class="addOrDelAll right addAll" id="addAll"></button>
+					<div class="headerList_content">Ваши друзья</div>
+				</div>
+				<div class="wrapperListFriends">
+					<ul class="listFriends" id="vkListFriends">
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="listConteiner right">
+			<div class="wrapperInput">
+				<input type="text" class="input" id="nameList" placeholder="Название">
+			</div>
+			<div class="wrapperList">
+				<div class="headerList">
+					<button class="addOrDelAll right delAll" id="delAll"></button>
+					<div class="headerList_content">Друзья в списке</div>
+				</div>
+				<div class="wrapperListFriends">
+					<ul class="listFriends" id="myListFriends">
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<button class="save right" id="saveList">Сохранить</button>
+	</footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+<script type="text/x-handlebars-template" id="listFriends">
+	{{#each list}}
+	{{#if this.added}}
+	<li class="listItem added" data-id="{{uid}}">
+		{{else}}
+	<li class="listItem" data-id="{{uid}}">
+		{{/if}}
+		<div class="wrapperFoto left">
+			<img src="{{photo_100}}" alt="" class="foto">
+		</div>
+		<button class="addOrDelButton right" id="addOrDelButton"></button>
+		<div class="name">{{first_name}} {{last_name}}</div>
+	</li>
+	{{/each}}
+</script>
+<script src="vkFriendsFilter.js"></script>
+</body>
+</html>

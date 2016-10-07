@@ -1,6 +1,8 @@
 extends ../main
 block description
 	meta(name="description" content="Портфолио и примеры работ Web разработчика Гордиенко Валентина.")
+block keywords
+	meta(name="keywords" content="Портфолио, Примеры работ, Сайт-портфолио, Гордиенко Валентин")
 block title
 	|Портфолио. Примеры работ. Web разработчик фрилансер Гордиенко Валентин.
 block stylesheets
@@ -12,11 +14,11 @@ block sidebar
 		+menu-navigation(2,"side-bar__item")
 		+menu-contacts("side-bar__item")
 block content
-	//MYSELF PROJECT
-	+project-list("Собственные проэкты", "add-new-my-project", myself_portfolio)
-	//PROJECT FOR A CUSTOMER
-	+project-list("Проэкты заказчиков", "add-new-customer-project", customer_portfolio)
 	//MY TEST PROJECT
-	+project-list("Мои тестовые проэкты", "add-new-test-project", test_portfolio)
+	+project-list("Мои тестовые проекты", "add-new-test-project", test_portfolio)
+	//PROJECT FOR A CUSTOMER
+	+project-list("Проекты заказчиков", "add-new-customer-project", customer_portfolio)
+	//MYSELF PROJECT
+	+project-list("Собственные проекты", "add-new-my-project", myself_portfolio)
 block modal_windows
 	include ../_common/add_project

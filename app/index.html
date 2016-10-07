@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--SEO-->
 		<meta name="description" content="Основная информация о Web разработчике Гордиенко Валентине.">
-		<meta name="keywords" content="">
+		<meta name="keywords" content="Основная информация, Портфолио, Примеры работ, Сайт-портфолио, Гордиенко Валентин">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
 		<!--TITLE-->
 		<title>Сайт портфолио. Web разработчик фрилансер Гордиенко Валентин.</title>
@@ -28,16 +28,16 @@
 		<!--endbuild-->
 		<!--START SCRIPTS AFTER LOUD PAGE-->
 		<!--build:js js/ga.min.js-->
-		<script src="js/ga.js"></script>
+		<script src="js/prod/ga.js"></script>
 		<!--endbuild-->
 		<!--build:js js/modernizr.min.js-->
-		<script src="js/modernizr.js"></script>
+		<script src="js/prod/modernizr.js"></script>
 		<!--endbuild-->
 	</head>
 	<body>
 		<!-- Yandex.Metrika counter-->
 		<!--build:js js/yam.min.js-->
-		<script src="js/yam.js"></script>
+		<script src="js/prod/yam.js"></script>
 		<!--endbuild-->
 		<noscript>
 			<div><img src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt=""></div>
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 			</header>
-			<!--PAGE-->
+			<PAGE></PAGE>
 			<main class="page conteiner page-width clearfix">
 				<!--MAIN CONTENT OF PAGE-->
 				<div class="page-content">
@@ -132,9 +132,26 @@
 										<p class="item-content education__item-period">23.02.2016 - 24.03.2016</p>
 									</div>
 								</li>
+								<li class="education__item">
+									<div class="education__item-icon course"></div>
+									<div class="education__item-content">
+										<p class="item-name education__item-name">Курс LoftSchool.com</p>
+										<p class="education__item-name"><a href="https://loftschool.com/certificate/OC33478556526" class="education__item-name--link">&quot;Комплексное обучение JavaScript&quot;</a></p>
+										<p class="item-content education__item-period">01.07.2016 - 01.09.2016</p>
+									</div>
+								</li>
+								<li class="education__item">
+									<div class="education__item-icon course"></div>
+									<div class="education__item-content">
+										<p class="item-name education__item-name">Курс LoftSchool.com</p>
+										<p class="education__item-name"><a href="https://loftschool.com/certificate/VF37129292311" class="education__item-name--link">&quot;Английский для разработчиков&quot;</a></p>
+										<p class="item-content education__item-period">15.07.2016 - 28.08.2016</p>
+									</div>
+								</li>
 							</ol>
 						</div>
 					</section>
+					<!--include ../_common/aboutMe-->
 				</div>
 				<!--SIDEBAR-->
 				<aside class="sidebar">
@@ -182,8 +199,8 @@
 		<!--endbower-->
 		<!--endbuild-->
 		<!--build:js js/main.min.js-->
-		<script src="js/main.js"></script>
-		<script src="js/validation.js"></script>
+		<script src="js/prod/main.js"></script>
+		<script src="js/prod/validation.js"></script>
 		<!--endbuild-->
 	</body>
 </html>

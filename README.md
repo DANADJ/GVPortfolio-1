@@ -1,4 +1,4 @@
-> Инструкция по установке моего приложения
+#Инструкция по установке моего приложения
 
 1. git clone https://github.com/DANADJ/GVPortfolio-1.git WEB-DEVELOPMENT
 2. cd WEB-DEVELOPMENT

@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!--SEO-->
 		<meta name="description" content="Портфолио и примеры работ Web разработчика Гордиенко Валентина.">
+		<meta name="keywords" content="Портфолио, Примеры работ, Сайт-портфолио, Гордиенко Валентин">
 		<meta name="author" content="WEB-developer Valentin Gordienko">
 		<!--TITLE-->
 		<title>Портфолио. Примеры работ. Web разработчик фрилансер Гордиенко Валентин.</title>
@@ -27,16 +28,16 @@
 		<!--endbuild-->
 		<!--START SCRIPTS AFTER LOUD PAGE-->
 		<!--build:js js/ga.min.js-->
-		<script src="js/ga.js"></script>
+		<script src="js/prod/ga.js"></script>
 		<!--endbuild-->
 		<!--build:js js/modernizr.min.js-->
-		<script src="js/modernizr.js"></script>
+		<script src="js/prod/modernizr.js"></script>
 		<!--endbuild-->
 	</head>
 	<body>
 		<!-- Yandex.Metrika counter-->
 		<!--build:js js/yam.min.js-->
-		<script src="js/yam.js"></script>
+		<script src="js/prod/yam.js"></script>
 		<!--endbuild-->
 		<noscript>
 			<div><img src="https://mc.yandex.ru/watch/36085175" style="position:absolute; left:-9999px;" alt=""></div>
@@ -61,48 +62,55 @@
 					</div>
 				</div>
 			</header>
-			<!--PAGE-->
+			<PAGE></PAGE>
 			<main class="page conteiner page-width clearfix">
 				<!--MAIN CONTENT OF PAGE-->
 				<div class="page-content">
-					<!--MYSELF PROJECT-->
+					<!--MY TEST PROJECT-->
 					<section class="page-content-item">
-						<h2 class="page-content-item__header">Собственные проэкты</h2>
+						<h2 class="page-content-item__header">Мои тестовые проекты</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<ol class="my-works-list page-content-list">
 								<li class="my-works-item">
 									<div class="my-works-item__inner">
-										<div class="my-works-item__img-wrapper"><img src="images/html5-css3-cours.jpg" alt="Шпаргалка по html и css" class="my-works-item__img"/></div>
-										<p class="my-works-item__header"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="link-without-decorations my-works-item__header-link">Шпаргалка по HTML5 и CSS3</a></p>
-										<p class="my-works-item__content">Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Пока ещё не закончил.</p>
+										<div class="my-works-item__img-wrapper"><img src="images/vkFriendsFilter.png" alt="App VK.COM &quot;ДРУГОФИЛЬТР&quot;" class="my-works-item__img"/></div>
+										<p class="my-works-item__header"><a href="test/JSvkFiendsFilter/vkFriendsFilter.html" target="_blank" class="link-without-decorations my-works-item__header-link">App VK.COM &quot;ДРУГОФИЛЬТР&quot;</a></p>
+										<p class="my-works-item__content">Один из выпускных проектов курса по JS. В приложеении реализована функция Drag And Drop. Приложение работает со списком ваших друзей в VK.COM</p>
 									</div>
 								</li>
 								<li class="my-works-item">
 									<div class="my-works-item__inner">
-										<div class="my-works-item__img-wrapper"><img src="images/html5-css3-cours.jpg" alt="Шпаргалка по html и css" class="my-works-item__img"/></div>
-										<p class="my-works-item__header"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="link-without-decorations my-works-item__header-link">Шпаргалка по HTML5 и CSS3</a></p>
-										<p class="my-works-item__content">Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Пока ещё не закончил.</p>
+										<div class="my-works-item__img-wrapper"><img src="images/accordeonJS.png" alt="Test task JS &quot;ACCORDEON&quot;" class="my-works-item__img"/></div>
+										<p class="my-works-item__header"><a href="test/accordeonJS/accordeonJS.html" target="_blank" class="link-without-decorations my-works-item__header-link">Test task JS &quot;ACCORDEON&quot;</a></p>
+										<p class="my-works-item__content">Несколько строк нативного JS для реализации аккордеона. Тестовое задание для курса по JS.</p>
 									</div>
 								</li>
-								<li class="my-works-item"><a id="add-new-my-project" href="#" class="add-new-work">Добавить проект</a></li>
+								<li class="my-works-item"><a id="add-new-test-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
 					</section>
 					<!--PROJECT FOR A CUSTOMER-->
 					<section class="page-content-item">
-						<h2 class="page-content-item__header">Проэкты заказчиков</h2>
+						<h2 class="page-content-item__header">Проекты заказчиков</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<ol class="my-works-list page-content-list">
 								<li class="my-works-item"><a id="add-new-customer-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
 					</section>
-					<!--MY TEST PROJECT-->
+					<!--MYSELF PROJECT-->
 					<section class="page-content-item">
-						<h2 class="page-content-item__header">Мои тестовые проэкты</h2>
+						<h2 class="page-content-item__header">Собственные проекты</h2>
 						<div class="page-content-item__conteiner clearfix">
 							<ol class="my-works-list page-content-list">
-								<li class="my-works-item"><a id="add-new-test-project" href="#" class="add-new-work">Добавить проект</a></li>
+								<li class="my-works-item">
+									<div class="my-works-item__inner">
+										<div class="my-works-item__img-wrapper"><img src="images/html5-css3-cours.jpg" alt="Шпаргалка по html и css" class="my-works-item__img"/></div>
+										<p class="my-works-item__header"><a href="http://v5.master-css.com/Valentin007" target="_blank" class="link-without-decorations my-works-item__header-link">Шпаргалка по HTML5 и CSS3</a></p>
+										<p class="my-works-item__content">Мой первый учебный сайт-шпаргалка по HTML5 и CSS3. Больше не разрабатываю.</p>
+									</div>
+								</li>
+								<li class="my-works-item"><a id="add-new-my-project" href="#" class="add-new-work">Добавить проект</a></li>
 							</ol>
 						</div>
 					</section>
@@ -192,8 +200,8 @@
 		<!--endbower-->
 		<!--endbuild-->
 		<!--build:js js/main.min.js-->
-		<script src="js/main.js"></script>
-		<script src="js/validation.js"></script>
+		<script src="js/prod/main.js"></script>
+		<script src="js/prod/validation.js"></script>
 		<!--endbuild-->
 	</body>
 </html>
