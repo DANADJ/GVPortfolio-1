@@ -5,5 +5,5 @@
 3. bower i
 4. npm i
 5. composer install
-6. modernizr -c modernizr-config.json
+6. modernizr -c modernizr_config.json
 7. gulp
